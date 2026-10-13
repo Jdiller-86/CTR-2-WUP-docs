@@ -5,7 +5,7 @@ in the private CTR2WUP repository. No ROMs, keys, saves, game assets, translated
 game code, SDK or application build binaries belong here.
 
 Website: https://jdiller-86.github.io/CTR-2-WUP-docs/
-Source commit: `bf17d411bf1811b21dc9ea917f53f93087509913` · project version `0.20.0`.
+Source commit: `3aa02d71f9774989dfe9f9d0c7bdb3d7b4126596` · project version `0.20.0`.
 CTR2WUP is in early development: the Windows GUI and playable commercial-game
 WUP conversion remain unfinished. See the maintained progress and acceptance pages.
 
