@@ -1,0 +1,204 @@
+{
+  "schema_version": 1,
+  "state": "available",
+  "project_url": "https://github.com/users/Jdiller-86/projects/2",
+  "generated_at": "2026-10-13T12:34:01Z",
+  "last_success_at": "2026-10-13T12:34:01Z",
+  "stale_after_seconds": 7200,
+  "full_gates": {
+    "accepted": 0,
+    "total": 7
+  },
+  "work_items": {
+    "total": 35,
+    "status_counts": {
+      "Planned": 35,
+      "In progress": 0,
+      "Awaiting evidence": 0,
+      "Blocked": 0,
+      "Ready for review": 0,
+      "Done": 0,
+      "Closed": 0,
+      "Accepted": 0,
+      "Unassigned": 0,
+      "Other": 0
+    }
+  },
+  "milestones": [
+    {
+      "position": 1,
+      "title": "M1: Native Wii U platform",
+      "status": "Planned",
+      "accepted": false,
+      "work_total": 5,
+      "status_counts": {
+        "Planned": 5,
+        "In progress": 0,
+        "Awaiting evidence": 0,
+        "Blocked": 0,
+        "Ready for review": 0,
+        "Done": 0,
+        "Closed": 0,
+        "Accepted": 0,
+        "Unassigned": 0,
+        "Other": 0
+      },
+      "waiting_resources": {
+        "Console testing": 5,
+        "Owned game input": 0,
+        "Windows testing": 0,
+        "Other resource": 0
+      }
+    },
+    {
+      "position": 2,
+      "title": "M2: CPU translation and performance",
+      "status": "Planned",
+      "accepted": false,
+      "work_total": 5,
+      "status_counts": {
+        "Planned": 5,
+        "In progress": 0,
+        "Awaiting evidence": 0,
+        "Blocked": 0,
+        "Ready for review": 0,
+        "Done": 0,
+        "Closed": 0,
+        "Accepted": 0,
+        "Unassigned": 0,
+        "Other": 0
+      },
+      "waiting_resources": {
+        "Console testing": 2,
+        "Owned game input": 0,
+        "Windows testing": 0,
+        "Other resource": 0
+      }
+    },
+    {
+      "position": 3,
+      "title": "M3: Homebrew execution runtime",
+      "status": "Planned",
+      "accepted": false,
+      "work_total": 5,
+      "status_counts": {
+        "Planned": 5,
+        "In progress": 0,
+        "Awaiting evidence": 0,
+        "Blocked": 0,
+        "Ready for review": 0,
+        "Done": 0,
+        "Closed": 0,
+        "Accepted": 0,
+        "Unassigned": 0,
+        "Other": 0
+      },
+      "waiting_resources": {
+        "Console testing": 3,
+        "Owned game input": 0,
+        "Windows testing": 0,
+        "Other resource": 0
+      }
+    },
+    {
+      "position": 4,
+      "title": "M4: PICA to GX2 rendering",
+      "status": "Planned",
+      "accepted": false,
+      "work_total": 5,
+      "status_counts": {
+        "Planned": 5,
+        "In progress": 0,
+        "Awaiting evidence": 0,
+        "Blocked": 0,
+        "Ready for review": 0,
+        "Done": 0,
+        "Closed": 0,
+        "Accepted": 0,
+        "Unassigned": 0,
+        "Other": 0
+      },
+      "waiting_resources": {
+        "Console testing": 1,
+        "Owned game input": 0,
+        "Windows testing": 0,
+        "Other resource": 0
+      }
+    },
+    {
+      "position": 5,
+      "title": "M5: Super Mario 3D Land revision",
+      "status": "Planned",
+      "accepted": false,
+      "work_total": 5,
+      "status_counts": {
+        "Planned": 5,
+        "In progress": 0,
+        "Awaiting evidence": 0,
+        "Blocked": 0,
+        "Ready for review": 0,
+        "Done": 0,
+        "Closed": 0,
+        "Accepted": 0,
+        "Unassigned": 0,
+        "Other": 0
+      },
+      "waiting_resources": {
+        "Console testing": 2,
+        "Owned game input": 5,
+        "Windows testing": 0,
+        "Other resource": 0
+      }
+    },
+    {
+      "position": 6,
+      "title": "M6: Automated ROM to WUP conversion",
+      "status": "Planned",
+      "accepted": false,
+      "work_total": 5,
+      "status_counts": {
+        "Planned": 5,
+        "In progress": 0,
+        "Awaiting evidence": 0,
+        "Blocked": 0,
+        "Ready for review": 0,
+        "Done": 0,
+        "Closed": 0,
+        "Accepted": 0,
+        "Unassigned": 0,
+        "Other": 0
+      },
+      "waiting_resources": {
+        "Console testing": 2,
+        "Owned game input": 4,
+        "Windows testing": 2,
+        "Other resource": 0
+      }
+    },
+    {
+      "position": 7,
+      "title": "M7: Windows GUI injector",
+      "status": "Planned",
+      "accepted": false,
+      "work_total": 5,
+      "status_counts": {
+        "Planned": 5,
+        "In progress": 0,
+        "Awaiting evidence": 0,
+        "Blocked": 0,
+        "Ready for review": 0,
+        "Done": 0,
+        "Closed": 0,
+        "Accepted": 0,
+        "Unassigned": 0,
+        "Other": 0
+      },
+      "waiting_resources": {
+        "Console testing": 1,
+        "Owned game input": 2,
+        "Windows testing": 4,
+        "Other resource": 0
+      }
+    }
+  ]
+}
