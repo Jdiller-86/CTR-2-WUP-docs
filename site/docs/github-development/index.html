@@ -2222,10 +2222,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#settings-requiring-additional-access" class="md-nav__link">
+  <a href="#repository-settings-and-authentication" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Settings requiring additional access
+        Repository settings and authentication
       
     </span>
   </a>
@@ -2572,10 +2572,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#settings-requiring-additional-access" class="md-nav__link">
+  <a href="#repository-settings-and-authentication" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Settings requiring additional access
+        Repository settings and authentication
       
     </span>
   </a>
@@ -2749,7 +2749,7 @@ a failed upload leaves a draft. Published versions cannot be replaced by differe
 artifacts. This route also avoids the cloud connection's rejected upload-host
 authentication. It does not close console or commercial acceptance gates.</p>
 <h2 id="agent-support">Agent support<a class="headerlink" href="#agent-support" title="Permanent link">&para;</a></h2>
-<p><a href="../../agent-instructions/">Shared instructions</a>, <a href="https://github.com/Jdiller-86/CTR-2-WUP/blob/1b14ea67cba652930ae1e49d60c2157321a82977/.github/copilot-instructions.md">Copilot guidance</a>
+<p><a href="../../agent-instructions/">Shared instructions</a>, <a href="https://github.com/Jdiller-86/CTR-2-WUP/blob/bf17d411bf1811b21dc9ea917f53f93087509913/.github/copilot-instructions.md">Copilot guidance</a>
 and four specialist profiles cover CPU/runtime, host conversion, graphics and
 read-only console-evidence review. Use supported Copilot clients when the account
 has access. Profile files do not activate a subscription or automatically assign
@@ -2766,17 +2766,12 @@ build also provides a searchable Material site and <strong>a single HTML guide t
 opens directly in a browser</strong>, with navigation, search and a print layout. The
 HTML guide requires no account, server or internet connection to read its content.
 Download it from a matching development release or Documentation run artifact.</p>
-<p>A separate public <strong>CTR-2-WUP-docs</strong> repository can host the generated site with
-GitHub Pages on the free plan while the application repository remains private.
-The export bundle includes the rendered site, notices, README and a pinned Pages
-workflow; it excludes application code, ROMs, keys and private test data. Initial
-creation/publication still requires repository access. A generated bundle is not
-proof of a published site; only link a live URL after verifying deployment.
-The connected integration rejected creation of <code>CTR-2-WUP-docs</code> with HTTP 403
-<strong>Resource not accessible by integration</strong>. The ready export can be uploaded to
-a public repository created by the owner, or published after granting the
-required repository creation/Pages access. The HTML guide is usable immediately.
-Private-source Pages is unavailable on the user's current plan and is not enabled.</p>
+<p>The public <a href="https://jdiller-86.github.io/CTR-2-WUP-docs/">CTR2WUP documentation site</a>
+is deployed on free GitHub Pages while application source stays private. The
+export contains rendered guides, notices, provenance and a pinned Pages workflow;
+application code, ROMs, keys and private test data are excluded. Publication and
+Pages Actions succeeded, and HTTP checks verify the site, dashboard, JSON and
+chart. Private-source Pages is not used. The offline reader remains available.</p>
 <div class="language-sh highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>python3<span class="w"> </span>-m<span class="w"> </span>venv<span class="w"> </span>artifacts/docs-build-venv
 <a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>artifacts/docs-build-venv/bin/python<span class="w"> </span>-m<span class="w"> </span>pip<span class="w"> </span>install<span class="w"> </span>-r<span class="w"> </span>docs-requirements.txt
 <a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>artifacts/docs-build-venv/bin/python<span class="w"> </span>tools/build-docs-site.py
@@ -2836,8 +2831,10 @@ write. It can explicitly create only <code>Jdiller-86/CTR-2-WUP-docs</code> as p
 free workflow-based Pages and publish its generated site. Application visibility
 never changes. Both publishers preserve existing tree contents and update main
 without force. Progress lives in <code>site/progress/</code>, inside the Pages upload root.
-The prepared site URL is <code>https://jdiller-86.github.io/CTR-2-WUP-docs/</code>; live
-publication is established by deployment receipts and HTTP checks.</p>
+<a href="https://jdiller-86.github.io/CTR-2-WUP-docs/">The documentation site</a> and
+<a href="https://jdiller-86.github.io/CTR-2-WUP-docs/progress/">interactive dashboard</a> are
+live. Their HTML, aggregate JSON and chart return HTTP 200; publication and Pages
+Actions succeeded. The README embeds the generated chart.</p>
 <p>Only seven documented milestone names, aggregate counts, accepted-gate counts,
 fixed waiting-resource categories, freshness and the Project link enter the public
 snapshot. No private issue title/body/number, item ID, owner note, ROM, key or trace
@@ -2849,37 +2846,27 @@ a limited integration. Tokens are never requested in chat or copied into reports
 Use trusted-main <strong>Project tracking</strong> for setup/export and <strong>Publish public
 documentation</strong> for docs-only publication. Neither runs untrusted PR code with
 the management token. Dry-run tools are available for reviewing mutations.</p>
-<h2 id="settings-requiring-additional-access">Settings requiring additional access<a class="headerlink" href="#settings-requiring-additional-access" title="Permanent link">&para;</a></h2>
-<p>The connected integration can push code, work with issues/milestones and read
-Actions runs, but GitHub rejected <code>createProjectV2</code> and repository administration/
-security-setting writes as <strong>Resource not accessible by integration</strong>. These are
-GitHub access denials, not failed source checks or an automatic approval review.</p>
-<p>The prepared desired setup is:</p>
-<ul>
-<li>Private project <strong>CTR2WUP Development</strong>, linked to this repository, containing
-  seven overviews plus 35 work issues, with Planned / In progress / Awaiting
-  evidence / Blocked / Ready for review / Done / Closed / Accepted columns and
-  fields for milestone and waiting resource. Accepted remains reserved for
-  explicitly reviewed full milestones.</li>
-<li>About description/topics reflecting early development; optional Discussions,
-  delete merged topic branches and free dependency-alert settings.</li>
-</ul>
-<p>Grant the GitHub connection the relevant <strong>Projects write</strong> and <strong>repository
-Administration/security-setting and public docs-repository/Pages write</strong> access to finish those protected operations,
-or apply them in repository/account settings.</p>
-<p>For this cloud environment, an optional secure personal secret requirement named
-<code>CTR2WUP_GITHUB_MANAGEMENT_TOKEN</code> has been saved for <code>api.github.com</code> only. The
-<a href="https://docs.github.com/en/issues/planning-and-tracking-with-projects/automating-your-project/using-the-api-to-manage-projects">Projects API documentation</a>
-specifies a classic personal access token with <code>project</code> scope; private repository
-issues/settings additionally need <code>repo</code> access. Enter the credential in environment
-settings, review/save the draft and publish the environment changes. Saving the
-requirement alone does not grant access or create a board. Keep the existing
-connection for normal Git/issue/Actions work; use the optional credential only
-for the management operations. No token value should be pasted into chat. The <a href="https://github.com/Jdiller-86/CTR-2-WUP/blob/1b14ea67cba652930ae1e49d60c2157321a82977/.github/repository-settings.json">desired configuration</a> is
-concrete and reviewable; the live milestone/issues view works while board access
-is pending. Repository visibility and paid entitlements have not been changed.</p>
+<h2 id="repository-settings-and-authentication">Repository settings and authentication<a class="headerlink" href="#repository-settings-and-authentication" title="Permanent link">&para;</a></h2>
+<p>Normal Git, issues, milestones, PRs and Actions use the connected integration.
+Its direct cloud Project/administration calls remain limited. Trusted-main
+management workflows use the separate repository Actions secret
+<code>CTR2WUP_GITHUB_MANAGEMENT_TOKEN</code>; this route has populated Project #2 and
+published the docs-only Pages site. No further token entry is needed for those
+verified operations.</p>
+<p><strong>Repository features</strong> applies the requested About/documentation URL, topics,
+Discussions, merged-branch cleanup and free Dependabot alerts, then verifies the
+result through the API. <strong>Project tracking</strong> owns board setup, explicit reviewed
+task transitions and public aggregates. <strong>Publish public documentation</strong> verifies
+the docs-only export before publication. Each preserves operation receipts.
+The <a href="https://github.com/Jdiller-86/CTR-2-WUP/blob/bf17d411bf1811b21dc9ea917f53f93087509913/.github/repository-settings.json">desired settings</a> specify mutation scope;
+actual API receipts establish which operations succeeded.</p>
+<p>Only trusted immutable main code executes with the management token. Values are
+consumed normally by the GitHub CLI and never copied into reports, source or
+chat. Existing owner board values remain authoritative; source synchronization
+cannot overwrite them. No branch protection or paid feature is enabled, and
+application repository visibility remains private.</p>
 <hr />
-<p>Maintained source: <a href="https://github.com/Jdiller-86/CTR-2-WUP/blob/1b14ea67cba652930ae1e49d60c2157321a82977/docs/github-development.md">docs/github-development.md</a> · <code>1b14ea67cba6</code>.
+<p>Maintained source: <a href="https://github.com/Jdiller-86/CTR-2-WUP/blob/bf17d411bf1811b21dc9ea917f53f93087509913/docs/github-development.md">docs/github-development.md</a> · <code>bf17d411bf18</code>.
 GitHub source and issue links may require repository access.</p>
 
 
