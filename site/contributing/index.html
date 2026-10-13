@@ -247,7 +247,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../docs/" class="md-tabs__link">
+        <a href="../docs/repository-guide/" class="md-tabs__link">
           
   
   
@@ -313,7 +313,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../docs/github-project-overview/" class="md-tabs__link">
+        <a href="../docs/development-tracking/" class="md-tabs__link">
           
   
   
@@ -433,6 +433,8 @@
     
       
         
+      
+        
           
         
       
@@ -501,6 +503,34 @@
 
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../docs/repository-guide/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Repository tour
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
             
               
             
@@ -1638,6 +1668,8 @@
       
         
       
+        
+      
     
     
     
@@ -1682,6 +1714,34 @@
 
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../docs/development-tracking/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Development tracking
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
             
               
                 
@@ -2552,13 +2612,18 @@ commercial execution pipeline and GUI are still being implemented. Read
 reproduction with original data. For a feature, describe the resulting behavior,
 its milestone and acceptance evidence. The issue forms also accept Wii U test
 results, including missing reports, failed storage checks and hangs.</p>
+<p>Use <a href="../docs/development-tracking/">development tracking</a> for native milestone →
+task → scoped feature → PR relationships. Assign the repository milestone and
+Project membership, give the feature a native parent, and record its PR in
+<code>docs/features.json</code>. Broad unfinished tasks remain open when a feature merges.</p>
 <p>Do not upload ROMs, key databases, personal keys, extracted game assets, saves,
 translated commercial code, game packages or credentials. Keep them under
 ignored <code>private/</code> directories locally. Original diagnostic TXT files are useful
 after reviewing them for private paths or data. Use <a href="../security/">SECURITY.md</a>
 for vulnerability reports instead of a normal issue.</p>
 <h2 id="build-and-check">Build and check<a class="headerlink" href="#build-and-check" title="Permanent link">&para;</a></h2>
-<p>Use Python 3.12+, Make and a C compiler. Install the verified Wii U SDK with the
+<p>Use Python 3.12+, Make and a C compiler. Host checks do not need the Wii U SDK;
+start with <code>make help</code> and <code>make check</code>. Install the verified Wii U SDK with the
 repository script; the first installation requires Docker. Optional encrypted
 input/packaging tests use the <code>cryptography</code> dependency. The target SDK uses
 devkitPro's devkitPPC, WUT and Wii U tools; the host compiler runs desktop tests.</p>
@@ -2604,14 +2669,18 @@ Use the pull request template. Update affected status, architecture, compatibili
 and build documentation when behavior or evidence changes; do not claim console
 execution from compilation. Record evidence in versioned reports where the
 existing workflow calls for them.</p>
+<p>Develop on a separate topic branch and push a draft PR early. Link its scoped
+feature using <code>Closes #...</code>, then keep the PR and issue visible in the same
+milestone and Project. Merge only after required checks pass. Delete and verify
+the completed remote and local topic branches after every merge.</p>
 <p>New fixtures must be original and reproducible from source. Guest memory is
 little-endian even on big-endian PowerPC; avoid native guest-word loads and keep
 unsupported states explicit. Review licenses and notices before adding a
 dependency or redistributing an executable. Generated builds belong under
 ignored <code>artifacts/</code>; inspect release contents for private data before publication.</p>
 <h2 id="agent-assisted-work">Agent-assisted work<a class="headerlink" href="#agent-assisted-work" title="Permanent link">&para;</a></h2>
-<p><a href="https://github.com/Jdiller-86/CTR-2-WUP/blob/a17aa4e6d8e6cdd63adf0d07192235a8c0ae33e8/.github/copilot-instructions.md">Repository Copilot instructions</a> and specialist
-profiles under <a href="https://github.com/Jdiller-86/CTR-2-WUP/tree/a17aa4e6d8e6cdd63adf0d07192235a8c0ae33e8/.github/agents">.github/agents</a> provide CPU/runtime, host-pipeline,
+<p><a href="https://github.com/Jdiller-86/CTR-2-WUP/blob/6dac794dd7728fb3dff3dfa29f012500a730948b/.github/copilot-instructions.md">Repository Copilot instructions</a> and specialist
+profiles under <a href="https://github.com/Jdiller-86/CTR-2-WUP/tree/6dac794dd7728fb3dff3dfa29f012500a730948b/.github/agents">.github/agents</a> provide CPU/runtime, host-pipeline,
 graphics and console-evidence context. Supported clients can select them when
 Copilot access is available. These files do not turn on paid services or autonomous
 jobs. Agent changes receive the same review and validation as any contribution;
@@ -2635,7 +2704,7 @@ email identifies commit authorship; it supplies no bot login, signature or acces
 Pushes, PR creation and merges still use the connected account. Existing history
 is preserved; GitHub decides how bot authors appear in contributor statistics.</p>
 <hr />
-<p>Maintained source: <a href="https://github.com/Jdiller-86/CTR-2-WUP/blob/a17aa4e6d8e6cdd63adf0d07192235a8c0ae33e8/CONTRIBUTING.md">CONTRIBUTING.md</a> · <code>a17aa4e6d8e6</code>.
+<p>Maintained source: <a href="https://github.com/Jdiller-86/CTR-2-WUP/blob/6dac794dd7728fb3dff3dfa29f012500a730948b/CONTRIBUTING.md">CONTRIBUTING.md</a> · <code>6dac794dd772</code>.
 GitHub source and issue links may require repository access.</p>
 
 
