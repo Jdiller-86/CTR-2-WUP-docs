@@ -2,8 +2,8 @@
   "schema_version": 1,
   "state": "available",
   "project_url": "https://github.com/users/Jdiller-86/projects/2",
-  "generated_at": "2026-10-13T15:09:22Z",
-  "last_success_at": "2026-10-13T15:09:22Z",
+  "generated_at": "2026-10-13T15:27:09Z",
+  "last_success_at": "2026-10-13T15:27:09Z",
   "stale_after_seconds": 7200,
   "full_gates": {
     "accepted": 0,
@@ -44,7 +44,7 @@
         "Other": 0
       },
       "waiting_resources": {
-        "Console testing": 4,
+        "Console testing": 5,
         "Owned game input": 0,
         "Windows testing": 0,
         "Other resource": 0
