@@ -2,7 +2,7 @@
   "schema_version": 1,
   "ok": true,
   "version": "0.23.0",
-  "source_commit": "5365aece43ea3897919e4f931010d8c984d5f2ad",
+  "source_commit": "068149c223d48e42c44f907845086b1f64b1fa4a",
   "public_repository": "Jdiller-86/CTR-2-WUP-docs",
   "public_site_url": "https://jdiller-86.github.io/CTR-2-WUP-docs/",
   "standalone_html": "CTR2WUP-Documentation-0.23.0.html",
