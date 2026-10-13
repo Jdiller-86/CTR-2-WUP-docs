@@ -1884,6 +1884,17 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#executable-intake-follow-up" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Executable intake follow-up
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#v0230-increment" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -2615,6 +2626,17 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#executable-intake-follow-up" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Executable intake follow-up
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#v0230-increment" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -2747,8 +2769,9 @@ Guest Draws 0.23.0, have reviewed scoped passes and user-confirmed silence and
 normal exit. The draw trace reaches the rendered second presentation at 57.33
 seconds; aggregate diagnostic timing is not game performance. Its visual prompt
 accepted an answer before that scene, so accurate presentation gating and phase
-profiling are the next follow-up. The newly supplied CCI exceeds the transfer
-limit; <a href="../docs/cia-intake/">small private intake</a> is still needed. All full
+profiling are the next follow-up. The full CCI exceeds the transfer
+limit, but the <a href="../docs/cia-intake/">small private intake</a> now verifies the USA
+Mario executable and exact revision identity. RomFS/CRO assets remain unavailable. All full
 milestones remain open. <a href="../docs/console-evidence/">Evidence review</a>.</p>
 <p>Updated <strong>October 13, 2026 (America/New_York)</strong> · <strong>v0.23.0</strong>.
 The target remains an UWUVCI-style Windows GUI: select an owned 3DS game, configure
@@ -2772,7 +2795,7 @@ is enabled. Current binaries are original homebrew diagnostics.</p>
 <tr>
 <td>Input/preparation</td>
 <td>Bounded CIA/NCSD/NCCH inspection, optional local key/seed imports/decryption, canonical full RomFS IVFC/metadata verification and private asset blobs</td>
-<td>Actual user exports/Mario assets, broader forms and Windows acceptance</td>
+<td>RomFS/CRO inventory for the verified USA Mario executable, broader forms and Windows acceptance</td>
 </tr>
 <tr>
 <td>CPU/runtime</td>
@@ -2796,6 +2819,14 @@ is enabled. Current binaries are original homebrew diagnostics.</p>
 </tr>
 </tbody>
 </table>
+<h2 id="executable-intake-follow-up">Executable intake follow-up<a class="headerlink" href="#executable-intake-follow-up" title="Permanent link">&para;</a></h2>
+<p>The derived USA Mario NCCH passes independent hashes, decompression and revision
+checks; pinned static analysis succeeds. Exact hashes and commercial bytes stay
+private. Its declared service list includes DSP and module loading, but runtime
+use and full asset/module inventory remain unverified. The inspector now accepts
+strict decrypted v0 CFA data partitions with original negative/compatibility
+coverage, without accepting prototype or v0 executable layouts. See
+<a href="../docs/first-title/">first-title findings</a>. No commercial profile is enabled.</p>
 <h2 id="v0230-increment">v0.23.0 increment<a class="headerlink" href="#v0230-increment" title="Permanent link">&para;</a></h2>
 <p>An original compiled ARM/libctru program now submits two standard GSP PICA
 command lists, retains shader/state across them, draws to owned tiled targets,
@@ -2806,7 +2837,7 @@ and <strong>97,200 covered fragments</strong>. Independent displayed-image check
 <p>Guest physical ownership, permission splits, resource/command/relay aliases,
 retained uploads, late failure and queue completion have <strong>83,108 assertions</strong>.
 The raw VFP push/pop guard now preserves exact bits under CRT FPSCR controls;
-unsupported arithmetic still fails. Required coverage is <strong>384 Python tests and
+unsupported arithmetic still fails. Required coverage is <strong>392 Python tests and
 22 normal/ASan/UBSan C suites</strong>; the report guide has 636 assertions. Native,
 Scene Check and compiled Guest Draws RPX/WUHB builds and exact reports are retained
 with source/SDK provenance; the October 13 physical follow-up is reviewed above.</p>
@@ -2999,29 +3030,23 @@ Future Codex commits use an opt-in attribution hook and verified public bot iden
 normal commits and existing history retain their authors. No repository visibility
 or paid entitlement was changed.</p>
 <h2 id="console-evidence-and-inputs-still-needed">Console evidence and inputs still needed<a class="headerlink" href="#console-evidence-and-inputs-still-needed" title="Permanent link">&para;</a></h2>
-<p>Five new result files establish original Save, embedded RomFS, SD-file assets
-and GX transfer/configuration checks. The additional Save 0.14.6 full trace
-confirms reload in its first guest session after closing and reopening the app.
-All new guides complete without failures/skips; guest fallback/fault are zero.
-The user confirms correct screens and normal Minus return, but reports Wii U
-launch music continuing throughout. Raw uploads remain private and older failures
-are retained separately in <a href="../docs/console-evidence/">the evidence review</a>.</p>
-<p>The tester reports latest U.S. firmware, Aroma and WUP Installer GX2; exact
-versions remain unknown. No console is attached.</p>
+<p>Reviewed original Save/reload, assets, GX, launch-audio and bounded draw results
+are retained in <a href="../docs/console-evidence/">the evidence review</a>. The user confirms
+pictures, silence and correct Minus return. Exact environment versions, full
+Home/APT/recovery/stability and original installed-WUP acceptance remain open.</p>
 <ul>
-<li><strong>Audio:</strong> run only <a href="../docs/launch-audio/">Audio Check and GX Transfers 0.20.0</a>
-  for launch silence, native tone and compiled stability/exit. No Save/RomFS or
-  long controls-guide repeat is required solely for this version.</li>
-<li><strong>Platform:</strong> exact versions, Home/APT routes, recovery and installed original
-  WUP evidence remain separate acceptance work.</li>
-<li><strong>Mario:</strong> supplied CIA exceeds the 32 MiB attachment limit; small intake has
-  encrypted content and no executable. Prepare locally or use an already decrypted
-  owned dump, then privately export the small executable intake. Keys remain local.
-  Actual revision/assets/required services and gameplay are unverified.</li>
-<li><strong>Windows/install:</strong> full native devkitPPC conversion, actual WUP
-  installation/Menu launch/audio/gameplay/save/reload and GUI acceptance remain
-  separate gates. CI tooling success does not close them.</li>
+<li><strong>Draw performance/evidence:</strong> investigate the 57.33-second rendered scene and
+  early visual-prompt confirmation. Add accurate gating, bounded guest progress
+  and phase measurements; the existing aggregate host timing is not game speed.</li>
+<li><strong>Mario:</strong> the uploaded derived USA executable/revision and private static
+  analysis are verified. The full CCI remains too large to transfer; RomFS/CRO
+  inventory, original full-container provenance and observed runtime requirements
+  remain unavailable. Exact hashes and commercial bytes stay private.</li>
+<li><strong>Windows/install:</strong> complete conversion, actual WUP installation/Menu launch,
+  gameplay/audio/save/reload and the planned GUI remain separate gates.</li>
 </ul>
+<p>No repeat of the completed audio/Save/RomFS routes is requested solely for an
+evidence/version refresh. New builds need their own focused regression results.</p>
 <h2 id="continuing-work">Continuing work<a class="headerlink" href="#continuing-work" title="Permanent link">&para;</a></h2>
 <p>Implement the PICA/GX2 features, services, modules/audio and retail saves exercised
 by original reference scenes and the selected title. Measure real Wii U costs
@@ -3034,7 +3059,7 @@ in <a href="../docs/development-history/">development history</a>. The verified 
 uses the existing checkout, SDK and <code>/workspace/ctr2wup-tools/environment/activate.sh</code>;
 no real keys, private console files or commercial data enter published artifacts.</p>
 <hr />
-<p>Maintained source: <a href="https://github.com/Jdiller-86/CTR-2-WUP/blob/0b5e01cd0abcb9fe2db1c00408b6f6584151cabb/STATUS.md">STATUS.md</a> · <code>0b5e01cd0abc</code>.
+<p>Maintained source: <a href="https://github.com/Jdiller-86/CTR-2-WUP/blob/e1a517df370edc29a56dced3a417942013134c37/STATUS.md">STATUS.md</a> · <code>e1a517df370e</code>.
 GitHub source and issue links may require repository access.</p>
 
 
