@@ -1250,6 +1250,8 @@
       
         
       
+        
+      
     
     
     
@@ -1702,6 +1704,34 @@
     
   
     First software scenes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="docs/guest-pica-draws/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Compiled guest PICA draws
   
 
     
@@ -2622,8 +2652,9 @@ for the supported subsets and current limits.</p>
 <li>Original compiled homebrew with two-screen framebuffer output, input,
   SD save/reload and read-only assets, including reviewed Wii U test results.</li>
 <li>Texture decoding, GX memory/display transfers, PICA configuration and first
-  original <a href="docs/software-scenes/">software triangle scenes</a>. General guest
-  PICA rendering, GPU shader translation and 3DS guest audio remain unfinished.</li>
+  original <a href="docs/software-scenes/">software triangle scenes</a>, now driven by a
+  <a href="docs/guest-pica-draws/">compiled guest through standard GSP</a>. Broader PICA
+  state, GPU shader translation and 3DS guest audio remain unfinished.</li>
 <li>Reproducible RPX/WUHB diagnostics and original packaging fixtures. Actual
   WUP installation and full Windows conversion still require acceptance.</li>
 </ul>
@@ -2644,15 +2675,16 @@ and check its <code>SHA256SUMS.txt</code>. For Wii U diagnostics, copy the kit's
 contents to your SD root and launch the WUHB in Aroma. Follow its prompts;
 plain-text results are saved to <code>sd:/ctr2wup/</code>. Original diagnostics need no ROM
 or key. See <a href="docs/getting-started/">getting started</a> and <a href="docs/console-testing/">console testing</a>.</p>
-<p>For development, use Python 3.12+, Make and a C compiler. The first SDK setup
+<p>For development, use Python 3.12+, GNU Make 4.0+ and a C compiler. Host checks run without the SDK. Its first setup
 also requires Docker. From the repository root:</p>
 <div class="language-sh highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>python3<span class="w"> </span>-m<span class="w"> </span>venv<span class="w"> </span>.venv
 <a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>.<span class="w"> </span>.venv/bin/activate
 <a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>python3<span class="w"> </span>-m<span class="w"> </span>pip<span class="w"> </span>install<span class="w"> </span>-e<span class="w"> </span><span class="s1">'.[packaging,decryption]'</span>
-<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>bash<span class="w"> </span>tools/install-wiiu-sdk.sh
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>make<span class="w"> </span><span class="nb">help</span>
 <a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>python3<span class="w"> </span>-m<span class="w"> </span>host<span class="w"> </span>doctor
 <a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>make<span class="w"> </span>check
-<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>python3<span class="w"> </span>-m<span class="w"> </span>host<span class="w"> </span>build<span class="w"> </span>--target<span class="w"> </span>prototype<span class="w"> </span>--output<span class="w"> </span><span class="s2">"artifacts/my-diagnostic"</span>
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>bash<span class="w"> </span>tools/install-wiiu-sdk.sh
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>python3<span class="w"> </span>-m<span class="w"> </span>host<span class="w"> </span>build<span class="w"> </span>--target<span class="w"> </span>prototype<span class="w"> </span>--output<span class="w"> </span><span class="s2">"artifacts/my-diagnostic"</span>
 </code></pre></div>
 <p>This builds an original RPX/WUHB diagnostic. <a href="docs/#build-and-development">Build instructions</a>,
 <a href="docs/build-windows/">Windows notes</a> and <a href="docs/compiled-homebrew/">compiled homebrew</a>
@@ -2672,7 +2704,7 @@ Builds use <a href="https://devkitpro.org">devkitPro</a>, <a href="https://githu
 and <a href="https://github.com/devkitPro/libctru">libctru</a>. The planned injector workflow
 is inspired by <a href="https://github.com/stuff-by-3-random-dudes/UWUVCI-AIO-WPF">UWUVCI AIO</a>.</p>
 <hr />
-<p>Maintained source: <a href="https://github.com/Jdiller-86/CTR-2-WUP/blob/07e86d1b3128ff9690ee438e26dc4c14fd38a15b/README.md">README.md</a> · <code>07e86d1b3128</code>.
+<p>Maintained source: <a href="https://github.com/Jdiller-86/CTR-2-WUP/blob/5365aece43ea3897919e4f931010d8c984d5f2ad/README.md">README.md</a> · <code>5365aece43ea</code>.
 GitHub source and issue links may require repository access.</p>
 
 

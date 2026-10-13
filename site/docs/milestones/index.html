@@ -1847,6 +1847,8 @@
       
         
       
+        
+      
     
     
     
@@ -2299,6 +2301,34 @@
     
   
     First software scenes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../guest-pica-draws/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Compiled guest PICA draws
   
 
     
@@ -3782,13 +3812,13 @@
 
 
 <h1 id="milestones-and-remaining-work">Milestones and remaining work<a class="headerlink" href="#milestones-and-remaining-work" title="Permanent link">&para;</a></h1>
-<p>Updated <strong>October 13, 2026</strong> for <strong>v0.22.0</strong>. The product is an UWUVCI-style
+<p>Updated <strong>October 13, 2026</strong> for <strong>v0.23.0</strong>. The product is an UWUVCI-style
 Windows GUI: <strong>Select owned 3DS ROM → configure title/artwork → Inject →
 install its WUP → play from the Wii U Menu</strong>. The CLI is the shared engine.
 Super Mario 3D Land is the first candidate; its exact revision remains unverified.</p>
 <p><strong>Approximately 20% implemented; 0/7 full milestones accepted.</strong> The estimate is
 a rough engineering judgment, not a percentage of issues, tests or commits. These
-<strong>35 remaining work items</strong> make the work actionable; creating or closing an issue
+<strong>35 gate work items</strong> make the work actionable; creating or closing an issue
 does not automatically accept a milestone or raise the completion estimate.</p>
 <p>The <a href="../project-brief/">project brief</a> defines requirements, the
 <a href="../development-plan/">product plan</a> defines execution order, and
@@ -3801,7 +3831,9 @@ item below is a separate implementation or evidence task feeding its milestone.
 status, blockers and reviewed full acceptance. <a href="../milestone-status.json">milestone-status.json</a>
 records versioned scope/evidence and initial seed values; it cannot overwrite
 existing Project values. The states below are a dated evidence snapshot. Manual
-issue notes and acceptance checkmarks remain reviewable.</p>
+issue notes and acceptance checkmarks remain reviewable. Native feature/PR links
+and the one-time empty/Todo status migration are documented in
+<a href="../development-tracking/">development tracking</a>; later owner edits remain authoritative.</p>
 <table>
 <thead>
 <tr>
@@ -4017,7 +4049,7 @@ so independent work can overlap without claiming downstream completion.</p>
 <p><strong>Entry:</strong> Original normal-CRT/devkitARM/libctru applications execute through the portable runtime on desktop. Their required guest memory, scheduler, service and display contracts are defined.</p>
 <p><strong>Deliverables:</strong> Stable compiled guest execution with checked kernel/IPC/lifecycle/display/input/filesystem contracts; focused module and guest-audio fixtures feed later selected-title integration.</p>
 <p><strong>Exit criteria:</strong> A real compiled guest executes on Wii U, updates both screens, responds to required GamePad input/touch and exits or completes a documented stability session. Exercised save/assets behavior is verified. This fixture gate does not require claiming all retail services or PICA draw support.</p>
-<p><strong>Verified desktop/earlier evidence:</strong> Eight original compiled applications cover boot, threads, input, graphics, interactive execution, save/reload, RomFS and GX transfers. Desktop/sanitizer and selected emulated PowerPC checks support exact pixels/state/files. Current physical Save/results/assets/GX checks remain pending; a native tone does not establish guest DSP/audio.</p>
+<p><strong>Verified desktop/earlier evidence:</strong> Nine original compiled applications cover boot, threads, input, graphics, interactive execution, save/reload, RomFS, GX transfers and bounded PICA draws. Desktop/sanitizer and selected emulated PowerPC checks support exact pixels/state/files. Reviewed physical Save/results/assets/GX evidence is retained; current compiled draw and launch-audio retests remain pending; a native tone does not establish guest DSP/audio.</p>
 <p><strong>Still needs external evidence/input:</strong> Original guest modules, audio probes and shared service work can proceed independently. Hardware validates display/input/audio/lifecycle/assets; observed retail service/module/save requirements need M5 intake.</p>
 <p>References: <a href="../compiled-homebrew/">Compiled applications</a> · <a href="../shared-services/">Services</a> · <a href="../filesystem/">Filesystem</a> · <a href="../romfs-assets/">RomFS assets</a>.</p>
 <h3 id="actionable-work-items_2">Actionable work items<a class="headerlink" href="#actionable-work-items_2" title="Permanent link">&para;</a></h3>
@@ -4083,10 +4115,11 @@ so independent work can overlap without claiming downstream completion.</p>
 <h3 id="actionable-work-items_3">Actionable work items<a class="headerlink" href="#actionable-work-items_3" title="Permanent link">&para;</a></h3>
 <p><a id="m4-pica-commands"></a></p>
 <h4 id="m4-pica-commands-decode-pica-state-and-submit-bounded-draw-commands">m4-pica-commands: Decode PICA state and submit bounded draw commands<a class="headerlink" href="#m4-pica-commands-decode-pica-state-and-submit-bounded-draw-commands" title="Permanent link">&para;</a></h4>
-<p>The standard guest path handles finalized viewport/scissor configuration. A separate owned-resource scene boundary now validates loader/index/fixed/shader state and produces original software triangles; guest draw integration and broader pipeline state remain open.</p>
+<p>The standard guest path handles configuration and bounded owned-resource draws through canonical tiled targets, retained shader/state and transactional completion. An original compiled guest verifies exact software scenes; broader pipeline state and native GPU translation remain open.</p>
 <p>State: <strong>In progress</strong> · Needs: none for original-fixture development.</p>
 <p>Depends on: none.</p>
 <p>Verified foundation: <a href="../pica-commands/">PICA command contract</a>, 353 original builder/reference cases, transactional native state and the compiled standard command-queue fixture. No draws or full task acceptance are claimed.</p>
+<p>v0.23.0 connects <a href="../guest-pica-draws/">compiled guest draws</a> to the standard GSP queue with owned resources, exact target/display checks and preserved failure state. Physical results remain deferred.</p>
 <p>v0.22.0 adds <a href="../software-scenes/">owned software scenes</a> with complete-list
 state/pixel rollback, explicit resource binding and independent exact pixels.
 These execute draws in the experimental boundary; the guest queue remains
@@ -4344,7 +4377,7 @@ topic branches, reviewable PRs and passing CI remain the development convention.
 No paid subscription or administrative setting is assumed enabled. See
 <a href="../github-development/">GitHub development</a> for actual access limits.</p>
 <hr />
-<p>Maintained source: <a href="https://github.com/Jdiller-86/CTR-2-WUP/blob/07e86d1b3128ff9690ee438e26dc4c14fd38a15b/docs/milestones.md">docs/milestones.md</a> · <code>07e86d1b3128</code>.
+<p>Maintained source: <a href="https://github.com/Jdiller-86/CTR-2-WUP/blob/5365aece43ea3897919e4f931010d8c984d5f2ad/docs/milestones.md">docs/milestones.md</a> · <code>5365aece43ea</code>.
 GitHub source and issue links may require repository access.</p>
 
 

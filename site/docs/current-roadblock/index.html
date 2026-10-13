@@ -74,7 +74,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#remaining-acceptance-gates-0200" class="md-skip">
+        <a href="#remaining-acceptance-gates-0230" class="md-skip">
           Skip to content
         </a>
       
@@ -1241,6 +1241,8 @@
       
         
       
+        
+      
     
     
     
@@ -1693,6 +1695,34 @@
     
   
     First software scenes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../guest-pica-draws/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Compiled guest PICA draws
   
 
     
@@ -2569,7 +2599,7 @@
 
 
 
-<h1 id="remaining-acceptance-gates-0200">Remaining acceptance gates (0.20.0)<a class="headerlink" href="#remaining-acceptance-gates-0200" title="Permanent link">&para;</a></h1>
+<h1 id="remaining-acceptance-gates-0230">Remaining acceptance gates (0.23.0)<a class="headerlink" href="#remaining-acceptance-gates-0230" title="Permanent link">&para;</a></h1>
 <p>The product remains a Windows GUI that converts owned 3DS games into individual
 Wii U WUP titles. Current diagnostics do not provide commercial gameplay.
 Approximately 20% implementation and 0/7 accepted full gates remain the assessment.</p>
@@ -2577,9 +2607,13 @@ Approximately 20% implementation and 0/7 accepted full gates remain the assessme
 collection, embedded/SD assets and GX transfer/configuration; pictures and Minus
 return have user confirmation. <a href="../console-evidence/">Evidence</a> preserves older
 failures separately. No repeat Save/RomFS round is requested.</p>
+<p>Physical testing is deferred by the user. Independent renderer/runtime and host
+development continues; these entries identify acceptance evidence to collect
+when testing or private input becomes available. The compiled original guest
+<a href="../guest-pica-draws/">draw checkpoint</a> now works on host and cross-builds for Wii U.</p>
 <p>Current external requirements:</p>
 <ol>
-<li><strong>Launch-audio regression:</strong> run only <a href="../launch-audio/">Audio Check and GX Transfers 0.20.0</a>.
+<li><strong>Launch-audio regression, when testing resumes:</strong> run the focused <a href="../launch-audio/">Audio Check and GX Transfers 0.20.0</a>.
    Return their new TXT results and a note on music/Minus return.</li>
 <li><strong>Platform acceptance:</strong> record exact firmware/Aroma/installer versions and
    complete native recovery/Home/APT and installed-original-WUP checks.</li>
@@ -2587,8 +2621,10 @@ failures separately. No repeat Save/RomFS round is requested.</p>
    <a href="../encrypted-input/">local decryption</a> or an already decrypted dump, then
    supply the <a href="../cia-intake/">small executable intake</a>. Actual assets and
    exercised CPU/services/PICA/audio requirements remain unknown. Keys stay local.</li>
-<li><strong>Renderer/runtime:</strong> implement actual PICA/GX2 draws, shaders, modules,
-   guest audio and retail save behavior, then measure physical scenes/gameplay.</li>
+<li><strong>Renderer/runtime:</strong> extend the bounded compiled guest software draw subset
+   with broader shaders/TEV/sampling, native GX2 translation, resource coherency,
+   modules, guest audio and retail saves. Collect the compiled draw guide and
+   measured physical scenes/gameplay when hardware testing resumes.</li>
 <li><strong>Conversion/GUI:</strong> prove the full native Windows conversion and WUP
    install/rebuild/save continuity, then complete the planned GUI acceptance.</li>
 </ol>
@@ -2668,7 +2704,7 @@ GitHub now has live milestone/issues tracking and reviewed CI/artifact/agent/doc
 setup. Projects and repository administration changes are blocked by the GitHub
 integration's permissions; the desired setup is recorded without claiming it live.</p>
 <hr />
-<p>Maintained source: <a href="https://github.com/Jdiller-86/CTR-2-WUP/blob/07e86d1b3128ff9690ee438e26dc4c14fd38a15b/docs/current-roadblock.md">docs/current-roadblock.md</a> · <code>07e86d1b3128</code>.
+<p>Maintained source: <a href="https://github.com/Jdiller-86/CTR-2-WUP/blob/5365aece43ea3897919e4f931010d8c984d5f2ad/docs/current-roadblock.md">docs/current-roadblock.md</a> · <code>5365aece43ea</code>.
 GitHub source and issue links may require repository access.</p>
 
 

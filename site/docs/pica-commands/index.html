@@ -74,7 +74,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#pica-command-front-end-0180" class="md-skip">
+        <a href="#pica-command-front-end" class="md-skip">
           Skip to content
         </a>
       
@@ -1141,6 +1141,8 @@
       
         
       
+        
+      
     
     
     
@@ -1687,6 +1689,34 @@
     
   
     First software scenes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../guest-pica-draws/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Compiled guest PICA draws
   
 
     
@@ -2557,11 +2587,14 @@
 
 
 
-<h1 id="pica-command-front-end-0180">PICA command front end (0.18.0)<a class="headerlink" href="#pica-command-front-end-0180" title="Permanent link">&para;</a></h1>
-<p>The native runtime can now process a small <strong>no-draw configuration</strong> command list
+<h1 id="pica-command-front-end">PICA command front end<a class="headerlink" href="#pica-command-front-end" title="Permanent link">&para;</a></h1>
+<p>The original v0.18 front end processes a small <strong>no-draw configuration</strong> command list
 through the standard GSP queue. It stores raw viewport/scissor register values,
 applies byte masks and recognizes the finalization emitted by libctru. This is a
 step toward M4. It produces no pixels, runs no shader and submits no GX2 draw.</p>
+<p>Version 0.23 also adapts <a href="../guest-pica-draws/">bounded compiled guest draws</a>
+through the standard queue. The configuration-only API below remains unchanged;
+the separate scene/guest adapter handles its explicitly defined shader/target subset.</p>
 <h2 id="wire-inspection">Wire inspection<a class="headerlink" href="#wire-inspection" title="Permanent link">&para;</a></h2>
 <p><code>renderer.pica.decode_commands</code> and <code>runtime/core/ctr_pica.c</code> inspect explicit
 little-endian bytes. A record contains its first parameter, header, extra
@@ -2685,7 +2718,7 @@ test; no completed long input guide must be repeated for this increment.</p>
 submission and reference scene/performance evidence remain open. Task
 <code>m4-pica-commands</code> is <strong>in progress</strong>, and M4 is not accepted.</p>
 <hr />
-<p>Maintained source: <a href="https://github.com/Jdiller-86/CTR-2-WUP/blob/07e86d1b3128ff9690ee438e26dc4c14fd38a15b/docs/pica-commands.md">docs/pica-commands.md</a> · <code>07e86d1b3128</code>.
+<p>Maintained source: <a href="https://github.com/Jdiller-86/CTR-2-WUP/blob/5365aece43ea3897919e4f931010d8c984d5f2ad/docs/pica-commands.md">docs/pica-commands.md</a> · <code>5365aece43ea</code>.
 GitHub source and issue links may require repository access.</p>
 
 

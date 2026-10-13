@@ -1141,6 +1141,8 @@
       
         
       
+        
+      
     
     
     
@@ -1654,6 +1656,34 @@
     
   
     First software scenes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../guest-pica-draws/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Compiled guest PICA draws
   
 
     
@@ -2598,7 +2628,9 @@ reads HID, writes RGB565 and displays through this interface in all Wii U builds
 see <code>gsp-display.md</code>. Version 0.11.0 adds one local GSP relay/shared framebuffer
 page, diagnostic VBlank and atomic queued presentation; see <code>gsp-queues.md</code>.
 The standard display guest uses this queue. Version 0.17 adds scoped synchronous
-GX commands; see <a href="../gx-transfers/">gx-transfers.md</a>. Guest PICA draw integration remains absent.
+GX commands; see <a href="../gx-transfers/">gx-transfers.md</a>. Version 0.23 connects bounded <a href="../guest-pica-draws/">compiled guest PICA draws</a>
+with owned physical resources, canonical tiled targets and atomic completion;
+software execution remains separate from native GPU shader translation.
 Its guest mode presents completed ARM-written raw framebuffers through the same
 GX2 copying path. It is separate from PICA/GSP emulation; see <code>guest-fixture.md</code>.
 Version 0.12 adds checked user-mode ARM/Thumb multiple-register/stack transfers
@@ -2713,7 +2745,7 @@ testing. Managed milestone issue sections derive from checked-in status data;
 PR/check/artifact/release records never automatically close hardware acceptance.
 Repository instructions and agent profiles preserve the same boundaries.</p>
 <hr />
-<p>Maintained source: <a href="https://github.com/Jdiller-86/CTR-2-WUP/blob/07e86d1b3128ff9690ee438e26dc4c14fd38a15b/docs/architecture.md">docs/architecture.md</a> · <code>07e86d1b3128</code>.
+<p>Maintained source: <a href="https://github.com/Jdiller-86/CTR-2-WUP/blob/5365aece43ea3897919e4f931010d8c984d5f2ad/docs/architecture.md">docs/architecture.md</a> · <code>5365aece43ea</code>.
 GitHub source and issue links may require repository access.</p>
 
 

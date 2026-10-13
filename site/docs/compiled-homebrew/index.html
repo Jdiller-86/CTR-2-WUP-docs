@@ -1154,6 +1154,8 @@
       
         
       
+        
+      
     
     
     
@@ -1606,6 +1608,34 @@
     
   
     First software scenes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../guest-pica-draws/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Compiled guest PICA draws
   
 
     
@@ -2479,8 +2509,13 @@ are checked before copying them to the requested location. A future native Windo
   and cache commands with checked pixels, padding and event waits; see
   <a href="../gx-transfers/">GX transfers</a>.</p>
 </li>
+<li>
+<p><code>draw</code>: standard GX/PICA lists, owned tiled targets, retained shader/state,
+  exact target/transfer/display assertions and own PASS/exit. See
+  <a href="../guest-pica-draws/">compiled guest draws</a> for the bounded fragment contract.</p>
+</li>
 </ul>
-<p>The default validator now runs all <strong>eight</strong> applications. The current console
+<p>The default validator now runs all <strong>nine</strong> applications. The current console
 kit includes Native, interactive, guarded interactive, Save and RomFS variants.
 The RomFS guest also passes under ASan/UBSan and emulated big-endian PPC Linux;
 this does not establish physical Wii U execution.</p>
@@ -2497,9 +2532,10 @@ run successfully. The boot checks its active state and <code>aptMainLoop</code>.
 startup lookup failures are APT:S, APT:A and optional ptm:sysm. Privileged/system
 services and general applets are not supplied. See <code>filesystem.md</code> for exact
 state, ownership, persistence and limits. No NCCH/IVFC authentication or retail save integration, DSP/audio, CRO,
-PICA commands, GPU physical addresses or commercial compatibility is claimed.
-Native diagnostic tone remains platform audio; v0.14.5 interactive/guarded completion is user-reported. New independent result
-files, save updates, RomFS and native Windows acceptance remain pending. Do not enable a commercial profile from these homebrew passes.</p>
+general PICA commands/physical mappings or commercial compatibility is claimed;
+the bounded GX/draw profiles are documented separately.
+Native diagnostic tone remains platform audio; v0.14.5 interactive/guarded completion is user-reported. Reviewed named results, fresh-launch saves and RomFS evidence are retained;
+new draw/launch-audio physical results and full Windows conversion remain pending. Do not enable a commercial profile from these homebrew passes.</p>
 <p>The original source is under <code>tests/homebrew</code>. Optional locally generated guest
 images link external libctru/newlib/compiler support. The library's full license
 is preserved at <code>licenses/libctru.txt</code>; retain this and the existing runtime
@@ -2508,7 +2544,7 @@ CRT's corresponding unmodified assembly/linker/spec sources, full license and
 section/relocation audit are supplied under <code>licenses/devkitarm-crtls/</code>. No ROM, game assets,
 keys, certificates or proprietary SDK is part of this workflow.</p>
 <hr />
-<p>Maintained source: <a href="https://github.com/Jdiller-86/CTR-2-WUP/blob/07e86d1b3128ff9690ee438e26dc4c14fd38a15b/docs/compiled-homebrew.md">docs/compiled-homebrew.md</a> · <code>07e86d1b3128</code>.
+<p>Maintained source: <a href="https://github.com/Jdiller-86/CTR-2-WUP/blob/5365aece43ea3897919e4f931010d8c984d5f2ad/docs/compiled-homebrew.md">docs/compiled-homebrew.md</a> · <code>5365aece43ea</code>.
 GitHub source and issue links may require repository access.</p>
 
 

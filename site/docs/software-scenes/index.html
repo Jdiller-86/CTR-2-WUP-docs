@@ -16,7 +16,7 @@
         <link rel="prev" href="../vertex-attributes/">
       
       
-        <link rel="next" href="../filesystem/">
+        <link rel="next" href="../guest-pica-draws/">
       
       
         
@@ -1141,6 +1141,8 @@
       
         
       
+        
+      
     
     
     
@@ -1684,6 +1686,34 @@
   
 </nav>
       
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../guest-pica-draws/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Compiled guest PICA draws
+  
+
+    
+  </span>
+  
+  
+
+      </a>
     </li>
   
 
@@ -2541,6 +2571,8 @@ loader, index, shader and raster path. Two indexed triangles form a square,
 red at lower left and green at upper right. Both unsigned byte and unsigned
 short index formats produce identical pixels. This is a software correctness
 checkpoint for M4; full renderer acceptance remains open.</p>
+<p>Version 0.23 connects this owned renderer to <a href="../guest-pica-draws/">standard compiled guest draws</a>.
+The focused native check below remains a separate original diagnostic.</p>
 <h2 id="focused-wii-u-check">Focused Wii U check<a class="headerlink" href="#focused-wii-u-check" title="Permanent link">&para;</a></h2>
 <p>Build with <code>python -m host build --target scene-check --output artifacts/my-scene-check</code>.
 The matching CI run also supplies <code>wiiu-scene-check-&lt;source commit&gt;</code>, containing
@@ -2595,7 +2627,7 @@ arithmetic or rounding approximation. MOV captures source lanes before writing
 in-place swizzles and rejects undefined lanes or missing code/END.</p>
 <p>The native Scene Check runs this CPU path, flips its owned image rows for display,
 then uses the established GX2 surface-copy presentation. It does not submit a
-PICA shader as a Latte shader. The standard guest GSP queue continues to use the
+PICA shader as a Latte shader. The v0.22 standard guest GSP queue continues to use the
 separate configuration-only PICA executor and rejects draws.</p>
 <h2 id="evidence-and-reference-limits">Evidence and reference limits<a class="headerlink" href="#evidence-and-reference-limits" title="Permanent link">&para;</a></h2>
 <p>Run <code>make check</code>, <code>make prototype</code>, then:</p>
@@ -2629,7 +2661,7 @@ independent hardware/reference raster observations, broader shader/fragment
 behavior, guest resource integration and a license-cleared GX2 shader route with
 measured costs. No commercial compatibility or full milestone PASS is implied.</p>
 <hr />
-<p>Maintained source: <a href="https://github.com/Jdiller-86/CTR-2-WUP/blob/07e86d1b3128ff9690ee438e26dc4c14fd38a15b/docs/software-scenes.md">docs/software-scenes.md</a> · <code>07e86d1b3128</code>.
+<p>Maintained source: <a href="https://github.com/Jdiller-86/CTR-2-WUP/blob/5365aece43ea3897919e4f931010d8c984d5f2ad/docs/software-scenes.md">docs/software-scenes.md</a> · <code>5365aece43ea</code>.
 GitHub source and issue links may require repository access.</p>
 
 

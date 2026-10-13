@@ -1139,6 +1139,8 @@
       
         
       
+        
+      
     
     
     
@@ -1611,6 +1613,34 @@
   
   
     <li class="md-nav__item">
+      <a href="../docs/guest-pica-draws/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Compiled guest PICA draws
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../docs/filesystem/" class="md-nav__link">
         
   
@@ -1854,10 +1884,21 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#v0220-increment" class="md-nav__link">
+  <a href="#v0230-increment" class="md-nav__link">
     <span class="md-ellipsis">
       
-        v0.22.0 increment
+        v0.23.0 increment
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#v0220-increment-historical" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        v0.22.0 increment (historical)
       
     </span>
   </a>
@@ -2574,10 +2615,21 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#v0220-increment" class="md-nav__link">
+  <a href="#v0230-increment" class="md-nav__link">
     <span class="md-ellipsis">
       
-        v0.22.0 increment
+        v0.23.0 increment
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#v0220-increment-historical" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        v0.22.0 increment (historical)
       
     </span>
   </a>
@@ -2690,7 +2742,7 @@
 
 
 <h1 id="ctr2wup-status">CTR2WUP status<a class="headerlink" href="#ctr2wup-status" title="Permanent link">&para;</a></h1>
-<p>Updated <strong>October 13, 2026 (America/New_York)</strong> · <strong>v0.22.0</strong>.
+<p>Updated <strong>October 13, 2026 (America/New_York)</strong> · <strong>v0.23.0</strong>.
 The target remains an UWUVCI-style Windows GUI: select an owned 3DS game, configure
 title/artwork, click Inject, install its individual WUP and play from Wii U Menu.
 <a href="../docs/project-brief/">Requirements</a>, <a href="../docs/development-plan/">product plan</a>,
@@ -2721,13 +2773,13 @@ is enabled. Current binaries are original homebrew diagnostics.</p>
 </tr>
 <tr>
 <td>Homebrew</td>
-<td>Eight normal-CRT/libctru applications: boot, threads, graphics, input, interactive, filesystem, RomFS and GX transfer</td>
+<td>Nine normal-CRT/libctru applications: boot, threads, graphics, input, interactive, filesystem, RomFS, GX transfer and PICA draws</td>
 <td>Launch-audio regression, broader services and game integration</td>
 </tr>
 <tr>
 <td>Graphics</td>
-<td>Direct/shared framebuffer presentation, five display formats, 14 base textures, scoped GX transfers and first original PICA-format loader/MOV-shader/software triangle scenes</td>
-<td>Guest draw/resource integration, broader shaders/TEV/sampling, GPU resources/coherency and measured console performance</td>
+<td>Direct/shared framebuffer presentation, five display formats, 14 base textures, scoped GX transfers and compiled original guest PICA/MOV/software draws</td>
+<td>broader shaders/TEV/sampling, GPU resources/coherency and measured console performance</td>
 </tr>
 <tr>
 <td>Packaging/GUI</td>
@@ -2736,7 +2788,32 @@ is enabled. Current binaries are original homebrew diagnostics.</p>
 </tr>
 </tbody>
 </table>
-<h2 id="v0220-increment">v0.22.0 increment<a class="headerlink" href="#v0220-increment" title="Permanent link">&para;</a></h2>
+<h2 id="v0230-increment">v0.23.0 increment<a class="headerlink" href="#v0230-increment" title="Permanent link">&para;</a></h2>
+<p>An original compiled ARM/libctru program now submits two standard GSP PICA
+command lists, retains shader/state across them, draws to owned tiled targets,
+checks the pixels, transfers both framebuffers and exits with its own PASS.
+The route executes <strong>17,420,794 ARM instructions</strong>, zero fallback, four triangles
+and <strong>97,200 covered fragments</strong>. Independent displayed-image checks cover all
+172,800 top/bottom pixels. See <a href="../docs/guest-pica-draws/">the guest draw contract</a>.</p>
+<p>Guest physical ownership, permission splits, resource/command/relay aliases,
+retained uploads, late failure and queue completion have <strong>83,108 assertions</strong>.
+The raw VFP push/pop guard now preserves exact bits under CRT FPSCR controls;
+unsupported arithmetic still fails. Required coverage is <strong>380 Python tests and
+22 normal/ASan/UBSan C suites</strong>; the report guide has 636 assertions. Native,
+Scene Check and compiled Guest Draws RPX/WUHB builds and exact reports are retained
+with source/SDK provenance; physical rendering evidence is deferred.</p>
+<p>Development is visible in PR #57 (guest draws) and merged PR #58 (tracking).
+Scoped feature issues connect native parents, milestones, Project items and PRs;
+35 established gate tasks retain their acceptance boundaries. AGENTS.md, the
+repository tour, shared runtime manifest and current product plan now provide a
+clear route for incoming contributors. The Actions credential remains in Actions.
+Completed remote/local branches are removed after merge.</p>
+<p>CPU software rendering supports the documented canonical target/fragment and
+MOV shader subset. Arithmetic shaders, sampling/general TEV, depth/blend/stencil,
+clipping and native GPU translation remain open. The Audio Check/GX Transfers
+<strong>0.20.0</strong> launch-music regression, commercial profile and all full gates remain
+pending. Host passes and cross-builds do not establish physical acceptance.</p>
+<h2 id="v0220-increment-historical">v0.22.0 increment (historical)<a class="headerlink" href="#v0220-increment-historical" title="Permanent link">&para;</a></h2>
 <p>The first original scenes now execute PICA-format loader/index state, fixed
 attributes, packed/float32 uniforms and actual MOV/NOP/END shader instructions
 through a checked software triangle renderer. Byte and short index formats
@@ -2947,7 +3024,7 @@ in <a href="../docs/development-history/">development history</a>. The verified 
 uses the existing checkout, SDK and <code>/workspace/ctr2wup-tools/environment/activate.sh</code>;
 no real keys, private console files or commercial data enter published artifacts.</p>
 <hr />
-<p>Maintained source: <a href="https://github.com/Jdiller-86/CTR-2-WUP/blob/07e86d1b3128ff9690ee438e26dc4c14fd38a15b/STATUS.md">STATUS.md</a> · <code>07e86d1b3128</code>.
+<p>Maintained source: <a href="https://github.com/Jdiller-86/CTR-2-WUP/blob/5365aece43ea3897919e4f931010d8c984d5f2ad/STATUS.md">STATUS.md</a> · <code>5365aece43ea</code>.
 GitHub source and issue links may require repository access.</p>
 
 

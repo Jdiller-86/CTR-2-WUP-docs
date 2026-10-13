@@ -1141,6 +1141,8 @@
       
         
       
+        
+      
     
     
     
@@ -1366,6 +1368,17 @@
     <span class="md-ellipsis">
       
         Verified evidence
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#raw-vfp-memory-under-crt-controls" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Raw VFP memory under CRT controls
       
     </span>
   </a>
@@ -1676,6 +1689,34 @@
     
   
     First software scenes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../guest-pica-draws/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Compiled guest PICA draws
   
 
     
@@ -2518,6 +2559,17 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#raw-vfp-memory-under-crt-controls" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Raw VFP memory under CRT controls
+      
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -2675,8 +2727,15 @@ six empty/unpredictable Thumb forms, including ones the emitter erases.
 <code>--multiple-api</code> adds the stack/transfer API suite (24 compiler/target checks
 total). An ARM LDM abort restores an early-emitter writeback; prior successful
 loads remain visible. See <code>cpu-stack.md</code> for constraints and independent evidence.</p>
+<h2 id="raw-vfp-memory-under-crt-controls">Raw VFP memory under CRT controls<a class="headerlink" href="#raw-vfp-memory-under-crt-controls" title="Permanent link">&para;</a></h2>
+<p>Version 0.23 keeps VPUSH/VPOP and the exercised VLDM/VSTM forms as raw bit
+transport under the CRT FPSCR flush/default-NaN controls. Register ranges and
+word counts are checked before effects; NaN/denormal payload bits and FPSCR are
+preserved. Unsupported arithmetic modes still reject before execution. This
+scoped fix enables the original compiled draw program without claiming general
+VFP control-mode support. The progress suite retains its separate dispatch checks.</p>
 <hr />
-<p>Maintained source: <a href="https://github.com/Jdiller-86/CTR-2-WUP/blob/07e86d1b3128ff9690ee438e26dc4c14fd38a15b/docs/upstream-integration.md">docs/upstream-integration.md</a> · <code>07e86d1b3128</code>.
+<p>Maintained source: <a href="https://github.com/Jdiller-86/CTR-2-WUP/blob/5365aece43ea3897919e4f931010d8c984d5f2ad/docs/upstream-integration.md">docs/upstream-integration.md</a> · <code>5365aece43ea</code>.
 GitHub source and issue links may require repository access.</p>
 
 
