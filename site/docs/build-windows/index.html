@@ -2524,6 +2524,9 @@ launcher. Install the declared crypto extras before exercising encrypted inputs:
 </code></pre></div>
 <p>Run Make commands in UCRT64 with native GCC available. <code>make check-c-portable</code>
 runs normal C suites; Linux ASan/UBSan results are separate evidence.
+The vertex suite includes every unsigned 8-bit/16-bit index value and original
+multi-stream/interleaved gathers; it uses portable byte loads rather than native
+unaligned index casts. These checks do not prove Wii U rendering or conversion.
 Generated fixtures are original and require no ROM, console key or commercial
 asset. See <a href="../encrypted-input/">encrypted inputs</a> for private local key handling.</p>
 <p>The Python wheel contains the CLI, translator and preparation modules. It does
@@ -2556,7 +2559,7 @@ Original synthetic packing checks and development SDK probes do not close these
 gates. Follow <a href="../milestones/">milestones</a> and <a href="../github-development/">GitHub development</a>
 for the current record.</p>
 <hr />
-<p>Maintained source: <a href="https://github.com/Jdiller-86/CTR-2-WUP/blob/3aa02d71f9774989dfe9f9d0c7bdb3d7b4126596/docs/build-windows.md">docs/build-windows.md</a> · <code>3aa02d71f977</code>.
+<p>Maintained source: <a href="https://github.com/Jdiller-86/CTR-2-WUP/blob/192eab3078a4ebb67a487ad0178220e517b34d52/docs/build-windows.md">docs/build-windows.md</a> · <code>192eab3078a4</code>.
 GitHub source and issue links may require repository access.</p>
 
 

@@ -2412,6 +2412,13 @@ inspection, build reports, and package inspection are separate from execution.
 Executable artifacts are the original native diagnostic and controlled guest RPXs,
 plus the separate .NET CIA intake console utility cross-published for Windows x64.
 An RPX is not an installable WUP directory.</p>
+<p>The portable <a href="../vertex-attributes/">vertex module</a> resolves explicitly supplied
+array streams into shader-input vectors. Its contiguous and indexed entry points
+share layout/range/value validation and commit output only after the complete
+request is valid. The indexed path reads unsigned 8-bit or little-endian 16-bit
+elements, preserving order and duplicates without reading unreferenced vertices.
+It does not follow guest addresses or implement PICA loader state, fixed
+attributes, float24/shader arithmetic, primitive assembly or GX2 submission.</p>
 <p>The CIA intake path uses bounded signature-layout/TMD/bitmap/content checks and
 selects index-0 application NCCH with checked absolute file offsets. Its derived
 CXI view preserves ExeFS/exheader code identity while explicitly removing RomFS
@@ -2608,7 +2615,7 @@ testing. Managed milestone issue sections derive from checked-in status data;
 PR/check/artifact/release records never automatically close hardware acceptance.
 Repository instructions and agent profiles preserve the same boundaries.</p>
 <hr />
-<p>Maintained source: <a href="https://github.com/Jdiller-86/CTR-2-WUP/blob/3aa02d71f9774989dfe9f9d0c7bdb3d7b4126596/docs/architecture.md">docs/architecture.md</a> · <code>3aa02d71f977</code>.
+<p>Maintained source: <a href="https://github.com/Jdiller-86/CTR-2-WUP/blob/192eab3078a4ebb67a487ad0178220e517b34d52/docs/architecture.md">docs/architecture.md</a> · <code>192eab3078a4</code>.
 GitHub source and issue links may require repository access.</p>
 
 

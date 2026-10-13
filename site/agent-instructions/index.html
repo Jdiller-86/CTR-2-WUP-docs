@@ -2350,13 +2350,18 @@ the existing isolated checkout; do not create a worktree unless asked.</p>
   not establish authenticity or installer acceptance.</li>
 <li>Maintain STATUS.md, milestone evidence, architecture/build/compatibility docs
   and versioned reports. Do not add a GUI before the execution pipeline works.</li>
+<li>Use the repository Actions credential through trusted-main workflows for
+  GitHub management operations; keep its value in Actions. The connected
+  integration supplies source transport and workflow dispatch/inspection.</li>
+<li>After merging a PR, delete its completed remote and local topic branch and
+  verify that the remote branch is gone.</li>
 <li>For Codex-generated commits, install the opt-in repository hook with
   <code>python3 tools/codex-attribution.py install</code>, then use <code>git codex-commit</code>.
   Preserve existing hooks and human attribution. See CONTRIBUTING.md for identity
   and authentication limits; never rewrite history solely to add attribution.</li>
 </ul>
 <hr />
-<p>Maintained source: <a href="https://github.com/Jdiller-86/CTR-2-WUP/blob/3aa02d71f9774989dfe9f9d0c7bdb3d7b4126596/AGENTS.md">AGENTS.md</a> · <code>3aa02d71f977</code>.
+<p>Maintained source: <a href="https://github.com/Jdiller-86/CTR-2-WUP/blob/192eab3078a4ebb67a487ad0178220e517b34d52/AGENTS.md">AGENTS.md</a> · <code>192eab3078a4</code>.
 GitHub source and issue links may require repository access.</p>
 
 

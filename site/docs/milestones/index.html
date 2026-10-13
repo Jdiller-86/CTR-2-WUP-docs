@@ -3692,7 +3692,7 @@
 
 
 <h1 id="milestones-and-remaining-work">Milestones and remaining work<a class="headerlink" href="#milestones-and-remaining-work" title="Permanent link">&para;</a></h1>
-<p>Updated <strong>October 13, 2026</strong> for <strong>v0.20.0</strong>. The product is an UWUVCI-style
+<p>Updated <strong>October 13, 2026</strong> for <strong>v0.21.0</strong>. The product is an UWUVCI-style
 Windows GUI: <strong>Select owned 3DS ROM → configure title/artwork → Inject →
 install its WUP → play from the Wii U Menu</strong>. The CLI is the shared engine.
 Super Mario 3D Land is the first candidate; its exact revision remains unverified.</p>
@@ -4005,8 +4005,13 @@ so independent work can overlap without claiming downstream completion.</p>
 <p><a id="m4-vertex-shaders"></a></p>
 <h4 id="m4-vertex-shaders-implement-vertex-formats-shader-execution-and-gx2-translation">m4-vertex-shaders: Implement vertex formats, shader execution and GX2 translation<a class="headerlink" href="#m4-vertex-shaders-implement-vertex-formats-shader-execution-and-gx2-translation" title="Permanent link">&para;</a></h4>
 <p>Choose a license-cleared Latte shader route and validate exercised vertex attributes, uniforms and shader instructions.</p>
-<p>State: <strong>Planned</strong> · Needs: none for original-fixture development.</p>
+<p>State: <strong>In progress</strong> · Needs: none for original-fixture development.</p>
 <p>Depends on: <a href="#m4-pica-commands">m4-pica-commands</a>.</p>
+<p>Verified foundation: <a href="../vertex-attributes/">resolved vertex decoding</a> now covers
+both contiguous streams and checked 8-bit/16-bit indexed gathers. The original
+suite covers every index value and transactional failure behavior. Loader/fixed
+state, uniforms, shader execution, actual draw scenes and full acceptance remain
+open; decoder checks do not accept this task.</p>
 <p>Acceptance:</p>
 <ul>
 <li>[ ] Original vertex/shader scenes compare independently checked outputs across the reference and chosen GX2/software correctness path using stated tolerances.</li>
@@ -4242,7 +4247,7 @@ topic branches, reviewable PRs and passing CI remain the development convention.
 No paid subscription or administrative setting is assumed enabled. See
 <a href="../github-development/">GitHub development</a> for actual access limits.</p>
 <hr />
-<p>Maintained source: <a href="https://github.com/Jdiller-86/CTR-2-WUP/blob/3aa02d71f9774989dfe9f9d0c7bdb3d7b4126596/docs/milestones.md">docs/milestones.md</a> · <code>3aa02d71f977</code>.
+<p>Maintained source: <a href="https://github.com/Jdiller-86/CTR-2-WUP/blob/192eab3078a4ebb67a487ad0178220e517b34d52/docs/milestones.md">docs/milestones.md</a> · <code>192eab3078a4</code>.
 GitHub source and issue links may require repository access.</p>
 
 
