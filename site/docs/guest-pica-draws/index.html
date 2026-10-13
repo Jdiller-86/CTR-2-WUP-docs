@@ -1700,10 +1700,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#deferred-physical-route" class="md-nav__link">
+  <a href="#physical-route-and-reviewed-follow-up" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Deferred physical route
+        Physical route and reviewed follow-up
       
     </span>
   </a>
@@ -2549,10 +2549,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#deferred-physical-route" class="md-nav__link">
+  <a href="#physical-route-and-reviewed-follow-up" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Deferred physical route
+        Physical route and reviewed follow-up
       
     </span>
   </a>
@@ -2610,7 +2610,8 @@ must pass before it prints <code>CTR2WUP compiled PICA draws PASS</code> and exi
 oracle independently compares all <strong>172,800 top/bottom pixels</strong> in the captured
 PPMs. The two images show a dark background and a central region divided diagonally into
 red and green triangles; top and bottom display sizes are 400×240 and 320×240.</p>
-<p>Original host captures, with physical display verification still pending:</p>
+<p>Original host captures; the October 13 physical run has separate user picture
+confirmation and the guest's own target/readback PASS:</p>
 <p><img alt="Original compiled guest top screen" src="../images/guest-draw-top-v023.png" /></p>
 <p><img alt="Original compiled guest bottom screen" src="../images/guest-draw-bottom-v023.png" /></p>
 <p>CI executes the sanitized original guest and native build on each PR. Download
@@ -2647,10 +2648,18 @@ attribute, uniform and MOV/NOP/END shader subset. Arithmetic shaders, sampling,
 general TEV, clipping, depth/blend/stencil and native GPU translation require
 separate scoped features. A raw VFP push/pop guard fix supports exact bit transfers
 under CRT FPSCR controls; it does not enable unsupported arithmetic modes.</p>
-<h2 id="deferred-physical-route">Deferred physical route<a class="headerlink" href="#deferred-physical-route" title="Permanent link">&para;</a></h2>
+<h2 id="physical-route-and-reviewed-follow-up">Physical route and reviewed follow-up<a class="headerlink" href="#physical-route-and-reviewed-follow-up" title="Permanent link">&para;</a></h2>
+<p>The October 13 run records both guide steps PASS, own guest exit, zero fallback
+and clean shutdown. The rendered second presentation takes 57.33 seconds in the
+trace; the user estimates roughly two minutes. The first frame is startup output,
+and the visual guide accepted confirmation before the drawn frame. The user's
+separate picture confirmation is retained; presentation gating and phase timing
+need a focused follow-up. See <a href="../console-evidence/">the evidence review</a>. This
+single run does not establish repeat-launch stability or useful game speed.</p>
 <p>Copy the artifact's WUHB to <code>sd:/wiiu/apps/</code> and launch it in Aroma when physical
-testing resumes. The focused <strong>Guest Draws</strong> guide requires the actual guest
-frame before accepting the visual answer. Confirm the red/green diagonal scene
+testing is requested for a new build. In 0.23.0 the focused <strong>Guest Draws</strong> guide
+requires a guest frame, but startup output also satisfies that guard. Wait for
+the actual red/green diagonal scene
 on TV and GamePad, then confirm the guest's own PASS and orderly exit. Minus
 returns from the native diagnostic. Preserve the named result TXT, source commit
 and artifact hashes; follow <a href="../console-retest/">result collection</a>.</p>
@@ -2658,7 +2667,8 @@ and artifact hashes; follow <a href="../console-retest/">result collection</a>.<
 <code>APT:A</code>, <code>ptm:sysm</code>) under the documented standalone startup profile. It still
 reaches its own main/assertions/exit. This does not claim complete service startup,
 console picture/timing, WUP installation or commercial compatibility. The earlier
-focused Audio Check/GX Transfers 0.20.0 launch-music regression remains pending.</p>
+focused Audio Check/GX Transfers 0.20.0 launch-music regression has reviewed
+October 13 physical passes; it does not establish 3DS guest audio.</p>
 <h2 id="tracking">Tracking<a class="headerlink" href="#tracking" title="Permanent link">&para;</a></h2>
 <p>The primary scoped feature is <code>guest-pica-draws</code>, implemented by PR #57 under
 task #27 and M4. It also advances #28/#30 and the checked ABI work in #18.
@@ -2666,7 +2676,7 @@ The native issue and PR are linked in <a href="https://github.com/users/Jdiller-
 Next features and their acceptance criteria are listed in
 <a href="../development-tracking/">development tracking</a>.</p>
 <hr />
-<p>Maintained source: <a href="https://github.com/Jdiller-86/CTR-2-WUP/blob/068149c223d48e42c44f907845086b1f64b1fa4a/docs/guest-pica-draws.md">docs/guest-pica-draws.md</a> · <code>068149c223d4</code>.
+<p>Maintained source: <a href="https://github.com/Jdiller-86/CTR-2-WUP/blob/0b5e01cd0abcb9fe2db1c00408b6f6584151cabb/docs/guest-pica-draws.md">docs/guest-pica-draws.md</a> · <code>0b5e01cd0abc</code>.
 GitHub source and issue links may require repository access.</p>
 
 

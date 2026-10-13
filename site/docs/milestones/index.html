@@ -3883,7 +3883,7 @@ passes establish their stated boundaries, not physical-console execution.</p>
 <tr>
 <td><a href="#m1">M1: Native Wii U platform</a></td>
 <td>Awaiting evidence</td>
-<td>Launch-audio regression, platform lifecycle/recovery and installed original WUP evidence</td>
+<td>Platform lifecycle/recovery, stability and installed original WUP evidence</td>
 </tr>
 <tr>
 <td><a href="#m2">M2: CPU translation and performance</a></td>
@@ -3929,7 +3929,7 @@ so independent work can overlap without claiming downstream completion.</p>
 <p><strong>Deliverables:</strong> A reproducible native platform build, checked result/save paths, a short guided console kit, an installed original diagnostic and a versioned platform acceptance record.</p>
 <p><strong>Exit criteria:</strong> Physical evidence establishes both screens, required controls/touch, native audio, reliable launch/exit, SD persistence/recovery and a documented stability session. An original WUP installs and launches/exits from the Wii U Menu.</p>
 <p><strong>Verified desktop/earlier evidence:</strong> Older native reports and the confirmed Minus exit are retained. The user reports Native/Guarded/Compiled completed without errors on v0.14.5; supplied text logs have older headers. A valid visit-1 snapshot proves initial persistence, while a later Save update failed and no new reports appeared. Current independent TXT read-back and save publication/recovery have desktop/sanitizer checks, not new console acceptance.</p>
-<p><strong>Reviewed physical follow-up:</strong> Named TXT collection, original fresh-launch save reload, embedded/SD assets and GX transfers pass their scoped checks; pictures and Minus return have user confirmation. Looping launch music remains an open defect.</p>
+<p><strong>Reviewed physical follow-up:</strong> Named TXT collection, original fresh-launch save reload, embedded/SD assets and GX transfers pass their scoped checks; pictures and Minus return have user confirmation. October 13 Audio Check/GX reports and user confirmation verify the launch-music regression; full lifecycle/recovery and installed-title acceptance remain open.</p>
 <p><strong>Still needs external evidence/input:</strong> Focused audio regression, exact firmware/Aroma/installer versions and native/installed lifecycle/recovery evidence require the Wii U. No game dump is needed for the original diagnostics.</p>
 <p>References: <a href="../console-evidence/">Console evidence</a> · <a href="../console-retest/">Short follow-up</a> · <a href="../guided-testing/">Guided tests</a> · <a href="../console-testing/">Console guide</a>.</p>
 <h3 id="actionable-work-items">Actionable work items<a class="headerlink" href="#actionable-work-items" title="Permanent link">&para;</a></h3>
@@ -4049,7 +4049,7 @@ so independent work can overlap without claiming downstream completion.</p>
 <p><strong>Entry:</strong> Original normal-CRT/devkitARM/libctru applications execute through the portable runtime on desktop. Their required guest memory, scheduler, service and display contracts are defined.</p>
 <p><strong>Deliverables:</strong> Stable compiled guest execution with checked kernel/IPC/lifecycle/display/input/filesystem contracts; focused module and guest-audio fixtures feed later selected-title integration.</p>
 <p><strong>Exit criteria:</strong> A real compiled guest executes on Wii U, updates both screens, responds to required GamePad input/touch and exits or completes a documented stability session. Exercised save/assets behavior is verified. This fixture gate does not require claiming all retail services or PICA draw support.</p>
-<p><strong>Verified desktop/earlier evidence:</strong> Nine original compiled applications cover boot, threads, input, graphics, interactive execution, save/reload, RomFS, GX transfers and bounded PICA draws. Desktop/sanitizer and selected emulated PowerPC checks support exact pixels/state/files. Reviewed physical Save/results/assets/GX evidence is retained; current compiled draw and launch-audio retests remain pending; a native tone does not establish guest DSP/audio.</p>
+<p><strong>Verified desktop/earlier evidence:</strong> Nine original compiled applications cover boot, threads, input, graphics, interactive execution, save/reload, RomFS, GX transfers and bounded PICA draws. Desktop/sanitizer and selected emulated PowerPC checks support exact pixels/state/files. Reviewed physical Save/results/assets/GX evidence is retained; October 13 compiled draw and launch-audio results are reviewed, with a 57.33-second draw-scene delay and premature visual-prompt guard requiring follow-up; a native tone does not establish guest DSP/audio.</p>
 <p><strong>Still needs external evidence/input:</strong> Original guest modules, audio probes and shared service work can proceed independently. Hardware validates display/input/audio/lifecycle/assets; observed retail service/module/save requirements need M5 intake.</p>
 <p>References: <a href="../compiled-homebrew/">Compiled applications</a> · <a href="../shared-services/">Services</a> · <a href="../filesystem/">Filesystem</a> · <a href="../romfs-assets/">RomFS assets</a>.</p>
 <h3 id="actionable-work-items_2">Actionable work items<a class="headerlink" href="#actionable-work-items_2" title="Permanent link">&para;</a></h3>
@@ -4119,7 +4119,7 @@ so independent work can overlap without claiming downstream completion.</p>
 <p>State: <strong>Done (bounded command acceptance reviewed)</strong> · Needs: none for original-fixture development.</p>
 <p>Depends on: none.</p>
 <p>Verified foundation: <a href="../pica-commands/">PICA command contract</a>, 353 original builder/reference cases, transactional native state and the compiled standard command-queue fixture. No draws or full task acceptance are claimed.</p>
-<p>v0.23.0 connects <a href="../guest-pica-draws/">compiled guest draws</a> to the standard GSP queue with owned resources, exact target/display checks and preserved failure state. Physical results remain deferred.</p>
+<p>v0.23.0 connects <a href="../guest-pica-draws/">compiled guest draws</a> to the standard GSP queue with owned resources, exact target/display checks and preserved failure state. October 13 physical own PASS/exit and user picture confirmation are reviewed; rendered presentation at 57.33 seconds and premature guide timing need a focused follow-up.</p>
 <p>v0.22.0 adds <a href="../software-scenes/">owned software scenes</a> with complete-list
 state/pixel rollback, explicit resource binding and independent exact pixels.
 These execute draws in the experimental boundary; the guest queue remains
@@ -4173,7 +4173,7 @@ license-cleared GX2 shader route remain open; this checkpoint does not accept th
 </ul>
 <p><a id="m4-console-scenes"></a></p>
 <h4 id="m4-console-scenes-compare-rendered-scenes-and-measure-wii-u-graphics-costs">m4-console-scenes: Compare rendered scenes and measure Wii U graphics costs<a class="headerlink" href="#m4-console-scenes-compare-rendered-scenes-and-measure-wii-u-graphics-costs" title="Permanent link">&para;</a></h4>
-<p>Use original reference scenes to establish real GX2 output and timing before title-specific visual acceptance.</p>
+<p>Retain reviewed bounded compiled draw results; correct premature visual gating and measure execution/scaling/GPU/wait/memory costs separately before full graphics or title acceptance.</p>
 <p>State: <strong>Blocked</strong> · Needs: <code>needs-console</code>.</p>
 <p>Depends on: <a href="#m4-vertex-shaders">m4-vertex-shaders</a>, <a href="#m4-fragment-pipeline">m4-fragment-pipeline</a>, <a href="#m4-coherency-cache">m4-coherency-cache</a>.</p>
 <p>Acceptance:</p>
@@ -4381,7 +4381,7 @@ topic branches, reviewable PRs and passing CI remain the development convention.
 No paid subscription or administrative setting is assumed enabled. See
 <a href="../github-development/">GitHub development</a> for actual access limits.</p>
 <hr />
-<p>Maintained source: <a href="https://github.com/Jdiller-86/CTR-2-WUP/blob/068149c223d48e42c44f907845086b1f64b1fa4a/docs/milestones.md">docs/milestones.md</a> · <code>068149c223d4</code>.
+<p>Maintained source: <a href="https://github.com/Jdiller-86/CTR-2-WUP/blob/0b5e01cd0abcb9fe2db1c00408b6f6584151cabb/docs/milestones.md">docs/milestones.md</a> · <code>0b5e01cd0abc</code>.
 GitHub source and issue links may require repository access.</p>
 
 

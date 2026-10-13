@@ -16,7 +16,7 @@ code,pre { font-family:ui-monospace,Consolas,"SFMono-Regular",monospace; } code 
 table { border-collapse:collapse; width:100%; margin:1rem 0; font-size:.9rem; } td,th { border:1px solid var(--line); padding:.55rem; text-align:left; vertical-align:top; } th { background:var(--code); } .table-wrap,.md-typeset__scrollwrap { max-width:100%; min-width:0; overflow-x:auto; } .table-wrap:focus-visible { outline-offset:-3px; } pre,.highlight { max-width:100%; min-width:0; overflow-wrap:normal; } blockquote { border-left:3px solid var(--line); margin-left:0; padding-left:1rem; color:var(--muted); } .admonition,details { border:1px solid var(--line); padding:.8rem; border-radius:.5rem; } summary { cursor:pointer; } [hidden] { display:none!important; }
 @media(max-width:850px) { header { position:static; } .layout { grid-template-columns:minmax(0,1fr); padding:.7rem; } aside { position:static; max-height:28vh; border-bottom:1px solid var(--line); } .guide-page,.scope { padding:1rem; } h1 { font-size:1.6rem; } html { scroll-padding-top:1rem; } }
 @media print { :root,body { color-scheme:light; --bg:white; --panel:white; --text:black; --muted:#333; --line:#aaa; --link:black; --code:#f5f5f5; } header { position:static; padding:0; } header input,header label,header button,aside,.scope { display:none!important; } .layout { display:block; padding:0; } .guide-page,.guide-page[hidden] { display:block!important; break-before:page; border:0; padding:0; } .guide-page:first-of-type { break-before:auto; } pre { white-space:pre-wrap; overflow:visible; overflow-wrap:anywhere; } .table-wrap { overflow:visible; } tr,img,svg { break-inside:avoid; } .headerlink { display:none; } a { text-decoration:none; } }
-</style></head><body><header><div><strong>CTR2WUP documentation</strong><span>Version 0.23.0 · dated assessment: 0/7 full milestones accepted</span></div><label for="guide-search">Search this guide</label><input id="guide-search" type="search" placeholder="Search topics and article text" autocomplete="off"><button id="theme-toggle" type="button">Light / dark</button><button id="print-guide" type="button">Print</button></header><div class="layout"><aside aria-label="Document navigation"><p id="search-status" role="status" aria-live="polite"></p><nav><a class="page-link" href="#page-0eb547304658805a">CTR2WUP</a><a class="page-link" href="#page-16a66ee4ac5b8867">First visit to the repository</a><a class="page-link" href="#page-3317412f2c28808f">Guided Wii U tests and TXT results (0.14.6)</a><a class="page-link" href="#page-818f9b8607a7b7f4">Architecture and implementation boundaries</a><a class="page-link" href="#page-40578c72585fa789">Tracking development from the repository</a><a class="page-link" href="#page-aa96433127207903">Contributing to CTR2WUP</a><a class="page-link" href="#page-b04b38d4e36f7a71">CTR2WUP documentation</a><a class="page-link" href="#page-789cee6d348d3200">Getting started</a><a class="page-link" href="#page-cd16c09e6232de38">Testing and evidence</a><a class="page-link" href="#page-e09ebb6a6cf5072e">Diagnostic troubleshooting</a><a class="page-link" href="#page-6d0ba3816186f428">Compatibility</a><a class="page-link" href="#page-1772b061ad90cf22">Project completion assessment</a><a class="page-link" href="#page-df45275d34010aa4">Milestones and remaining work</a><a class="page-link" href="#page-eea1fcd3d85d2991">Remaining acceptance gates (0.23.0)</a><a class="page-link" href="#page-a93b1881f4ef1402">GSP command queue and CPU-backed GX transfers (0.18.0)</a><a class="page-link" href="#page-5748ca38e77fe743">Current console follow-up</a><a class="page-link" href="#page-5f8d8a70bf6d79a0">Current-process read-only RomFS assets (0.16.0)</a><a class="page-link" href="#page-8bd3b7e795b5a488">Local encrypted-ROM preparation (0.16.0)</a><a class="page-link" href="#page-9af9c2bac98d08cd">CIA intake and the attachment transfer limit</a><a class="page-link" href="#page-2b4b839b93c06e78">Original encrypted homebrew packaging</a><a class="page-link" href="#page-43d0f88214e9875b">Compiler-built homebrew evidence</a><a class="page-link" href="#page-ccfd5de9f45fd068">Controlled NCCH guest execution (0.2.0)</a><a class="page-link" href="#page-152d5975289299d9">Build on Windows</a><a class="page-link" href="#page-7154b1ce546500fe">Portable CPU and AOT evidence</a><a class="page-link" href="#page-54eb9b4ff4067e19">ARM/Thumb stack and register transfers (0.14.6)</a><a class="page-link" href="#page-b4bb6934fc80b11e">Checked external AOT integration</a><a class="page-link" href="#page-1adcb6d9b9a942d6">Shared guest memory management</a><a class="page-link" href="#page-d6f81084aa56e90d">Single-core guest threads</a><a class="page-link" href="#page-d3990a024c0ce778">Shared memory and synchronization</a><a class="page-link" href="#page-644eb16bae230b8e">Shared TLS and SRV/CFG startup support (0.6.0)</a><a class="page-link" href="#page-1734a5edcb99cd99">Standard HID input subset (0.9.0)</a><a class="page-link" href="#page-d0c5244020c9ffb7">Standard direct GSP framebuffer display (0.10.0)</a><a class="page-link" href="#page-cbd6b7e14fbba49b">GSP shared framebuffer queues and VBlank relay (0.11.0)</a><a class="page-link" href="#page-ac6eea5bfc2d4518">Renderer foundation</a><a class="page-link" href="#page-c41bd26c5d3f4511">PICA command front end</a><a class="page-link" href="#page-ef01ffe655d329f7">Vertex attribute decoding</a><a class="page-link" href="#page-8ca47883e6c4a73e">First software triangle scenes</a><a class="page-link" href="#page-281c4fd2af364f78">Compiled original guest PICA draws</a><a class="page-link" href="#page-fc91eab0fcc820ea">Private filesystem and standalone application lifecycle (0.14.6)</a><a class="page-link" href="#page-fd59837ca6c79694">CTR2WUP Development</a><a class="page-link" href="#page-5c50600c67d32e7b">CTR2WUP status</a><a class="page-link" href="#page-6044fad264e8c0f3">CTR2WUP product development plan</a><a class="page-link" href="#page-d24bbfaea972e513">Windows GUI and injection workflow</a><a class="page-link" href="#page-58b65e3953fdcd7a">First supported-title candidate: Super Mario 3D Land</a><a class="page-link" href="#page-700bfebbda2308ee">CTR2WUP — Work Mode development brief</a><a class="page-link" href="#page-38f8ee1b90faa55d">Foundation audit</a><a class="page-link" href="#page-9796e29579656671">Batch CIA 3DS Decryptor investigation</a><a class="page-link" href="#page-ec849fdaf3bbc38f">Console evidence review</a><a class="page-link" href="#page-8fcf07826d2459c3">Physical Wii U test checklist</a><a class="page-link" href="#page-553ce71701069d93">Covered 3DSX startup source</a><a class="page-link" href="#page-7dcf84926bde3c84">GitHub development</a><a class="page-link" href="#page-c3deb1b9b4f4d58a">Working on CTR2WUP</a><a class="page-link" href="#page-510f88b2dfe6b0bf">Security policy</a><a class="page-link" href="#page-bae58f2e333b3722">Changelog</a><a class="page-link" href="#page-2bf37a6e06142482">Development history through v0.16.0</a><a class="page-link" href="#page-891b2bf3f54dba0d">License</a><a class="page-link" href="#page-ea58de180cd8f4e5">Third-party notices</a><a class="page-link" href="#page-a994247690abe288">Site engine licenses</a><a class="page-link" href="#page-da1a36df220cd5da">Launch music check (0.20.0)</a><a class="page-link" href="#asset-5900d507f63e2399">docs/milestone-status.json</a><a class="page-link" href="#asset-03ddfdd5d01eabe9">site-licenses/mkdocs.txt</a><a class="page-link" href="#asset-427418d5c6c84626">site-licenses/mkdocs-material.txt</a><a class="page-link" href="#asset-77db260f45384ac2">site-licenses/material-icons.txt</a><a class="page-link" href="#asset-45db76650c680ad9">site-licenses/font-awesome.txt</a><a class="page-link" href="#asset-299c93517840457b">site-licenses/octicons.txt</a></nav></aside><main><p class="scope">The planned product is a Windows GUI that injects an owned 3DS game into a playable Wii U WUP. Current releases are original diagnostics; commercial games and the GUI remain unfinished. This guide records evidence at its source version; <a href="https://github.com/users/Jdiller-86/projects/2">Project #2 owns current tracking and acceptance</a>. Reading and search work offline. External source/issue links need internet and may require repository access. Source commit: <code>068149c223d48e42c44f907845086b1f64b1fa4a</code>.</p><section class="guide-page" id="page-0eb547304658805a" data-title="CTR2WUP"><article class="md-content__inner md-typeset">
+</style></head><body><header><div><strong>CTR2WUP documentation</strong><span>Version 0.23.0 · dated assessment: 0/7 full milestones accepted</span></div><label for="guide-search">Search this guide</label><input id="guide-search" type="search" placeholder="Search topics and article text" autocomplete="off"><button id="theme-toggle" type="button">Light / dark</button><button id="print-guide" type="button">Print</button></header><div class="layout"><aside aria-label="Document navigation"><p id="search-status" role="status" aria-live="polite"></p><nav><a class="page-link" href="#page-0eb547304658805a">CTR2WUP</a><a class="page-link" href="#page-16a66ee4ac5b8867">First visit to the repository</a><a class="page-link" href="#page-3317412f2c28808f">Guided Wii U tests and TXT results (0.14.6)</a><a class="page-link" href="#page-818f9b8607a7b7f4">Architecture and implementation boundaries</a><a class="page-link" href="#page-40578c72585fa789">Tracking development from the repository</a><a class="page-link" href="#page-aa96433127207903">Contributing to CTR2WUP</a><a class="page-link" href="#page-b04b38d4e36f7a71">CTR2WUP documentation</a><a class="page-link" href="#page-789cee6d348d3200">Getting started</a><a class="page-link" href="#page-cd16c09e6232de38">Testing and evidence</a><a class="page-link" href="#page-e09ebb6a6cf5072e">Diagnostic troubleshooting</a><a class="page-link" href="#page-6d0ba3816186f428">Compatibility</a><a class="page-link" href="#page-1772b061ad90cf22">Project completion assessment</a><a class="page-link" href="#page-df45275d34010aa4">Milestones and remaining work</a><a class="page-link" href="#page-eea1fcd3d85d2991">Remaining acceptance gates (0.23.0)</a><a class="page-link" href="#page-a93b1881f4ef1402">GSP command queue and CPU-backed GX transfers (0.18.0)</a><a class="page-link" href="#page-5748ca38e77fe743">Current console follow-up</a><a class="page-link" href="#page-5f8d8a70bf6d79a0">Current-process read-only RomFS assets (0.16.0)</a><a class="page-link" href="#page-8bd3b7e795b5a488">Local encrypted-ROM preparation (0.16.0)</a><a class="page-link" href="#page-9af9c2bac98d08cd">CIA intake and the attachment transfer limit</a><a class="page-link" href="#page-2b4b839b93c06e78">Original encrypted homebrew packaging</a><a class="page-link" href="#page-43d0f88214e9875b">Compiler-built homebrew evidence</a><a class="page-link" href="#page-ccfd5de9f45fd068">Controlled NCCH guest execution (0.2.0)</a><a class="page-link" href="#page-152d5975289299d9">Build on Windows</a><a class="page-link" href="#page-7154b1ce546500fe">Portable CPU and AOT evidence</a><a class="page-link" href="#page-54eb9b4ff4067e19">ARM/Thumb stack and register transfers (0.14.6)</a><a class="page-link" href="#page-b4bb6934fc80b11e">Checked external AOT integration</a><a class="page-link" href="#page-1adcb6d9b9a942d6">Shared guest memory management</a><a class="page-link" href="#page-d6f81084aa56e90d">Single-core guest threads</a><a class="page-link" href="#page-d3990a024c0ce778">Shared memory and synchronization</a><a class="page-link" href="#page-644eb16bae230b8e">Shared TLS and SRV/CFG startup support (0.6.0)</a><a class="page-link" href="#page-1734a5edcb99cd99">Standard HID input subset (0.9.0)</a><a class="page-link" href="#page-d0c5244020c9ffb7">Standard direct GSP framebuffer display (0.10.0)</a><a class="page-link" href="#page-cbd6b7e14fbba49b">GSP shared framebuffer queues and VBlank relay (0.11.0)</a><a class="page-link" href="#page-ac6eea5bfc2d4518">Renderer foundation</a><a class="page-link" href="#page-c41bd26c5d3f4511">PICA command front end</a><a class="page-link" href="#page-ef01ffe655d329f7">Vertex attribute decoding</a><a class="page-link" href="#page-8ca47883e6c4a73e">First software triangle scenes</a><a class="page-link" href="#page-281c4fd2af364f78">Compiled original guest PICA draws</a><a class="page-link" href="#page-fc91eab0fcc820ea">Private filesystem and standalone application lifecycle (0.14.6)</a><a class="page-link" href="#page-fd59837ca6c79694">CTR2WUP Development</a><a class="page-link" href="#page-5c50600c67d32e7b">CTR2WUP status</a><a class="page-link" href="#page-6044fad264e8c0f3">CTR2WUP product development plan</a><a class="page-link" href="#page-d24bbfaea972e513">Windows GUI and injection workflow</a><a class="page-link" href="#page-58b65e3953fdcd7a">First supported-title candidate: Super Mario 3D Land</a><a class="page-link" href="#page-700bfebbda2308ee">CTR2WUP — Work Mode development brief</a><a class="page-link" href="#page-38f8ee1b90faa55d">Foundation audit</a><a class="page-link" href="#page-9796e29579656671">Batch CIA 3DS Decryptor investigation</a><a class="page-link" href="#page-ec849fdaf3bbc38f">Console evidence review</a><a class="page-link" href="#page-8fcf07826d2459c3">Physical Wii U test checklist</a><a class="page-link" href="#page-553ce71701069d93">Covered 3DSX startup source</a><a class="page-link" href="#page-7dcf84926bde3c84">GitHub development</a><a class="page-link" href="#page-c3deb1b9b4f4d58a">Working on CTR2WUP</a><a class="page-link" href="#page-510f88b2dfe6b0bf">Security policy</a><a class="page-link" href="#page-bae58f2e333b3722">Changelog</a><a class="page-link" href="#page-2bf37a6e06142482">Development history through v0.16.0</a><a class="page-link" href="#page-891b2bf3f54dba0d">License</a><a class="page-link" href="#page-ea58de180cd8f4e5">Third-party notices</a><a class="page-link" href="#page-a994247690abe288">Site engine licenses</a><a class="page-link" href="#page-da1a36df220cd5da">Launch music check (0.20.0)</a><a class="page-link" href="#asset-5900d507f63e2399">docs/milestone-status.json</a><a class="page-link" href="#asset-03ddfdd5d01eabe9">site-licenses/mkdocs.txt</a><a class="page-link" href="#asset-427418d5c6c84626">site-licenses/mkdocs-material.txt</a><a class="page-link" href="#asset-77db260f45384ac2">site-licenses/material-icons.txt</a><a class="page-link" href="#asset-45db76650c680ad9">site-licenses/font-awesome.txt</a><a class="page-link" href="#asset-299c93517840457b">site-licenses/octicons.txt</a></nav></aside><main><p class="scope">The planned product is a Windows GUI that injects an owned 3DS game into a playable Wii U WUP. Current releases are original diagnostics; commercial games and the GUI remain unfinished. This guide records evidence at its source version; <a href="https://github.com/users/Jdiller-86/projects/2">Project #2 owns current tracking and acceptance</a>. Reading and search work offline. External source/issue links need internet and may require repository access. Source commit: <code>0b5e01cd0abcb9fe2db1c00408b6f6584151cabb</code>.</p><section class="guide-page" id="page-0eb547304658805a" data-title="CTR2WUP"><article class="md-content__inner md-typeset">
                 
                   
 
@@ -102,7 +102,7 @@ Builds use <a href="https://devkitpro.org" rel="noopener noreferrer" target="_bl
 and <a href="https://github.com/devkitPro/libctru" rel="noopener noreferrer" target="_blank">libctru</a>. The planned injector workflow
 is inspired by <a href="https://github.com/stuff-by-3-random-dudes/UWUVCI-AIO-WPF" rel="noopener noreferrer" target="_blank">UWUVCI AIO</a>.</p>
 <hr>
-<p>Maintained source: <a href="https://github.com/Jdiller-86/CTR-2-WUP/blob/068149c223d48e42c44f907845086b1f64b1fa4a/README.md" rel="noopener noreferrer" target="_blank">README.md</a> · <code>068149c223d4</code>.
+<p>Maintained source: <a href="https://github.com/Jdiller-86/CTR-2-WUP/blob/0b5e01cd0abcb9fe2db1c00408b6f6584151cabb/README.md" rel="noopener noreferrer" target="_blank">README.md</a> · <code>0b5e01cd0abc</code>.
 GitHub source and issue links may require repository access.</p>
 
 
@@ -247,7 +247,7 @@ them in GitHub. A merged feature can be Done while its task and milestone remain
 open. Project status, checked source provenance and explicit evidence limits make
 that distinction visible without relying on a chat transcript.</p>
 <hr>
-<p>Maintained source: <a href="https://github.com/Jdiller-86/CTR-2-WUP/blob/068149c223d48e42c44f907845086b1f64b1fa4a/docs/repository-guide.md" rel="noopener noreferrer" target="_blank">docs/repository-guide.md</a> · <code>068149c223d4</code>.
+<p>Maintained source: <a href="https://github.com/Jdiller-86/CTR-2-WUP/blob/0b5e01cd0abcb9fe2db1c00408b6f6584151cabb/docs/repository-guide.md" rel="noopener noreferrer" target="_blank">docs/repository-guide.md</a> · <code>0b5e01cd0abc</code>.
 GitHub source and issue links may require repository access.</p>
 
 
@@ -269,11 +269,11 @@ GitHub source and issue links may require repository access.</p>
 
 
 <h1 id="page-3317412f2c28808f--guided-wii-u-tests-and-txt-results-0146">Guided Wii U tests and TXT results (0.14.6)<a class="headerlink" href="#page-3317412f2c28808f--guided-wii-u-tests-and-txt-results-0146" title="Permanent link">¶</a></h1>
-<p>The kit contains five original homebrew diagnostics, supplied as WUHB and RPX.
-No ROM is required. The current round is the short
-<a href="#page-5748ca38e77fe743">save and result-file check</a>, followed by Compiled RomFS.
-The user reports that Native, Guarded AOT and Compiled AOT completed on 0.14.5;
-their ten-minute guides need not be repeated for this round.</p>
+<p>This page preserves the original 0.14.6 controls and reporting contract.
+The current physical results and focused follow-up are in
+<a href="#page-ec849fdaf3bbc38f">console-evidence.md</a> and <a href="#page-5748ca38e77fe743">console-retest.md</a>.
+Save/RomFS, launch audio and bounded guest draws have reviewed scoped results;
+no long guide repetition is requested solely for a version bump.</p>
 <h2 id="page-3317412f2c28808f--launch">Launch<a class="headerlink" href="#page-3317412f2c28808f--launch" title="Permanent link">¶</a></h2>
 <p>For Aroma, copy the kit's <code>sd-card/</code> contents to the SD root. Apps belong in
 <code>sd:/wiiu/apps/</code>. An RPX-capable launcher can use the matching <code>rpx/</code> files.
@@ -335,7 +335,7 @@ the actual Wii U SDK. v0.14.6 result persistence and save updates are awaiting
 physical evidence. These diagnostics do not verify PICA, guest audio, retail
 saves, Mario gameplay or WUP installation.</p>
 <hr>
-<p>Maintained source: <a href="https://github.com/Jdiller-86/CTR-2-WUP/blob/068149c223d48e42c44f907845086b1f64b1fa4a/docs/guided-testing.md" rel="noopener noreferrer" target="_blank">docs/guided-testing.md</a> · <code>068149c223d4</code>.
+<p>Maintained source: <a href="https://github.com/Jdiller-86/CTR-2-WUP/blob/0b5e01cd0abcb9fe2db1c00408b6f6584151cabb/docs/guided-testing.md" rel="noopener noreferrer" target="_blank">docs/guided-testing.md</a> · <code>0b5e01cd0abc</code>.
 GitHub source and issue links may require repository access.</p>
 
 
@@ -580,7 +580,7 @@ testing. Managed milestone issue sections derive from checked-in status data;
 PR/check/artifact/release records never automatically close hardware acceptance.
 Repository instructions and agent profiles preserve the same boundaries.</p>
 <hr>
-<p>Maintained source: <a href="https://github.com/Jdiller-86/CTR-2-WUP/blob/068149c223d48e42c44f907845086b1f64b1fa4a/docs/architecture.md" rel="noopener noreferrer" target="_blank">docs/architecture.md</a> · <code>068149c223d4</code>.
+<p>Maintained source: <a href="https://github.com/Jdiller-86/CTR-2-WUP/blob/0b5e01cd0abcb9fe2db1c00408b6f6584151cabb/docs/architecture.md" rel="noopener noreferrer" target="_blank">docs/architecture.md</a> · <code>0b5e01cd0abc</code>.
 GitHub source and issue links may require repository access.</p>
 
 
@@ -705,7 +705,7 @@ verified against merged PR #48/#57 and original reference traces. Its review
 marker is recorded once; later maintainer reopen/status changes are preserved.
 No full milestone or other unreviewed task can complete through that rule.</p>
 <hr>
-<p>Maintained source: <a href="https://github.com/Jdiller-86/CTR-2-WUP/blob/068149c223d48e42c44f907845086b1f64b1fa4a/docs/development-tracking.md" rel="noopener noreferrer" target="_blank">docs/development-tracking.md</a> · <code>068149c223d4</code>.
+<p>Maintained source: <a href="https://github.com/Jdiller-86/CTR-2-WUP/blob/0b5e01cd0abcb9fe2db1c00408b6f6584151cabb/docs/development-tracking.md" rel="noopener noreferrer" target="_blank">docs/development-tracking.md</a> · <code>0b5e01cd0abc</code>.
 GitHub source and issue links may require repository access.</p>
 
 
@@ -804,8 +804,8 @@ unsupported states explicit. Review licenses and notices before adding a
 dependency or redistributing an executable. Generated builds belong under
 ignored <code>artifacts/</code>; inspect release contents for private data before publication.</p>
 <h2 id="page-aa96433127207903--agent-assisted-work">Agent-assisted work<a class="headerlink" href="#page-aa96433127207903--agent-assisted-work" title="Permanent link">¶</a></h2>
-<p><a href="https://github.com/Jdiller-86/CTR-2-WUP/blob/068149c223d48e42c44f907845086b1f64b1fa4a/.github/copilot-instructions.md" rel="noopener noreferrer" target="_blank">Repository Copilot instructions</a> and specialist
-profiles under <a href="https://github.com/Jdiller-86/CTR-2-WUP/tree/068149c223d48e42c44f907845086b1f64b1fa4a/.github/agents" rel="noopener noreferrer" target="_blank">.github/agents</a> provide CPU/runtime, host-pipeline,
+<p><a href="https://github.com/Jdiller-86/CTR-2-WUP/blob/0b5e01cd0abcb9fe2db1c00408b6f6584151cabb/.github/copilot-instructions.md" rel="noopener noreferrer" target="_blank">Repository Copilot instructions</a> and specialist
+profiles under <a href="https://github.com/Jdiller-86/CTR-2-WUP/tree/0b5e01cd0abcb9fe2db1c00408b6f6584151cabb/.github/agents" rel="noopener noreferrer" target="_blank">.github/agents</a> provide CPU/runtime, host-pipeline,
 graphics and console-evidence context. Supported clients can select them when
 Copilot access is available. These files do not turn on paid services or autonomous
 jobs. Agent changes receive the same review and validation as any contribution;
@@ -829,7 +829,7 @@ email identifies commit authorship; it supplies no bot login, signature or acces
 Pushes, PR creation and merges still use the connected account. Existing history
 is preserved; GitHub decides how bot authors appear in contributor statistics.</p>
 <hr>
-<p>Maintained source: <a href="https://github.com/Jdiller-86/CTR-2-WUP/blob/068149c223d48e42c44f907845086b1f64b1fa4a/CONTRIBUTING.md" rel="noopener noreferrer" target="_blank">CONTRIBUTING.md</a> · <code>068149c223d4</code>.
+<p>Maintained source: <a href="https://github.com/Jdiller-86/CTR-2-WUP/blob/0b5e01cd0abcb9fe2db1c00408b6f6584151cabb/CONTRIBUTING.md" rel="noopener noreferrer" target="_blank">CONTRIBUTING.md</a> · <code>0b5e01cd0abc</code>.
 GitHub source and issue links may require repository access.</p>
 
 
@@ -907,7 +907,7 @@ notes and receipts; its old pending statements are historical.</p>
 performance or successful WUP installation. Keep ROMs, keys, saves, game traces
 and extracted commercial assets private.</p>
 <hr>
-<p>Maintained source: <a href="https://github.com/Jdiller-86/CTR-2-WUP/blob/068149c223d48e42c44f907845086b1f64b1fa4a/docs/README.md" rel="noopener noreferrer" target="_blank">docs/README.md</a> · <code>068149c223d4</code>.
+<p>Maintained source: <a href="https://github.com/Jdiller-86/CTR-2-WUP/blob/0b5e01cd0abcb9fe2db1c00408b6f6584151cabb/docs/README.md" rel="noopener noreferrer" target="_blank">docs/README.md</a> · <code>0b5e01cd0abc</code>.
 GitHub source and issue links may require repository access.</p>
 
 
@@ -981,7 +981,7 @@ not enable game execution. Do not attach keys, full ROMs, saves or commercial
 asset blobs to GitHub issues. The first selected game is Super Mario 3D Land;
 its actual revision and requirements still await private analysis.</p>
 <hr>
-<p>Maintained source: <a href="https://github.com/Jdiller-86/CTR-2-WUP/blob/068149c223d48e42c44f907845086b1f64b1fa4a/docs/getting-started.md" rel="noopener noreferrer" target="_blank">docs/getting-started.md</a> · <code>068149c223d4</code>.
+<p>Maintained source: <a href="https://github.com/Jdiller-86/CTR-2-WUP/blob/0b5e01cd0abcb9fe2db1c00408b6f6584151cabb/docs/getting-started.md" rel="noopener noreferrer" target="_blank">docs/getting-started.md</a> · <code>0b5e01cd0abc</code>.
 GitHub source and issue links may require repository access.</p>
 
 
@@ -1052,7 +1052,7 @@ boot/menu/gameplay/input/audio/save/reload/stability, actual WUP install/Menu
 launch, useful Wii U timings and the final Windows GUI conversion workflow.
 Passing unit tests and creating more diagnostics are partial implementation.</p>
 <hr>
-<p>Maintained source: <a href="https://github.com/Jdiller-86/CTR-2-WUP/blob/068149c223d48e42c44f907845086b1f64b1fa4a/docs/testing.md" rel="noopener noreferrer" target="_blank">docs/testing.md</a> · <code>068149c223d4</code>.
+<p>Maintained source: <a href="https://github.com/Jdiller-86/CTR-2-WUP/blob/0b5e01cd0abcb9fe2db1c00408b6f6584151cabb/docs/testing.md" rel="noopener noreferrer" target="_blank">docs/testing.md</a> · <code>0b5e01cd0abc</code>.
 GitHub source and issue links may require repository access.</p>
 
 
@@ -1129,7 +1129,7 @@ private intake process; they do not belong in GitHub issues.</p>
 0.14.6 Save/RomFS round and optional 0.16 Asset Files / 0.17 GX round have different
 purposes; <a href="#page-cd16c09e6232de38">testing</a> explains which evidence each provides.</p>
 <hr>
-<p>Maintained source: <a href="https://github.com/Jdiller-86/CTR-2-WUP/blob/068149c223d48e42c44f907845086b1f64b1fa4a/docs/troubleshooting.md" rel="noopener noreferrer" target="_blank">docs/troubleshooting.md</a> · <code>068149c223d4</code>.
+<p>Maintained source: <a href="https://github.com/Jdiller-86/CTR-2-WUP/blob/0b5e01cd0abcb9fe2db1c00408b6f6584151cabb/docs/troubleshooting.md" rel="noopener noreferrer" target="_blank">docs/troubleshooting.md</a> · <code>0b5e01cd0abc</code>.
 GitHub source and issue links may require repository access.</p>
 
 
@@ -1288,7 +1288,7 @@ GitHub source and issue links may require repository access.</p>
 <tr>
 <td>Any commercial revision</td>
 <td>Unsupported/unverified</td>
-<td>Mario CIA exceeds transfer limit; small intake reports encrypted executable and contains no code; required HLE/GPU/audio/save implementation and Wii U gameplay evidence remain absent</td>
+<td>New reportedly decrypted Mario CCI exceeds transfer limit; smaller private executable intake remains needed; required HLE/GPU/audio/save implementation and Wii U gameplay evidence remain absent</td>
 </tr>
 <tr>
 <td>WUP installation</td>
@@ -1322,7 +1322,7 @@ v0.14.5 Native/Guarded/Compiled successes are retained as reported evidence whil
 the user is away. They do not establish v0.15 decryption, v0.14.6 SD/RomFS, retail
 compatibility or actual WUP installation. No completed milestone is added.</p>
 <hr>
-<p>Maintained source: <a href="https://github.com/Jdiller-86/CTR-2-WUP/blob/068149c223d48e42c44f907845086b1f64b1fa4a/docs/compatibility.md" rel="noopener noreferrer" target="_blank">docs/compatibility.md</a> · <code>068149c223d4</code>.
+<p>Maintained source: <a href="https://github.com/Jdiller-86/CTR-2-WUP/blob/0b5e01cd0abcb9fe2db1c00408b6f6584151cabb/docs/compatibility.md" rel="noopener noreferrer" target="_blank">docs/compatibility.md</a> · <code>0b5e01cd0abc</code>.
 GitHub source and issue links may require repository access.</p>
 
 
@@ -1487,7 +1487,7 @@ Project #2 is populated through Actions; its task fields remain authoritative.
 These scoped successes do not accept a full gate or materially change the
 approximately-20% implementation estimate.</p>
 <hr>
-<p>Maintained source: <a href="https://github.com/Jdiller-86/CTR-2-WUP/blob/068149c223d48e42c44f907845086b1f64b1fa4a/docs/progress.md" rel="noopener noreferrer" target="_blank">docs/progress.md</a> · <code>068149c223d4</code>.
+<p>Maintained source: <a href="https://github.com/Jdiller-86/CTR-2-WUP/blob/0b5e01cd0abcb9fe2db1c00408b6f6584151cabb/docs/progress.md" rel="noopener noreferrer" target="_blank">docs/progress.md</a> · <code>0b5e01cd0abc</code>.
 GitHub source and issue links may require repository access.</p>
 
 
@@ -1580,7 +1580,7 @@ passes establish their stated boundaries, not physical-console execution.</p>
 <tr>
 <td><a href="#page-df45275d34010aa4--m1">M1: Native Wii U platform</a></td>
 <td>Awaiting evidence</td>
-<td>Launch-audio regression, platform lifecycle/recovery and installed original WUP evidence</td>
+<td>Platform lifecycle/recovery, stability and installed original WUP evidence</td>
 </tr>
 <tr>
 <td><a href="#page-df45275d34010aa4--m2">M2: CPU translation and performance</a></td>
@@ -1626,7 +1626,7 @@ so independent work can overlap without claiming downstream completion.</p>
 <p><strong>Deliverables:</strong> A reproducible native platform build, checked result/save paths, a short guided console kit, an installed original diagnostic and a versioned platform acceptance record.</p>
 <p><strong>Exit criteria:</strong> Physical evidence establishes both screens, required controls/touch, native audio, reliable launch/exit, SD persistence/recovery and a documented stability session. An original WUP installs and launches/exits from the Wii U Menu.</p>
 <p><strong>Verified desktop/earlier evidence:</strong> Older native reports and the confirmed Minus exit are retained. The user reports Native/Guarded/Compiled completed without errors on v0.14.5; supplied text logs have older headers. A valid visit-1 snapshot proves initial persistence, while a later Save update failed and no new reports appeared. Current independent TXT read-back and save publication/recovery have desktop/sanitizer checks, not new console acceptance.</p>
-<p><strong>Reviewed physical follow-up:</strong> Named TXT collection, original fresh-launch save reload, embedded/SD assets and GX transfers pass their scoped checks; pictures and Minus return have user confirmation. Looping launch music remains an open defect.</p>
+<p><strong>Reviewed physical follow-up:</strong> Named TXT collection, original fresh-launch save reload, embedded/SD assets and GX transfers pass their scoped checks; pictures and Minus return have user confirmation. October 13 Audio Check/GX reports and user confirmation verify the launch-music regression; full lifecycle/recovery and installed-title acceptance remain open.</p>
 <p><strong>Still needs external evidence/input:</strong> Focused audio regression, exact firmware/Aroma/installer versions and native/installed lifecycle/recovery evidence require the Wii U. No game dump is needed for the original diagnostics.</p>
 <p>References: <a href="#page-ec849fdaf3bbc38f">Console evidence</a> · <a href="#page-5748ca38e77fe743">Short follow-up</a> · <a href="#page-3317412f2c28808f">Guided tests</a> · <a href="#page-8fcf07826d2459c3">Console guide</a>.</p>
 <h3 id="page-df45275d34010aa4--actionable-work-items">Actionable work items<a class="headerlink" href="#page-df45275d34010aa4--actionable-work-items" title="Permanent link">¶</a></h3>
@@ -1746,7 +1746,7 @@ so independent work can overlap without claiming downstream completion.</p>
 <p><strong>Entry:</strong> Original normal-CRT/devkitARM/libctru applications execute through the portable runtime on desktop. Their required guest memory, scheduler, service and display contracts are defined.</p>
 <p><strong>Deliverables:</strong> Stable compiled guest execution with checked kernel/IPC/lifecycle/display/input/filesystem contracts; focused module and guest-audio fixtures feed later selected-title integration.</p>
 <p><strong>Exit criteria:</strong> A real compiled guest executes on Wii U, updates both screens, responds to required GamePad input/touch and exits or completes a documented stability session. Exercised save/assets behavior is verified. This fixture gate does not require claiming all retail services or PICA draw support.</p>
-<p><strong>Verified desktop/earlier evidence:</strong> Nine original compiled applications cover boot, threads, input, graphics, interactive execution, save/reload, RomFS, GX transfers and bounded PICA draws. Desktop/sanitizer and selected emulated PowerPC checks support exact pixels/state/files. Reviewed physical Save/results/assets/GX evidence is retained; current compiled draw and launch-audio retests remain pending; a native tone does not establish guest DSP/audio.</p>
+<p><strong>Verified desktop/earlier evidence:</strong> Nine original compiled applications cover boot, threads, input, graphics, interactive execution, save/reload, RomFS, GX transfers and bounded PICA draws. Desktop/sanitizer and selected emulated PowerPC checks support exact pixels/state/files. Reviewed physical Save/results/assets/GX evidence is retained; October 13 compiled draw and launch-audio results are reviewed, with a 57.33-second draw-scene delay and premature visual-prompt guard requiring follow-up; a native tone does not establish guest DSP/audio.</p>
 <p><strong>Still needs external evidence/input:</strong> Original guest modules, audio probes and shared service work can proceed independently. Hardware validates display/input/audio/lifecycle/assets; observed retail service/module/save requirements need M5 intake.</p>
 <p>References: <a href="#page-43d0f88214e9875b">Compiled applications</a> · <a href="#page-644eb16bae230b8e">Services</a> · <a href="#page-fc91eab0fcc820ea">Filesystem</a> · <a href="#page-5f8d8a70bf6d79a0">RomFS assets</a>.</p>
 <h3 id="page-df45275d34010aa4--actionable-work-items_2">Actionable work items<a class="headerlink" href="#page-df45275d34010aa4--actionable-work-items_2" title="Permanent link">¶</a></h3>
@@ -1816,7 +1816,7 @@ so independent work can overlap without claiming downstream completion.</p>
 <p>State: <strong>Done (bounded command acceptance reviewed)</strong> · Needs: none for original-fixture development.</p>
 <p>Depends on: none.</p>
 <p>Verified foundation: <a href="#page-c41bd26c5d3f4511">PICA command contract</a>, 353 original builder/reference cases, transactional native state and the compiled standard command-queue fixture. No draws or full task acceptance are claimed.</p>
-<p>v0.23.0 connects <a href="#page-281c4fd2af364f78">compiled guest draws</a> to the standard GSP queue with owned resources, exact target/display checks and preserved failure state. Physical results remain deferred.</p>
+<p>v0.23.0 connects <a href="#page-281c4fd2af364f78">compiled guest draws</a> to the standard GSP queue with owned resources, exact target/display checks and preserved failure state. October 13 physical own PASS/exit and user picture confirmation are reviewed; rendered presentation at 57.33 seconds and premature guide timing need a focused follow-up.</p>
 <p>v0.22.0 adds <a href="#page-8ca47883e6c4a73e">owned software scenes</a> with complete-list
 state/pixel rollback, explicit resource binding and independent exact pixels.
 These execute draws in the experimental boundary; the guest queue remains
@@ -1870,7 +1870,7 @@ license-cleared GX2 shader route remain open; this checkpoint does not accept th
 </ul>
 <p><a id="page-df45275d34010aa4--m4-console-scenes"></a></p>
 <h4 id="page-df45275d34010aa4--m4-console-scenes-compare-rendered-scenes-and-measure-wii-u-graphics-costs">m4-console-scenes: Compare rendered scenes and measure Wii U graphics costs<a class="headerlink" href="#page-df45275d34010aa4--m4-console-scenes-compare-rendered-scenes-and-measure-wii-u-graphics-costs" title="Permanent link">¶</a></h4>
-<p>Use original reference scenes to establish real GX2 output and timing before title-specific visual acceptance.</p>
+<p>Retain reviewed bounded compiled draw results; correct premature visual gating and measure execution/scaling/GPU/wait/memory costs separately before full graphics or title acceptance.</p>
 <p>State: <strong>Blocked</strong> · Needs: <code>needs-console</code>.</p>
 <p>Depends on: <a href="#page-df45275d34010aa4--m4-vertex-shaders">m4-vertex-shaders</a>, <a href="#page-df45275d34010aa4--m4-fragment-pipeline">m4-fragment-pipeline</a>, <a href="#page-df45275d34010aa4--m4-coherency-cache">m4-coherency-cache</a>.</p>
 <p>Acceptance:</p>
@@ -2078,7 +2078,7 @@ topic branches, reviewable PRs and passing CI remain the development convention.
 No paid subscription or administrative setting is assumed enabled. See
 <a href="#page-7dcf84926bde3c84">GitHub development</a> for actual access limits.</p>
 <hr>
-<p>Maintained source: <a href="https://github.com/Jdiller-86/CTR-2-WUP/blob/068149c223d48e42c44f907845086b1f64b1fa4a/docs/milestones.md" rel="noopener noreferrer" target="_blank">docs/milestones.md</a> · <code>068149c223d4</code>.
+<p>Maintained source: <a href="https://github.com/Jdiller-86/CTR-2-WUP/blob/0b5e01cd0abcb9fe2db1c00408b6f6584151cabb/docs/milestones.md" rel="noopener noreferrer" target="_blank">docs/milestones.md</a> · <code>0b5e01cd0abc</code>.
 GitHub source and issue links may require repository access.</p>
 
 
@@ -2101,37 +2101,36 @@ GitHub source and issue links may require repository access.</p>
 
 <h1 id="page-eea1fcd3d85d2991--remaining-acceptance-gates-0230">Remaining acceptance gates (0.23.0)<a class="headerlink" href="#page-eea1fcd3d85d2991--remaining-acceptance-gates-0230" title="Permanent link">¶</a></h1>
 <p>The product remains a Windows GUI that converts owned 3DS games into individual
-Wii U WUP titles. Current diagnostics do not provide commercial gameplay.
-Approximately 20% implementation and 0/7 accepted full gates remain the assessment.</p>
-<p>Reviewed physical reports establish original fresh-launch saves, named TXT
-collection, embedded/SD assets and GX transfer/configuration; pictures and Minus
-return have user confirmation. <a href="#page-ec849fdaf3bbc38f">Evidence</a> preserves older
-failures separately. No repeat Save/RomFS round is requested.</p>
-<p>Physical testing is deferred by the user. Independent renderer/runtime and host
-development continues; these entries identify acceptance evidence to collect
-when testing or private input becomes available. The compiled original guest
-<a href="#page-281c4fd2af364f78">draw checkpoint</a> now works on host and cross-builds for Wii U.</p>
-<p>Current external requirements:</p>
+Wii U WUP titles. Approximately 20% implementation and 0/7 full gates accepted
+remain the assessment. Original diagnostics are separate from commercial play.</p>
+<p>The user is available with Windows 11, an SD reader and Aroma. Reviewed October 13
+Audio Check/GX Transfers 0.20.0 and Guest Draws 0.23.0 results establish scoped
+passes and user-confirmed silence, pictures and exit. Save/RomFS already have
+reviewed results. No blanket repeat is requested. See <a href="#page-ec849fdaf3bbc38f">evidence</a>.</p>
+<p>Current requirements:</p>
 <ol>
-<li><strong>Launch-audio regression, when testing resumes:</strong> run the focused <a href="#page-da1a36df220cd5da">Audio Check and GX Transfers 0.20.0</a>.
-   Return their new TXT results and a note on music/Minus return.</li>
-<li><strong>Platform acceptance:</strong> record exact firmware/Aroma/installer versions and
-   complete native recovery/Home/APT and installed-original-WUP checks.</li>
-<li><strong>Mario input:</strong> privately prepare the exact owned revision with
-   <a href="#page-8bd3b7e795b5a488">local decryption</a> or an already decrypted dump, then
-   supply the <a href="#page-9af9c2bac98d08cd">small executable intake</a>. Actual assets and
-   exercised CPU/services/PICA/audio requirements remain unknown. Keys stay local.</li>
-<li><strong>Renderer/runtime:</strong> extend the bounded compiled guest software draw subset
-   with broader shaders/TEV/sampling, native GX2 translation, resource coherency,
-   modules, guest audio and retail saves. Collect the compiled draw guide and
-   measured physical scenes/gameplay when hardware testing resumes.</li>
+<li><strong>Draw progress and accurate evidence:</strong> the rendered second presentation
+   takes 57.33 seconds in the trace; the visual guide accepted an answer before
+   that scene. Gate confirmation on the drawn frame, measure individual phases
+   and investigate the fixed guest-instruction-per-refresh budget. Aggregate
+   host refresh time is not a GPU/CPU breakdown or a game-performance result.</li>
+<li><strong>Mario intake:</strong> the newly supplied CCI is described as decrypted but exceeds
+   the 32 MiB executor transfer limit. Use the existing Windows/Python
+   <a href="#page-9af9c2bac98d08cd">small private executable export</a>; retain the full file locally
+   for assets/modules. Exact identity and decryption remain unverified. Keys stay local.</li>
+<li><strong>Platform acceptance:</strong> complete documented repeat launch, Home/APT,
+   stability, SD recovery and original WUP install/Menu-launch checks with exact
+   environment/build identity. The three successful sessions do not complete
+   those full criteria.</li>
+<li><strong>Renderer/runtime implementation:</strong> broader shaders, TEV/sampling, native
+   GX2 translation, coherency, dynamic modules, guest audio and retail saves
+   remain open. Independent original-fixture development can continue.</li>
 <li><strong>Conversion/GUI:</strong> prove the full native Windows conversion and WUP
-   install/rebuild/save continuity, then complete the planned GUI acceptance.</li>
+   install/rebuild/save continuity, then complete GUI acceptance.</li>
 </ol>
-<p>Independent development can continue. It cannot replace title bytes, physical
-console observations or full Windows/install acceptance. Project #2 is populated
-through the repository Actions secret; public docs and the Project dashboard are
-deployed and HTTP-verified. Direct cloud administration access remains limited.</p>
+<p>GitHub management and publication are working through trusted-main Actions.
+Full Project statuses and gate acceptance remain authoritative; the scoped
+physical passes do not close parent tasks or full milestones automatically.</p>
 <h2 id="page-eea1fcd3d85d2991--historical-handoffs">Historical handoffs<a class="headerlink" href="#page-eea1fcd3d85d2991--historical-handoffs" title="Permanent link">¶</a></h2>
 <h3 id="page-eea1fcd3d85d2991--v0170-handoff">v0.17.0 handoff<a class="headerlink" href="#page-eea1fcd3d85d2991--v0170-handoff" title="Permanent link">¶</a></h3>
 <p>The final product remains an UWUVCI-style <strong>Windows GUI → Inject → per-game WUP →
@@ -2204,7 +2203,7 @@ GitHub now has live milestone/issues tracking and reviewed CI/artifact/agent/doc
 setup. Projects and repository administration changes are blocked by the GitHub
 integration's permissions; the desired setup is recorded without claiming it live.</p>
 <hr>
-<p>Maintained source: <a href="https://github.com/Jdiller-86/CTR-2-WUP/blob/068149c223d48e42c44f907845086b1f64b1fa4a/docs/current-roadblock.md" rel="noopener noreferrer" target="_blank">docs/current-roadblock.md</a> · <code>068149c223d4</code>.
+<p>Maintained source: <a href="https://github.com/Jdiller-86/CTR-2-WUP/blob/0b5e01cd0abcb9fe2db1c00408b6f6584151cabb/docs/current-roadblock.md" rel="noopener noreferrer" target="_blank">docs/current-roadblock.md</a> · <code>0b5e01cd0abc</code>.
 GitHub source and issue links may require repository access.</p>
 
 
@@ -2326,7 +2325,7 @@ list and waits for P3D. Its TXT report includes PICA list/write/finalizer counts
 and parser diagnostics. Picture and launcher confirmations remain separate;
 these pictures still come from fills/transfers, not a PICA draw renderer.</p>
 <hr>
-<p>Maintained source: <a href="https://github.com/Jdiller-86/CTR-2-WUP/blob/068149c223d48e42c44f907845086b1f64b1fa4a/docs/gx-transfers.md" rel="noopener noreferrer" target="_blank">docs/gx-transfers.md</a> · <code>068149c223d4</code>.
+<p>Maintained source: <a href="https://github.com/Jdiller-86/CTR-2-WUP/blob/0b5e01cd0abcb9fe2db1c00408b6f6584151cabb/docs/gx-transfers.md" rel="noopener noreferrer" target="_blank">docs/gx-transfers.md</a> · <code>0b5e01cd0abc</code>.
 GitHub source and issue links may require repository access.</p>
 
 
@@ -2352,15 +2351,21 @@ GitHub source and issue links may require repository access.</p>
 results. The additional Save 0.14.6 trace confirms persistence across closing and
 reopening the app. Correct screens and normal Minus return have the user’s
 confirmation. See <a href="#page-ec849fdaf3bbc38f">the evidence review</a>.</p>
-<p><strong>Run only the short <a href="#page-da1a36df220cd5da">launch-audio check</a> with Audio Check and GX
-Transfers 0.20.0.</strong> It addresses Wii U launch music continuing during the apps.
+<p>The October 13 <a href="#page-da1a36df220cd5da">launch-audio check</a> and Guest Draws follow-up
+have reviewed passes, with the user confirming pictures, silence and correct
+exit. The rendered draw scene takes 57.33 seconds in the trace. Its visual
+prompt accepted an answer before that scene, so the next focused work is
+presentation gating and measured diagnostic progress. See
+<a href="#page-ec849fdaf3bbc38f">the evidence review</a>.
 There is no need to repeat Save/RomFS or the long native controls/stability guide
 solely for a version bump. Keep older reports, snapshot and backup siblings.</p>
-<p>The guide gives the two app names, prompts, result locations and files to upload.
+<p>A new draw-performance build will require its own focused hardware comparison;
+this run cannot establish a future build's speed. No further test is requested
+for the unchanged audio, Save or RomFS routes.
 These original RPX/WUHB diagnostics have separate acceptance from installed WUPs,
 commercial gameplay and full milestones.</p>
 <hr>
-<p>Maintained source: <a href="https://github.com/Jdiller-86/CTR-2-WUP/blob/068149c223d48e42c44f907845086b1f64b1fa4a/docs/console-retest.md" rel="noopener noreferrer" target="_blank">docs/console-retest.md</a> · <code>068149c223d4</code>.
+<p>Maintained source: <a href="https://github.com/Jdiller-86/CTR-2-WUP/blob/0b5e01cd0abcb9fe2db1c00408b6f6584151cabb/docs/console-retest.md" rel="noopener noreferrer" target="_blank">docs/console-retest.md</a> · <code>0b5e01cd0abc</code>.
 GitHub source and issue links may require repository access.</p>
 
 
@@ -2487,7 +2492,7 @@ extdata/retail saves, console SD behavior and Windows conversion integration
 remain unfinished. Signature authenticity is unverified. This diagnostic does
 not enable a retail profile, render PICA scenes or establish console speed.</p>
 <hr>
-<p>Maintained source: <a href="https://github.com/Jdiller-86/CTR-2-WUP/blob/068149c223d48e42c44f907845086b1f64b1fa4a/docs/romfs-assets.md" rel="noopener noreferrer" target="_blank">docs/romfs-assets.md</a> · <code>068149c223d4</code>.
+<p>Maintained source: <a href="https://github.com/Jdiller-86/CTR-2-WUP/blob/0b5e01cd0abcb9fe2db1c00408b6f6584151cabb/docs/romfs-assets.md" rel="noopener noreferrer" target="_blank">docs/romfs-assets.md</a> · <code>0b5e01cd0abc</code>.
 GitHub source and issue links may require repository access.</p>
 
 
@@ -2635,7 +2640,7 @@ extracted onto host paths. See <a href="#page-5f8d8a70bf6d79a0">romfs-assets.md<
 methods, licenses and input/output handoff. Supported decrypted <code>.cci</code> (NCSD)
 can enter the same checked pipeline; no batch executable is bundled or executed.</p>
 <hr>
-<p>Maintained source: <a href="https://github.com/Jdiller-86/CTR-2-WUP/blob/068149c223d48e42c44f907845086b1f64b1fa4a/docs/encrypted-input.md" rel="noopener noreferrer" target="_blank">docs/encrypted-input.md</a> · <code>068149c223d4</code>.
+<p>Maintained source: <a href="https://github.com/Jdiller-86/CTR-2-WUP/blob/0b5e01cd0abcb9fe2db1c00408b6f6584151cabb/docs/encrypted-input.md" rel="noopener noreferrer" target="_blank">docs/encrypted-input.md</a> · <code>0b5e01cd0abc</code>.
 GitHub source and issue links may require repository access.</p>
 
 
@@ -2657,6 +2662,30 @@ GitHub source and issue links may require repository access.</p>
 
 
 <h1 id="page-9af9c2bac98d08cd--cia-intake-and-the-attachment-transfer-limit">CIA intake and the attachment transfer limit<a class="headerlink" href="#page-9af9c2bac98d08cd--cia-intake-and-the-attachment-transfer-limit" title="Permanent link">¶</a></h1>
+<p><strong>October 13 current input:</strong> the user supplied a CCI described as decrypted,
+but it exceeds the executor's 32 MiB transfer limit. No byte from that attachment
+has been inspected; filename identity and decryption remain unverified. On the
+Windows 11 PC with Python 3.12+, install the released CTR2WUP Python wheel, then:</p>
+<div class="language-powershell highlight"><pre><span></span><code><a id="page-9af9c2bac98d08cd--__codelineno-0-1" name="page-9af9c2bac98d08cd--__codelineno-0-1" href="#page-9af9c2bac98d08cd--__codelineno-0-1"></a><span class="n">py</span> <span class="n">-m</span> <span class="n">host</span> <span class="n">prepare-rom</span> <span class="s2">"C:\path\owned-game.cci"</span> <span class="p">-</span><span class="n">-output</span> <span class="s2">"C:\path\new-Mario-prepared"</span>
+<a id="page-9af9c2bac98d08cd--__codelineno-0-2" name="page-9af9c2bac98d08cd--__codelineno-0-2" href="#page-9af9c2bac98d08cd--__codelineno-0-2"></a><span class="n">py</span> <span class="n">-m</span> <span class="n">host</span> <span class="n">prepare-intake</span> <span class="s2">"C:\path\new-Mario-prepared\game.cxi"</span> <span class="p">-</span><span class="n">-output</span> <span class="s2">"C:\path\new-Mario-intake"</span>
+</code></pre></div>
+<p>Return <code>new-Mario-intake\CTR2WUP-intake.zip</code> and
+<code>new-Mario-prepared\preparation-report.json</code> privately in this chat. The output
+directory must be new. NCSD cartridge input uses the same content-based Python
+route as <code>.3ds</code>; renaming or uploading the full CCI again is unnecessary. The
+original file remains unchanged and stays on the PC for later RomFS/module work.
+The archive contains a receipt and, for supported decrypted input, a derived
+executable-only CXI below 30 MiB; it excludes RomFS, tickets, certificates and
+keys. A report-only result still requires resolving its stated blocking error.
+The standalone .NET CIA helper below does not accept CCI.</p>
+<p>The user's direct 0.20.0 export reported <code>unsupported_ncch_version</code> for version 0.
+CFA data partitions use version 0, while supported application CXIs use version 2.
+The two-step route selects and validates the supported main partition without
+inspecting unsupported auxiliary layouts. An original v2-executable/v0-data
+fixture verifies this route; which partition caused the user's error remains
+unknown until their small intake arrives. A separate planned feature addresses
+strict decrypted CFA inspection. Do not alter the original header or infer
+commercial compatibility from successful intake.</p>
 <p>October 11 update: the user returned a valid report-only intake ZIP. The helper
 reports <code>encrypted_cia_content</code>; no executable view was exported. This identifies
 the next input as a decrypted executable/CIA copy. The receipt is retained
@@ -2711,9 +2740,9 @@ self-contained EXE is cross-published; native Windows execution remains
 unverified. No user game byte or credential is included in the utility bundle.</p>
 <h2 id="page-9af9c2bac98d08cd--shared-python-engine">Shared Python engine<a class="headerlink" href="#page-9af9c2bac98d08cd--shared-python-engine" title="Permanent link">¶</a></h2>
 <p>For developers with Python 3.12+:</p>
-<div class="language-sh highlight"><pre><span></span><code><a id="page-9af9c2bac98d08cd--__codelineno-0-1" name="page-9af9c2bac98d08cd--__codelineno-0-1" href="#page-9af9c2bac98d08cd--__codelineno-0-1"></a>python<span class="w"> </span>-m<span class="w"> </span>host<span class="w"> </span>inspect<span class="w"> </span><span class="s2">"private/game.cia"</span>
-<a id="page-9af9c2bac98d08cd--__codelineno-0-2" name="page-9af9c2bac98d08cd--__codelineno-0-2" href="#page-9af9c2bac98d08cd--__codelineno-0-2"></a>python<span class="w"> </span>-m<span class="w"> </span>host<span class="w"> </span>prepare-intake<span class="w"> </span><span class="s2">"private/game.cia"</span><span class="w"> </span>--output<span class="w"> </span><span class="s2">"private/game-intake"</span>
-<a id="page-9af9c2bac98d08cd--__codelineno-0-3" name="page-9af9c2bac98d08cd--__codelineno-0-3" href="#page-9af9c2bac98d08cd--__codelineno-0-3"></a>python<span class="w"> </span>-m<span class="w"> </span>host<span class="w"> </span>analyze-title<span class="w"> </span><span class="s2">"private/game-intake/executable-view.cxi"</span><span class="w"> </span>--lifter<span class="w"> </span>--output<span class="w"> </span><span class="s2">"private/game-analysis"</span>
+<div class="language-sh highlight"><pre><span></span><code><a id="page-9af9c2bac98d08cd--__codelineno-1-1" name="page-9af9c2bac98d08cd--__codelineno-1-1" href="#page-9af9c2bac98d08cd--__codelineno-1-1"></a>python<span class="w"> </span>-m<span class="w"> </span>host<span class="w"> </span>inspect<span class="w"> </span><span class="s2">"private/game.cia"</span>
+<a id="page-9af9c2bac98d08cd--__codelineno-1-2" name="page-9af9c2bac98d08cd--__codelineno-1-2" href="#page-9af9c2bac98d08cd--__codelineno-1-2"></a>python<span class="w"> </span>-m<span class="w"> </span>host<span class="w"> </span>prepare-intake<span class="w"> </span><span class="s2">"private/game.cia"</span><span class="w"> </span>--output<span class="w"> </span><span class="s2">"private/game-intake"</span>
+<a id="page-9af9c2bac98d08cd--__codelineno-1-3" name="page-9af9c2bac98d08cd--__codelineno-1-3" href="#page-9af9c2bac98d08cd--__codelineno-1-3"></a>python<span class="w"> </span>-m<span class="w"> </span>host<span class="w"> </span>analyze-title<span class="w"> </span><span class="s2">"private/game-intake/executable-view.cxi"</span><span class="w"> </span>--lifter<span class="w"> </span>--output<span class="w"> </span><span class="s2">"private/game-analysis"</span>
 </code></pre></div>
 <p>The engine supports standard <code>0x2020</code> type-0/version-0 CIA, SHA-256 signed-header
 layouts, version-1 TMD tables, sparse content bitmaps, exact ticket/TMD identity,
@@ -2735,9 +2764,9 @@ original RomFS placeholder and compressed code, and checks byte-for-byte
 agreement with the Python engine. No commercial test material is used.</p>
 <p>Build the helper with .NET 10.0.401, using intermediate/output paths outside the
 source tree. Windows publishing is pinned to the .NET 10.0.12 runtime:</p>
-<div class="language-sh highlight"><pre><span></span><code><a id="page-9af9c2bac98d08cd--__codelineno-1-1" name="page-9af9c2bac98d08cd--__codelineno-1-1" href="#page-9af9c2bac98d08cd--__codelineno-1-1"></a>dotnet<span class="w"> </span>build<span class="w"> </span>tools/CiaIntake/CiaIntake.csproj<span class="w"> </span>-c<span class="w"> </span>Release<span class="w"> </span>-p:BaseIntermediateOutputPath<span class="o">=</span>/absolute/artifacts/cia-obj/<span class="w"> </span>-p:OutputPath<span class="o">=</span>/absolute/artifacts/cia-linux/
-<a id="page-9af9c2bac98d08cd--__codelineno-1-2" name="page-9af9c2bac98d08cd--__codelineno-1-2" href="#page-9af9c2bac98d08cd--__codelineno-1-2"></a>python<span class="w"> </span>tools/validate-cia-helper.py<span class="w"> </span>--helper<span class="w"> </span>/absolute/artifacts/cia-linux/CTR2WUP-CIA-Intake.dll<span class="w"> </span>--output<span class="w"> </span>artifacts/cia-helper-report
-<a id="page-9af9c2bac98d08cd--__codelineno-1-3" name="page-9af9c2bac98d08cd--__codelineno-1-3" href="#page-9af9c2bac98d08cd--__codelineno-1-3"></a>dotnet<span class="w"> </span>publish<span class="w"> </span>tools/CiaIntake/CiaIntake.csproj<span class="w"> </span>-c<span class="w"> </span>Release<span class="w"> </span>-r<span class="w"> </span>win-x64<span class="w"> </span>--self-contained<span class="w"> </span><span class="nb">true</span><span class="w"> </span>-p:PublishSingleFile<span class="o">=</span><span class="nb">true</span><span class="w"> </span>-p:EnableCompressionInSingleFile<span class="o">=</span><span class="nb">true</span><span class="w"> </span>-p:IncludeNativeLibrariesForSelfExtract<span class="o">=</span><span class="nb">true</span><span class="w"> </span>-p:BaseIntermediateOutputPath<span class="o">=</span>/absolute/artifacts/cia-win-obj/<span class="w"> </span>-p:PublishDir<span class="o">=</span>/absolute/artifacts/cia-windows/
+<div class="language-sh highlight"><pre><span></span><code><a id="page-9af9c2bac98d08cd--__codelineno-2-1" name="page-9af9c2bac98d08cd--__codelineno-2-1" href="#page-9af9c2bac98d08cd--__codelineno-2-1"></a>dotnet<span class="w"> </span>build<span class="w"> </span>tools/CiaIntake/CiaIntake.csproj<span class="w"> </span>-c<span class="w"> </span>Release<span class="w"> </span>-p:BaseIntermediateOutputPath<span class="o">=</span>/absolute/artifacts/cia-obj/<span class="w"> </span>-p:OutputPath<span class="o">=</span>/absolute/artifacts/cia-linux/
+<a id="page-9af9c2bac98d08cd--__codelineno-2-2" name="page-9af9c2bac98d08cd--__codelineno-2-2" href="#page-9af9c2bac98d08cd--__codelineno-2-2"></a>python<span class="w"> </span>tools/validate-cia-helper.py<span class="w"> </span>--helper<span class="w"> </span>/absolute/artifacts/cia-linux/CTR2WUP-CIA-Intake.dll<span class="w"> </span>--output<span class="w"> </span>artifacts/cia-helper-report
+<a id="page-9af9c2bac98d08cd--__codelineno-2-3" name="page-9af9c2bac98d08cd--__codelineno-2-3" href="#page-9af9c2bac98d08cd--__codelineno-2-3"></a>dotnet<span class="w"> </span>publish<span class="w"> </span>tools/CiaIntake/CiaIntake.csproj<span class="w"> </span>-c<span class="w"> </span>Release<span class="w"> </span>-r<span class="w"> </span>win-x64<span class="w"> </span>--self-contained<span class="w"> </span><span class="nb">true</span><span class="w"> </span>-p:PublishSingleFile<span class="o">=</span><span class="nb">true</span><span class="w"> </span>-p:EnableCompressionInSingleFile<span class="o">=</span><span class="nb">true</span><span class="w"> </span>-p:IncludeNativeLibrariesForSelfExtract<span class="o">=</span><span class="nb">true</span><span class="w"> </span>-p:BaseIntermediateOutputPath<span class="o">=</span>/absolute/artifacts/cia-win-obj/<span class="w"> </span>-p:PublishDir<span class="o">=</span>/absolute/artifacts/cia-windows/
 </code></pre></div>
 <p>The .NET Windows runtime is MIT with additional preserved third-party notices,
 copied from the exact restored runtime package. The helper archive includes
@@ -2745,7 +2774,7 @@ copied from the exact restored runtime package. The helper archive includes
 CIA layout facts were checked against the pinned lifter's <code>src/rom.rs</code> and
 documented container offsets. The reader/exporter code is original.</p>
 <hr>
-<p>Maintained source: <a href="https://github.com/Jdiller-86/CTR-2-WUP/blob/068149c223d48e42c44f907845086b1f64b1fa4a/docs/cia-intake.md" rel="noopener noreferrer" target="_blank">docs/cia-intake.md</a> · <code>068149c223d4</code>.
+<p>Maintained source: <a href="https://github.com/Jdiller-86/CTR-2-WUP/blob/0b5e01cd0abcb9fe2db1c00408b6f6584151cabb/docs/cia-intake.md" rel="noopener noreferrer" target="_blank">docs/cia-intake.md</a> · <code>0b5e01cd0abc</code>.
 GitHub source and issue links may require repository access.</p>
 
 
@@ -2868,7 +2897,7 @@ provenance; it was not incorporated or executed. The nuspacker/CNUS_Packer
 checkouts have no identified license grant and remain research references only.
 See <code>foundation-audit.md</code> for pins and licensing constraints.</p>
 <hr>
-<p>Maintained source: <a href="https://github.com/Jdiller-86/CTR-2-WUP/blob/068149c223d48e42c44f907845086b1f64b1fa4a/docs/packaging.md" rel="noopener noreferrer" target="_blank">docs/packaging.md</a> · <code>068149c223d4</code>.
+<p>Maintained source: <a href="https://github.com/Jdiller-86/CTR-2-WUP/blob/0b5e01cd0abcb9fe2db1c00408b6f6584151cabb/docs/packaging.md" rel="noopener noreferrer" target="_blank">docs/packaging.md</a> · <code>0b5e01cd0abc</code>.
 GitHub source and issue links may require repository access.</p>
 
 
@@ -2979,7 +3008,7 @@ CRT's corresponding unmodified assembly/linker/spec sources, full license and
 section/relocation audit are supplied under <code>licenses/devkitarm-crtls/</code>. No ROM, game assets,
 keys, certificates or proprietary SDK is part of this workflow.</p>
 <hr>
-<p>Maintained source: <a href="https://github.com/Jdiller-86/CTR-2-WUP/blob/068149c223d48e42c44f907845086b1f64b1fa4a/docs/compiled-homebrew.md" rel="noopener noreferrer" target="_blank">docs/compiled-homebrew.md</a> · <code>068149c223d4</code>.
+<p>Maintained source: <a href="https://github.com/Jdiller-86/CTR-2-WUP/blob/0b5e01cd0abcb9fe2db1c00408b6f6584151cabb/docs/compiled-homebrew.md" rel="noopener noreferrer" target="_blank">docs/compiled-homebrew.md</a> · <code>0b5e01cd0abc</code>.
 GitHub source and issue links may require repository access.</p>
 
 
@@ -3176,7 +3205,7 @@ original interpreter/AOT self-test; external AOT is also verified on desktop and
 emulated PPC. See <code>guest-memory.md</code> and collect the additional native-mode result
 per <code>console-testing.md</code>. GPU/DSP physical memory and broader boot remain pending.</p>
 <hr>
-<p>Maintained source: <a href="https://github.com/Jdiller-86/CTR-2-WUP/blob/068149c223d48e42c44f907845086b1f64b1fa4a/docs/guest-fixture.md" rel="noopener noreferrer" target="_blank">docs/guest-fixture.md</a> · <code>068149c223d4</code>.
+<p>Maintained source: <a href="https://github.com/Jdiller-86/CTR-2-WUP/blob/0b5e01cd0abcb9fe2db1c00408b6f6584151cabb/docs/guest-fixture.md" rel="noopener noreferrer" target="_blank">docs/guest-fixture.md</a> · <code>0b5e01cd0abc</code>.
 GitHub source and issue links may require repository access.</p>
 
 
@@ -3272,7 +3301,7 @@ Original synthetic packing checks and development SDK probes do not close these
 gates. Follow <a href="#page-df45275d34010aa4">milestones</a> and <a href="#page-7dcf84926bde3c84">GitHub development</a>
 for the current record.</p>
 <hr>
-<p>Maintained source: <a href="https://github.com/Jdiller-86/CTR-2-WUP/blob/068149c223d48e42c44f907845086b1f64b1fa4a/docs/build-windows.md" rel="noopener noreferrer" target="_blank">docs/build-windows.md</a> · <code>068149c223d4</code>.
+<p>Maintained source: <a href="https://github.com/Jdiller-86/CTR-2-WUP/blob/0b5e01cd0abcb9fe2db1c00408b6f6584151cabb/docs/build-windows.md" rel="noopener noreferrer" target="_blank">docs/build-windows.md</a> · <code>0b5e01cd0abc</code>.
 GitHub source and issue links may require repository access.</p>
 
 
@@ -3361,7 +3390,7 @@ arithmetic/memory/branch/VFP/dispatch/fallback benchmarks are outstanding.</p>
 using the audited lifter. It does not use its native-endian desktop ABI as a
 PowerPC backend and does not distribute that tool or its incomplete notices.</p>
 <hr>
-<p>Maintained source: <a href="https://github.com/Jdiller-86/CTR-2-WUP/blob/068149c223d48e42c44f907845086b1f64b1fa4a/docs/cpu-subset.md" rel="noopener noreferrer" target="_blank">docs/cpu-subset.md</a> · <code>068149c223d4</code>.
+<p>Maintained source: <a href="https://github.com/Jdiller-86/CTR-2-WUP/blob/0b5e01cd0abcb9fe2db1c00408b6f6584151cabb/docs/cpu-subset.md" rel="noopener noreferrer" target="_blank">docs/cpu-subset.md</a> · <code>0b5e01cd0abc</code>.
 GitHub source and issue links may require repository access.</p>
 
 
@@ -3457,7 +3486,7 @@ Workload speed, full physical PowerPC acceptance, commercial startup and the
 user's selected Mario revision remain unverified. Scoped normal compiled
 homebrew has separate desktop/sanitizer/emulated-PPC evidence.</p>
 <hr>
-<p>Maintained source: <a href="https://github.com/Jdiller-86/CTR-2-WUP/blob/068149c223d48e42c44f907845086b1f64b1fa4a/docs/cpu-stack.md" rel="noopener noreferrer" target="_blank">docs/cpu-stack.md</a> · <code>068149c223d4</code>.
+<p>Maintained source: <a href="https://github.com/Jdiller-86/CTR-2-WUP/blob/0b5e01cd0abcb9fe2db1c00408b6f6584151cabb/docs/cpu-stack.md" rel="noopener noreferrer" target="_blank">docs/cpu-stack.md</a> · <code>0b5e01cd0abc</code>.
 GitHub source and issue links may require repository access.</p>
 
 
@@ -3626,7 +3655,7 @@ preserved. Unsupported arithmetic modes still reject before execution. This
 scoped fix enables the original compiled draw program without claiming general
 VFP control-mode support. The progress suite retains its separate dispatch checks.</p>
 <hr>
-<p>Maintained source: <a href="https://github.com/Jdiller-86/CTR-2-WUP/blob/068149c223d48e42c44f907845086b1f64b1fa4a/docs/upstream-integration.md" rel="noopener noreferrer" target="_blank">docs/upstream-integration.md</a> · <code>068149c223d4</code>.
+<p>Maintained source: <a href="https://github.com/Jdiller-86/CTR-2-WUP/blob/0b5e01cd0abcb9fe2db1c00408b6f6584151cabb/docs/upstream-integration.md" rel="noopener noreferrer" target="_blank">docs/upstream-integration.md</a> · <code>0b5e01cd0abc</code>.
 GitHub source and issue links may require repository access.</p>
 
 
@@ -3763,7 +3792,7 @@ remain pending. STATUS.md records current report paths.</p>
 those allocations until final release. Owned shared backing uses the combined
 budget. See <code>kernel-objects.md</code>.</p>
 <hr>
-<p>Maintained source: <a href="https://github.com/Jdiller-86/CTR-2-WUP/blob/068149c223d48e42c44f907845086b1f64b1fa4a/docs/guest-memory.md" rel="noopener noreferrer" target="_blank">docs/guest-memory.md</a> · <code>068149c223d4</code>.
+<p>Maintained source: <a href="https://github.com/Jdiller-86/CTR-2-WUP/blob/0b5e01cd0abcb9fe2db1c00408b6f6584151cabb/docs/guest-memory.md" rel="noopener noreferrer" target="_blank">docs/guest-memory.md</a> · <code>0b5e01cd0abc</code>.
 GitHub source and issue links may require repository access.</p>
 
 
@@ -3831,7 +3860,7 @@ Separate external AOT probes check media instructions/barriers and two threads'
 VFP arithmetic/FPSCR isolation. <code>compiled-homebrew.md</code> records real libctru tests.
 Every physical Wii U result remains pending.</p>
 <hr>
-<p>Maintained source: <a href="https://github.com/Jdiller-86/CTR-2-WUP/blob/068149c223d48e42c44f907845086b1f64b1fa4a/docs/guest-threads.md" rel="noopener noreferrer" target="_blank">docs/guest-threads.md</a> · <code>068149c223d4</code>.
+<p>Maintained source: <a href="https://github.com/Jdiller-86/CTR-2-WUP/blob/0b5e01cd0abcb9fe2db1c00408b6f6584151cabb/docs/guest-threads.md" rel="noopener noreferrer" target="_blank">docs/guest-threads.md</a> · <code>0b5e01cd0abc</code>.
 GitHub source and issue links may require repository access.</p>
 
 
@@ -3934,7 +3963,7 @@ the API suite to a compiler/target run.</p>
 specific FAIL code. Console/native Windows evidence is still required.
 See STATUS.md for current reports.</p>
 <hr>
-<p>Maintained source: <a href="https://github.com/Jdiller-86/CTR-2-WUP/blob/068149c223d48e42c44f907845086b1f64b1fa4a/docs/kernel-objects.md" rel="noopener noreferrer" target="_blank">docs/kernel-objects.md</a> · <code>068149c223d4</code>.
+<p>Maintained source: <a href="https://github.com/Jdiller-86/CTR-2-WUP/blob/0b5e01cd0abcb9fe2db1c00408b6f6584151cabb/docs/kernel-objects.md" rel="noopener noreferrer" target="_blank">docs/kernel-objects.md</a> · <code>0b5e01cd0abc</code>.
 GitHub source and issue links may require repository access.</p>
 
 
@@ -4100,7 +4129,7 @@ framebuffer queues and diagnostic VBlank/IRQ delivery; see <code>gsp-queues.md</
 This does not supply stock libctru service threads, address arbitration, barriers
 or GPU register/command initialization. Those remain explicit unsupported paths.</p>
 <hr>
-<p>Maintained source: <a href="https://github.com/Jdiller-86/CTR-2-WUP/blob/068149c223d48e42c44f907845086b1f64b1fa4a/docs/shared-services.md" rel="noopener noreferrer" target="_blank">docs/shared-services.md</a> · <code>068149c223d4</code>.
+<p>Maintained source: <a href="https://github.com/Jdiller-86/CTR-2-WUP/blob/0b5e01cd0abcb9fe2db1c00408b6f6584151cabb/docs/shared-services.md" rel="noopener noreferrer" target="_blank">docs/shared-services.md</a> · <code>0b5e01cd0abc</code>.
 GitHub source and issue links may require repository access.</p>
 
 
@@ -4169,7 +4198,7 @@ Interface facts were checked against devkitPro/libctru commit
 and IPC descriptor definitions. The implementation and fixture are original.
 This does not claim conventional graphical homebrew boot or Mario compatibility.</p>
 <hr>
-<p>Maintained source: <a href="https://github.com/Jdiller-86/CTR-2-WUP/blob/068149c223d48e42c44f907845086b1f64b1fa4a/docs/hid-input.md" rel="noopener noreferrer" target="_blank">docs/hid-input.md</a> · <code>068149c223d4</code>.
+<p>Maintained source: <a href="https://github.com/Jdiller-86/CTR-2-WUP/blob/0b5e01cd0abcb9fe2db1c00408b6f6584151cabb/docs/hid-input.md" rel="noopener noreferrer" target="_blank">docs/hid-input.md</a> · <code>0b5e01cd0abc</code>.
 GitHub source and issue links may require repository access.</p>
 
 
@@ -4281,7 +4310,7 @@ claimed to boot. This bridge is a reusable display foundation for the injector.<
 the selected Mario revision's private executable intake. Without that evidence,
 M3/M4/M5, commercial conversion, installer acceptance and the GUI remain open.</p>
 <hr>
-<p>Maintained source: <a href="https://github.com/Jdiller-86/CTR-2-WUP/blob/068149c223d48e42c44f907845086b1f64b1fa4a/docs/gsp-display.md" rel="noopener noreferrer" target="_blank">docs/gsp-display.md</a> · <code>068149c223d4</code>.
+<p>Maintained source: <a href="https://github.com/Jdiller-86/CTR-2-WUP/blob/0b5e01cd0abcb9fe2db1c00408b6f6584151cabb/docs/gsp-display.md" rel="noopener noreferrer" target="_blank">docs/gsp-display.md</a> · <code>0b5e01cd0abc</code>.
 GitHub source and issue links may require repository access.</p>
 
 
@@ -4371,7 +4400,7 @@ physical/VRAM mapping, broader PICA/GX2 translation and guest DSP/audio remain o
 shared runtime development can continue without a ROM; exact Mario requirements
 and physical acceptance still need private intake and console results.</p>
 <hr>
-<p>Maintained source: <a href="https://github.com/Jdiller-86/CTR-2-WUP/blob/068149c223d48e42c44f907845086b1f64b1fa4a/docs/gsp-queues.md" rel="noopener noreferrer" target="_blank">docs/gsp-queues.md</a> · <code>068149c223d4</code>.
+<p>Maintained source: <a href="https://github.com/Jdiller-86/CTR-2-WUP/blob/0b5e01cd0abcb9fe2db1c00408b6f6584151cabb/docs/gsp-queues.md" rel="noopener noreferrer" target="_blank">docs/gsp-queues.md</a> · <code>0b5e01cd0abc</code>.
 GitHub source and issue links may require repository access.</p>
 
 
@@ -4464,7 +4493,7 @@ three-frame outputs with zero fallback. PICA lists/draws remain unsupported; GPU
 resource/sampling/TEV/shader/coherency work and actual console scene/timing proof
 are still required. See <a href="#page-a93b1881f4ef1402">gx-transfers.md</a>.</p>
 <hr>
-<p>Maintained source: <a href="https://github.com/Jdiller-86/CTR-2-WUP/blob/068149c223d48e42c44f907845086b1f64b1fa4a/docs/renderer-status.md" rel="noopener noreferrer" target="_blank">docs/renderer-status.md</a> · <code>068149c223d4</code>.
+<p>Maintained source: <a href="https://github.com/Jdiller-86/CTR-2-WUP/blob/0b5e01cd0abcb9fe2db1c00408b6f6584151cabb/docs/renderer-status.md" rel="noopener noreferrer" target="_blank">docs/renderer-status.md</a> · <code>0b5e01cd0abc</code>.
 GitHub source and issue links may require repository access.</p>
 
 
@@ -4616,7 +4645,7 @@ test; no completed long input guide must be repeated for this increment.</p>
 submission and reference scene/performance evidence remain open. Task
 <code>m4-pica-commands</code> is <strong>in progress</strong>, and M4 is not accepted.</p>
 <hr>
-<p>Maintained source: <a href="https://github.com/Jdiller-86/CTR-2-WUP/blob/068149c223d48e42c44f907845086b1f64b1fa4a/docs/pica-commands.md" rel="noopener noreferrer" target="_blank">docs/pica-commands.md</a> · <code>068149c223d4</code>.
+<p>Maintained source: <a href="https://github.com/Jdiller-86/CTR-2-WUP/blob/0b5e01cd0abcb9fe2db1c00408b6f6584151cabb/docs/pica-commands.md" rel="noopener noreferrer" target="_blank">docs/pica-commands.md</a> · <code>0b5e01cd0abc</code>.
 GitHub source and issue links may require repository access.</p>
 
 
@@ -4771,7 +4800,7 @@ the portable Windows target include this suite, and the native Wii U source list
 cross-compiles the module. Desktop/sanitizer passes and cross-compilation do not
 establish Espresso execution or any rendered scene. Milestone M4 remains open.</p>
 <hr>
-<p>Maintained source: <a href="https://github.com/Jdiller-86/CTR-2-WUP/blob/068149c223d48e42c44f907845086b1f64b1fa4a/docs/vertex-attributes.md" rel="noopener noreferrer" target="_blank">docs/vertex-attributes.md</a> · <code>068149c223d4</code>.
+<p>Maintained source: <a href="https://github.com/Jdiller-86/CTR-2-WUP/blob/0b5e01cd0abcb9fe2db1c00408b6f6584151cabb/docs/vertex-attributes.md" rel="noopener noreferrer" target="_blank">docs/vertex-attributes.md</a> · <code>0b5e01cd0abc</code>.
 GitHub source and issue links may require repository access.</p>
 
 
@@ -4888,7 +4917,7 @@ independent hardware/reference raster observations, broader shader/fragment
 behavior, guest resource integration and a license-cleared GX2 shader route with
 measured costs. No commercial compatibility or full milestone PASS is implied.</p>
 <hr>
-<p>Maintained source: <a href="https://github.com/Jdiller-86/CTR-2-WUP/blob/068149c223d48e42c44f907845086b1f64b1fa4a/docs/software-scenes.md" rel="noopener noreferrer" target="_blank">docs/software-scenes.md</a> · <code>068149c223d4</code>.
+<p>Maintained source: <a href="https://github.com/Jdiller-86/CTR-2-WUP/blob/0b5e01cd0abcb9fe2db1c00408b6f6584151cabb/docs/software-scenes.md" rel="noopener noreferrer" target="_blank">docs/software-scenes.md</a> · <code>0b5e01cd0abc</code>.
 GitHub source and issue links may require repository access.</p>
 
 
@@ -4932,7 +4961,8 @@ must pass before it prints <code>CTR2WUP compiled PICA draws PASS</code> and exi
 oracle independently compares all <strong>172,800 top/bottom pixels</strong> in the captured
 PPMs. The two images show a dark background and a central region divided diagonally into
 red and green triangles; top and bottom display sizes are 400×240 and 320×240.</p>
-<p>Original host captures, with physical display verification still pending:</p>
+<p>Original host captures; the October 13 physical run has separate user picture
+confirmation and the guest's own target/readback PASS:</p>
 <p><img alt="Original compiled guest top screen" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAZAAAADwCAIAAAChXqV1AAAEgklEQVR42u3UUQ3DQAwFQUMohFA4/uBSDFE+2pVHWgAn39PM5zqSlGicQBKwJAlYkoAlScCSJGBJApYkAUuSgCUJWJIELEkCliRgSRKwJAlYkoAlScCSJGBJApYkAUuSgCUJWJIELEkCliRgSRKwJAlYkoAlScCSBKy/fNY9M7eknwWsZ2AxSwJWCSxsScCKgYUtCVgxsJglAasEFrYkYMXAwpYErBhYzJKAVQILWxKwYmBhSwJWDCxmScAqgYUtCVgxsLAlASsGFrMkYJXAwpYErBhY2JKAFQOLWRKwSmBhSwJWDCxsScCKgcUsCVglsLAlASsGFrYkYMXAYpYErBJY2JKAFQMLWxKwYmAxSwJWCSxsScCKgYUtAQtYMbCYJWABqwQWtgQsYMXAwpaABawYWMwSsIBVAgtbAhawYmBhS8ACVgwsZglYwDq5/7VvAQtY2JKABSxmScACFrYELGBhSwIWsJglAQtY2BKwgIUtCVjAYpYELGBhS8ACFrYkYAGLWRKwgIUtAQtY2JKABSxmCVjAAha2BCxgYUsCFrCYJWABC1jYErCAhS0JWMBiloAFLGBhS8ACFrYkYAGLWQIWsICFLQELWNiSgAUsZglYwDIYbAlYwMKWBCxgMUvAApawJWABC1sSsIDFLAELWMKWgAUsbEnAAhazBCxgCVsCFrCwJQELWMwSsIAlbAlYwMKWBCxgMUvAApawJWABS04ALGABi1kCFrCELQELWMIWsIAFLGYJWMAStgQsYAlbwAIWsJglYAFL2BKwgCVsAQtYwGKWgAUsYUvAApawBSxgGQyzBCxgCVsCFrCELWABS8wSsIAlbAlYwBK2gAUsMUvAApawJWABS9gCFrDELAELWMKWgAUsYQtYwBKzBCxgCVsCFrCELWABS8wSsIAlbAELWMAStoAFLDFLwAKWsAUsYAFL2AIWsMQsAQtYwhawgAUsYQtYwBKzBCxgCVvAAhawhC1gAUvMErCAJWwBC1gGI2wBC1hilhMAC1jCFrCAJWELWMCSmAUsYAlbwAKWhC1gAUtiFrCAJWwBC1gStoAFLIlZwAKWsAUsYEnYAhawpPVmAQtYwhawgCVhC1jAktaaBSxgCVvAApaELWABS1prFrCAJWwBC1gStoAFLGmtWcAClrAFLGBJ2AIWsKS1ZgELWBKwgCVhC1jAktaaBSxgSRm2gAUsKcMWsIAlZcwCFrCkDFvAApaUYQtYwJIyZgELWFKGLWABS8qwBSxgSRmzgAUsKcMWsIAlZdgCFrCkjFnAApaUYQtYwJIybAELWFLGLGABS8qwBSxgSRm2gAUsKWMWsIAlZdgCFrCkDFvAApaUMQtYwJIybAELWFKGLWABS8qYBSxgSRm2gAUsKcMWsIAlZcwCFrCkDFvAApaUYQtYwJIyZgELWFKGLWBJErAkAUuSgCVJwJIELEkCliQBSxKwJAlYkgQsScCSJGBJErAkAUuSgCVJwJIELEkCliQBSxKwJAlYkoDlCpKAJUnAkgQsSQKWJAFLErAkCViS9KYv5a5XEc5NIY0AAAAASUVORK5CYII="></p>
 <p><img alt="Original compiled guest bottom screen" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAUAAAADwCAIAAAD+Tyo8AAADr0lEQVR42u3TAQ2AAAwEsUlAAhbwLw5MkJBjTU7Bb53jvCRFGxNIAEsCWBLAEsCSAJYEsCSAJYAlASwJYAlgSQBLAlgSwBLAkgCWBLAkgCWAJQEsCWAJYEkASwJYEsASwJIAlgSwpE8B3zNzSz9pI2CGBXAbMMMCuA0YYwGcB8ywAG4DZlgAtwFjLIDzgBkWwG3ADAvgNmCMBXAeMMMCuA2YYQHcBoyxAM4DZlgAtwEzLIDbgDEWwHnADAvgNmCGBXAbMMYCOA+YYQHcBsywAG4DxlgA5wEzLIDbgBkWwG3AGAvgPGCGBXAbMMMCuA0YYwGcB8ywAG4DZlgAtwFjLIDzgBkWwG3ADAvgNmCMBXAeMMMCuA2YYQHcBoyxAM4DZlgAtwEzLIDbgDEWwHnADAvgNmCGBXAbMMYCOA+YYQHcBsywAG4DxlgA5wEzLIDbgBkWwNcPruZrBTDDAhhghgUwwBgL4I2AGQYYYIYFMMAYC2CAGRbASwEzDDDAGAtggBkWwAAzLICXAsYYYIAZFsAAMyyAAcZYADMsgAFmWAADjLEABphhgAFmWAADjLEABphhAQwwwwADjLEABphhAQwwwwJYGAMMMMMCGGCGBTDAGAMMsBgGGGCGBTDAGAtggBkGGGAxDDDAGAtggBkGGGAxDDDAwhhggBkWwAAzDDDAwhhggBkWwAAzLIAdHWOAARbDAAPMsAAGGGOAARbDAAMshgEGGGMBDDDDAAMshgEGWBgDDDDDAlgMAwywMAYYYDEMMMAMAwywMAYYYDEMMMBiGGCAMQYYYDEMMMBiGGCAZQKAxTDAAIthgAEWxgADzDDAAIthgAEWxgADLIYBBphhgAEWxgADLIYBBli7DQMsjAEGWAwDDLAYBhhgbWEMsBgGGGAxDDDAwhhggLXFMMBS2DDAUpgxwFLYMMBS2DDAUpgxwFLYMMBS2DDAUpgxwFLYMMBS2DDAUpgxwFLYMMBS2DDAUpgxwFLYMMBS2DDAUpgxwFLYMMBS2DDAUpgxwFLYMMBS2DDAUpgxwFLYMMBS2DDAUpgxwFLYMMBS2DDAUpgxwFLYMMBS2DDAUpgxwFLYMMBS2DDAUpgxwFLYMMBS2DDAUpgxwFLYMMBS2DDAUpgxwFLYMMBS2DDAUpgxwFLYMMBS2PA6wJIAlgCWBLAkgCUBLAEsCWBJAEsCWAJYEsCSAJYAlgSwJIAlASwBLAlgSQBLAlgCWBLAkgCWAJYEsCSAJQEsASwJYEkv9QD+NN84DfXDXQAAAABJRU5ErkJggg=="></p>
 <p>CI executes the sanitized original guest and native build on each PR. Download
@@ -4969,10 +4999,18 @@ attribute, uniform and MOV/NOP/END shader subset. Arithmetic shaders, sampling,
 general TEV, clipping, depth/blend/stencil and native GPU translation require
 separate scoped features. A raw VFP push/pop guard fix supports exact bit transfers
 under CRT FPSCR controls; it does not enable unsupported arithmetic modes.</p>
-<h2 id="page-281c4fd2af364f78--deferred-physical-route">Deferred physical route<a class="headerlink" href="#page-281c4fd2af364f78--deferred-physical-route" title="Permanent link">¶</a></h2>
+<h2 id="page-281c4fd2af364f78--physical-route-and-reviewed-follow-up">Physical route and reviewed follow-up<a class="headerlink" href="#page-281c4fd2af364f78--physical-route-and-reviewed-follow-up" title="Permanent link">¶</a></h2>
+<p>The October 13 run records both guide steps PASS, own guest exit, zero fallback
+and clean shutdown. The rendered second presentation takes 57.33 seconds in the
+trace; the user estimates roughly two minutes. The first frame is startup output,
+and the visual guide accepted confirmation before the drawn frame. The user's
+separate picture confirmation is retained; presentation gating and phase timing
+need a focused follow-up. See <a href="#page-ec849fdaf3bbc38f">the evidence review</a>. This
+single run does not establish repeat-launch stability or useful game speed.</p>
 <p>Copy the artifact's WUHB to <code>sd:/wiiu/apps/</code> and launch it in Aroma when physical
-testing resumes. The focused <strong>Guest Draws</strong> guide requires the actual guest
-frame before accepting the visual answer. Confirm the red/green diagonal scene
+testing is requested for a new build. In 0.23.0 the focused <strong>Guest Draws</strong> guide
+requires a guest frame, but startup output also satisfies that guard. Wait for
+the actual red/green diagonal scene
 on TV and GamePad, then confirm the guest's own PASS and orderly exit. Minus
 returns from the native diagnostic. Preserve the named result TXT, source commit
 and artifact hashes; follow <a href="#page-5748ca38e77fe743">result collection</a>.</p>
@@ -4980,7 +5018,8 @@ and artifact hashes; follow <a href="#page-5748ca38e77fe743">result collection</
 <code>APT:A</code>, <code>ptm:sysm</code>) under the documented standalone startup profile. It still
 reaches its own main/assertions/exit. This does not claim complete service startup,
 console picture/timing, WUP installation or commercial compatibility. The earlier
-focused Audio Check/GX Transfers 0.20.0 launch-music regression remains pending.</p>
+focused Audio Check/GX Transfers 0.20.0 launch-music regression has reviewed
+October 13 physical passes; it does not establish 3DS guest audio.</p>
 <h2 id="page-281c4fd2af364f78--tracking">Tracking<a class="headerlink" href="#page-281c4fd2af364f78--tracking" title="Permanent link">¶</a></h2>
 <p>The primary scoped feature is <code>guest-pica-draws</code>, implemented by PR #57 under
 task #27 and M4. It also advances #28/#30 and the checked ABI work in #18.
@@ -4988,7 +5027,7 @@ The native issue and PR are linked in <a href="https://github.com/users/Jdiller-
 Next features and their acceptance criteria are listed in
 <a href="#page-40578c72585fa789">development tracking</a>.</p>
 <hr>
-<p>Maintained source: <a href="https://github.com/Jdiller-86/CTR-2-WUP/blob/068149c223d48e42c44f907845086b1f64b1fa4a/docs/guest-pica-draws.md" rel="noopener noreferrer" target="_blank">docs/guest-pica-draws.md</a> · <code>068149c223d4</code>.
+<p>Maintained source: <a href="https://github.com/Jdiller-86/CTR-2-WUP/blob/0b5e01cd0abcb9fe2db1c00408b6f6584151cabb/docs/guest-pica-draws.md" rel="noopener noreferrer" target="_blank">docs/guest-pica-draws.md</a> · <code>0b5e01cd0abc</code>.
 GitHub source and issue links may require repository access.</p>
 
 
@@ -5121,7 +5160,7 @@ an empty save. Minus exits the host. This is an original diagnostic save and
 RPX/WUHB, not a Mario save or an installable WUP. The initial snapshot is received; successful physical update/reload is pending.
 Use the current <a href="#page-5748ca38e77fe743">console retest</a> and return its new result TXT.</p>
 <hr>
-<p>Maintained source: <a href="https://github.com/Jdiller-86/CTR-2-WUP/blob/068149c223d48e42c44f907845086b1f64b1fa4a/docs/filesystem.md" rel="noopener noreferrer" target="_blank">docs/filesystem.md</a> · <code>068149c223d4</code>.
+<p>Maintained source: <a href="https://github.com/Jdiller-86/CTR-2-WUP/blob/0b5e01cd0abcb9fe2db1c00408b6f6584151cabb/docs/filesystem.md" rel="noopener noreferrer" target="_blank">docs/filesystem.md</a> · <code>0b5e01cd0abc</code>.
 GitHub source and issue links may require repository access.</p>
 
 
@@ -5233,7 +5272,7 @@ Do not publish game dumps, decryption keys, retail saves or commercial traces.</
 in <a href="#page-40578c72585fa789">development tracking</a>. The initial reviewed status
 migration only replaces old empty/Todo values; later owner edits are preserved.</p>
 <hr>
-<p>Maintained source: <a href="https://github.com/Jdiller-86/CTR-2-WUP/blob/068149c223d48e42c44f907845086b1f64b1fa4a/docs/github-project-overview.md" rel="noopener noreferrer" target="_blank">docs/github-project-overview.md</a> · <code>068149c223d4</code>.
+<p>Maintained source: <a href="https://github.com/Jdiller-86/CTR-2-WUP/blob/0b5e01cd0abcb9fe2db1c00408b6f6584151cabb/docs/github-project-overview.md" rel="noopener noreferrer" target="_blank">docs/github-project-overview.md</a> · <code>0b5e01cd0abc</code>.
 GitHub source and issue links may require repository access.</p>
 
 
@@ -5255,6 +5294,14 @@ GitHub source and issue links may require repository access.</p>
 
 
 <h1 id="page-5c50600c67d32e7b--ctr2wup-status">CTR2WUP status<a class="headerlink" href="#page-5c50600c67d32e7b--ctr2wup-status" title="Permanent link">¶</a></h1>
+<p><strong>October 13 physical follow-up:</strong> Audio Check and GX Transfers 0.20.0, plus
+Guest Draws 0.23.0, have reviewed scoped passes and user-confirmed silence and
+normal exit. The draw trace reaches the rendered second presentation at 57.33
+seconds; aggregate diagnostic timing is not game performance. Its visual prompt
+accepted an answer before that scene, so accurate presentation gating and phase
+profiling are the next follow-up. The newly supplied CCI exceeds the transfer
+limit; <a href="#page-9af9c2bac98d08cd">small private intake</a> is still needed. All full
+milestones remain open. <a href="#page-ec849fdaf3bbc38f">Evidence review</a>.</p>
 <p>Updated <strong>October 13, 2026 (America/New_York)</strong> · <strong>v0.23.0</strong>.
 The target remains an UWUVCI-style Windows GUI: select an owned 3DS game, configure
 title/artwork, click Inject, install its individual WUP and play from Wii U Menu.
@@ -5314,7 +5361,7 @@ The raw VFP push/pop guard now preserves exact bits under CRT FPSCR controls;
 unsupported arithmetic still fails. Required coverage is <strong>384 Python tests and
 22 normal/ASan/UBSan C suites</strong>; the report guide has 636 assertions. Native,
 Scene Check and compiled Guest Draws RPX/WUHB builds and exact reports are retained
-with source/SDK provenance; physical rendering evidence is deferred.</p>
+with source/SDK provenance; the October 13 physical follow-up is reviewed above.</p>
 <p>Development is visible in PR #57 (guest draws) and merged PR #58 (tracking).
 Scoped feature issues connect native parents, milestones, Project items and PRs;
 35 established gate tasks retain their acceptance boundaries. The bounded
@@ -5325,9 +5372,9 @@ clear route for incoming contributors. The Actions credential remains in Actions
 Completed remote/local branches are removed after merge.</p>
 <p>CPU software rendering supports the documented canonical target/fragment and
 MOV shader subset. Arithmetic shaders, sampling/general TEV, depth/blend/stencil,
-clipping and native GPU translation remain open. The Audio Check/GX Transfers
-<strong>0.20.0</strong> launch-music regression, commercial profile and all full gates remain
-pending. Host passes and cross-builds do not establish physical acceptance.</p>
+clipping and native GPU translation remain open. The Audio Check/GX Transfers <strong>0.20.0</strong> launch-music regression has reviewed
+physical passes. Commercial profiles, useful performance and all full gates
+remain pending. Host passes and cross-builds do not establish physical acceptance.</p>
 <h2 id="page-5c50600c67d32e7b--v0220-increment-historical">v0.22.0 increment (historical)<a class="headerlink" href="#page-5c50600c67d32e7b--v0220-increment-historical" title="Permanent link">¶</a></h2>
 <p>The first original scenes now execute PICA-format loader/index state, fixed
 attributes, packed/float32 uniforms and actual MOV/NOP/END shader instructions
@@ -5539,7 +5586,7 @@ in <a href="#page-2bf37a6e06142482">development history</a>. The verified cloud 
 uses the existing checkout, SDK and <code>/workspace/ctr2wup-tools/environment/activate.sh</code>;
 no real keys, private console files or commercial data enter published artifacts.</p>
 <hr>
-<p>Maintained source: <a href="https://github.com/Jdiller-86/CTR-2-WUP/blob/068149c223d48e42c44f907845086b1f64b1fa4a/STATUS.md" rel="noopener noreferrer" target="_blank">STATUS.md</a> · <code>068149c223d4</code>.
+<p>Maintained source: <a href="https://github.com/Jdiller-86/CTR-2-WUP/blob/0b5e01cd0abcb9fe2db1c00408b6f6584151cabb/STATUS.md" rel="noopener noreferrer" target="_blank">STATUS.md</a> · <code>0b5e01cd0abc</code>.
 GitHub source and issue links may require repository access.</p>
 
 
@@ -5621,8 +5668,8 @@ installed-WUP acceptance, commercial conversion and final GUI are still pending.
 <td>M4 #28/#30; retain software reference and explicit shader/cache misses</td>
 </tr>
 <tr>
-<td>Deferred physical evidence</td>
-<td>Resume the focused launch-audio check, run the compiled draw guide, record repeat launch/exit, exact-build results and Espresso/rendering costs</td>
+<td>Physical evidence and performance</td>
+<td>Retain reviewed audio/GX/draw results; correct drawn-frame gating, measure diagnostic phases and execution budget, then collect repeat launch/exit and full Espresso/rendering costs</td>
 <td>M1 #13–#16, M2 #20/#21, M3 #22/#26 and M4 #31; only physical observations accept these gates</td>
 </tr>
 <tr>
@@ -5647,8 +5694,10 @@ installed-WUP acceptance, commercial conversion and final GUI are still pending.
 </tr>
 </tbody>
 </table></div>
-<p>Physical testing is deferred by the user. Continue original renderer/runtime and
-host development that does not depend on hardware. Keep exact blocked acceptance
+<p>The user is available for focused physical tests with Windows 11 and Aroma.
+October 13 audio/GX/draw results are reviewed; the draw trace exposes a 57.33-second
+scene delay and premature visual confirmation. Continue original renderer/runtime
+and host development alongside targeted hardware follow-ups. Keep exact blocked acceptance
 visible; do not treat a host pass as a console result or ask for repeated tests of
 unchanged completed routes. Priorities may change when actual title requirements
 or measured bottlenecks become available.</p>
@@ -5705,7 +5754,7 @@ Test counts and upstream desktop compatibility cannot replace product acceptance
 <p>See <a href="#page-df45275d34010aa4">milestones</a> for full exit criteria, <a href="#page-16a66ee4ac5b8867">repository tour</a>
 for source layout and <a href="#page-2bf37a6e06142482">development history</a> for dated checkpoints.</p>
 <hr>
-<p>Maintained source: <a href="https://github.com/Jdiller-86/CTR-2-WUP/blob/068149c223d48e42c44f907845086b1f64b1fa4a/docs/development-plan.md" rel="noopener noreferrer" target="_blank">docs/development-plan.md</a> · <code>068149c223d4</code>.
+<p>Maintained source: <a href="https://github.com/Jdiller-86/CTR-2-WUP/blob/0b5e01cd0abcb9fe2db1c00408b6f6584151cabb/docs/development-plan.md" rel="noopener noreferrer" target="_blank">docs/development-plan.md</a> · <code>0b5e01cd0abc</code>.
 GitHub source and issue links may require repository access.</p>
 
 
@@ -5823,7 +5872,7 @@ uploaded, included in exported projects or shipped in WUPs. Preparation success
 does not override a game's unsupported profile or physical compatibility gate.
 The GUI remains unimplemented until the underlying commercial pipeline works.</p>
 <hr>
-<p>Maintained source: <a href="https://github.com/Jdiller-86/CTR-2-WUP/blob/068149c223d48e42c44f907845086b1f64b1fa4a/docs/gui-workflow.md" rel="noopener noreferrer" target="_blank">docs/gui-workflow.md</a> · <code>068149c223d4</code>.
+<p>Maintained source: <a href="https://github.com/Jdiller-86/CTR-2-WUP/blob/0b5e01cd0abcb9fe2db1c00408b6f6584151cabb/docs/gui-workflow.md" rel="noopener noreferrer" target="_blank">docs/gui-workflow.md</a> · <code>0b5e01cd0abc</code>.
 GitHub source and issue links may require repository access.</p>
 
 
@@ -5845,6 +5894,12 @@ GitHub source and issue links may require repository access.</p>
 
 
 <h1 id="page-58b65e3953fdcd7a--first-supported-title-candidate-super-mario-3d-land">First supported-title candidate: Super Mario 3D Land<a class="headerlink" href="#page-58b65e3953fdcd7a--first-supported-title-candidate-super-mario-3d-land" title="Permanent link">¶</a></h1>
+<p><strong>October 13:</strong> the user supplied a CCI described as decrypted, but the 32 MiB
+executor transfer limit prevents inspecting it. Its decryption, exact identity,
+revision and assets remain unverified. The Windows 11/Python small-intake route
+in <a href="#page-9af9c2bac98d08cd">CIA/NCSD intake</a> is ready; title-specific analysis waits for
+that private executable export. Physical original draw/audio passes are separate
+from commercial compatibility.</p>
 <p>October 11 update: the user is preparing console tests and has supplied the
 small CIA helper receipt. It reports outer-encrypted executable content and
 contains no executable view. Decrypted executable intake is still needed; no
@@ -5953,7 +6008,7 @@ are reusable startup interfaces, not an inferred Mario patch/profile. Its actual
 memory needs, thread/shared-memory behavior and GPU/DSP mappings still require
 the supplied revision and runtime evidence. See <code>guest-memory.md</code>.</p>
 <hr>
-<p>Maintained source: <a href="https://github.com/Jdiller-86/CTR-2-WUP/blob/068149c223d48e42c44f907845086b1f64b1fa4a/docs/first-title.md" rel="noopener noreferrer" target="_blank">docs/first-title.md</a> · <code>068149c223d4</code>.
+<p>Maintained source: <a href="https://github.com/Jdiller-86/CTR-2-WUP/blob/0b5e01cd0abcb9fe2db1c00408b6f6584151cabb/docs/first-title.md" rel="noopener noreferrer" target="_blank">docs/first-title.md</a> · <code>0b5e01cd0abc</code>.
 GitHub source and issue links may require repository access.</p>
 
 
@@ -6188,7 +6243,7 @@ GitHub source and issue links may require repository access.</p>
 <p>Defer New 3DS exclusives, stereoscopic TV output, online services, cameras, microphone support, DLC/update merging, save import/export, and broad arbitrary-ROM claims until the initial title works. Track each deferred feature so titles requiring it are identified accurately.</p>
 <p>Begin now with the source/license audit and executable Wii U platform prototype.</p>
 <hr>
-<p>Maintained source: <a href="https://github.com/Jdiller-86/CTR-2-WUP/blob/068149c223d48e42c44f907845086b1f64b1fa4a/docs/project-brief.md" rel="noopener noreferrer" target="_blank">docs/project-brief.md</a> · <code>068149c223d4</code>.
+<p>Maintained source: <a href="https://github.com/Jdiller-86/CTR-2-WUP/blob/0b5e01cd0abcb9fe2db1c00408b6f6584151cabb/docs/project-brief.md" rel="noopener noreferrer" target="_blank">docs/project-brief.md</a> · <code>0b5e01cd0abc</code>.
 GitHub source and issue links may require repository access.</p>
 
 
@@ -6400,7 +6455,7 @@ renderer-status.md rather than hidden in a blanket comparison claim. No Azahar
 implementation is copied or linked. These checks do not prove GX2 rendering,
 real-game assets or Wii U performance.</p>
 <hr>
-<p>Maintained source: <a href="https://github.com/Jdiller-86/CTR-2-WUP/blob/068149c223d48e42c44f907845086b1f64b1fa4a/docs/foundation-audit.md" rel="noopener noreferrer" target="_blank">docs/foundation-audit.md</a> · <code>068149c223d4</code>.
+<p>Maintained source: <a href="https://github.com/Jdiller-86/CTR-2-WUP/blob/0b5e01cd0abcb9fe2db1c00408b6f6584151cabb/docs/foundation-audit.md" rel="noopener noreferrer" target="_blank">docs/foundation-audit.md</a> · <code>0b5e01cd0abc</code>.
 GitHub source and issue links may require repository access.</p>
 
 
@@ -6584,7 +6639,7 @@ remain unverified. No further resource is needed from the user while away.</p>
 source pins, license/source comparisons and <code>cci-interoperability.json</code>. External
 source excerpts, binaries and key databases are excluded from delivery.</p>
 <hr>
-<p>Maintained source: <a href="https://github.com/Jdiller-86/CTR-2-WUP/blob/068149c223d48e42c44f907845086b1f64b1fa4a/docs/batch-decryptor-audit.md" rel="noopener noreferrer" target="_blank">docs/batch-decryptor-audit.md</a> · <code>068149c223d4</code>.
+<p>Maintained source: <a href="https://github.com/Jdiller-86/CTR-2-WUP/blob/0b5e01cd0abcb9fe2db1c00408b6f6584151cabb/docs/batch-decryptor-audit.md" rel="noopener noreferrer" target="_blank">docs/batch-decryptor-audit.md</a> · <code>0b5e01cd0abc</code>.
 GitHub source and issue links may require repository access.</p>
 
 
@@ -6606,6 +6661,58 @@ GitHub source and issue links may require repository access.</p>
 
 
 <h1 id="page-ec849fdaf3bbc38f--console-evidence-review">Console evidence review<a class="headerlink" href="#page-ec849fdaf3bbc38f--console-evidence-review" title="Permanent link">¶</a></h1>
+<h2 id="page-ec849fdaf3bbc38f--october-13-launch-audio-gx-transfers-and-compiled-pica-draws">October 13: launch audio, GX transfers and compiled PICA draws<a class="headerlink" href="#page-ec849fdaf3bbc38f--october-13-launch-audio-gx-transfers-and-compiled-pica-draws" title="Permanent link">¶</a></h2>
+<p>The new private ZIP contains three full traces and two independent 4 KiB result
+files. Audio Check 0.20.0 records both launch-music silence and the native tone
+as PASS in its full trace; its separate result file was not included. GX Transfers
+0.20.0 and Guest Draws 0.23.0 each record both guide steps PASS in matching result
+and trace files, with no failed or skipped steps. All three traces reach
+<code>main_return</code>; the user separately confirms no launch music and correct exit.
+This is scoped hardware evidence, not full milestone acceptance.</p>
+<div class="table-wrap" tabindex="0" role="region" aria-label="Scrollable documentation table"><table>
+<thead>
+<tr>
+<th>Diagnostic</th>
+<th>Reviewed physical evidence</th>
+<th>Timing and limits</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Audio Check 0.20.0</td>
+<td>Silence prompt and native tone on both outputs PASS; five tone requests; clean shutdown</td>
+<td>No guest DSP/audio claim; standalone result TXT absent from this upload</td>
+</tr>
+<tr>
+<td>GX Transfers 0.20.0</td>
+<td>Original guest PASS/exit, 17 GX operations, four paired presentations, zero fallback/fault</td>
+<td>Final transfer presentation at 6,882 ms; mean diagnostic host frame 145,948 us</td>
+</tr>
+<tr>
+<td>Guest Draws 0.23.0</td>
+<td>Own PICA draw PASS/exit, four triangles, 97,200 fragments, 36 shader steps, zero fallback/fault; user confirms pictures</td>
+<td>Rendered second presentation at 57,330 ms; session 70,021 ms; mean host frame 153,189 us</td>
+</tr>
+</tbody>
+</table></div>
+<p>The physical draw run executed 17,457,061 instructions. The host reference count
+is 17,420,794; they are different runs, not an exact instruction-count match.
+The user estimates roughly two minutes before the draw picture appeared.
+The trace's first presentation at 1,235 ms is the startup framebuffer, not the
+rendered scene. These aggregate timings include diagnostic overhead and do not
+measure a game frame rate or isolate CPU rasterization, scaling, GPU waits or SD
+publication costs.</p>
+<p>The visual prompt accepted R at 10,221 ms, before the drawn second presentation.
+Its guide PASS alone therefore cannot prove the final triangle picture was
+confirmed at the right time. The user's separate confirmation and the later
+guest's own target/readback PASS remain evidence. A focused follow-up must gate
+the visual answer on the drawn presentation, measure individual phases and
+review the fixed 50,000-instruction-per-refresh budget. No audio, Save or RomFS
+repeat is requested solely for this evidence update.</p>
+<p>The user is available with Windows 11, an SD reader and current mainstream Wii U
+firmware/Aroma; exact versions were not supplied. Raw files and their SHA-256
+receipt remain in ignored private storage. Full lifecycle/recovery, installed
+WUP, guest audio, broader graphics and useful game performance remain open.</p>
 <h2 id="page-ec849fdaf3bbc38f--october-12-follow-up-current-reports-and-fresh-launch-save">October 12 follow-up: current reports and fresh-launch save<a class="headerlink" href="#page-ec849fdaf3bbc38f--october-12-follow-up-current-reports-and-fresh-launch-save" title="Permanent link">¶</a></h2>
 <p>Five completed named result files were reviewed from the latest private ZIP.
 The user confirms correct screens and normal Minus return. All apps continued
@@ -6784,7 +6891,7 @@ FSA behavior during a console freeze, and the original freeze remain unverified.
 That earlier retest request is superseded by the latest feedback and v0.14.6
 save/result-file round above.</p>
 <hr>
-<p>Maintained source: <a href="https://github.com/Jdiller-86/CTR-2-WUP/blob/068149c223d48e42c44f907845086b1f64b1fa4a/docs/console-evidence.md" rel="noopener noreferrer" target="_blank">docs/console-evidence.md</a> · <code>068149c223d4</code>.
+<p>Maintained source: <a href="https://github.com/Jdiller-86/CTR-2-WUP/blob/0b5e01cd0abcb9fe2db1c00408b6f6584151cabb/docs/console-evidence.md" rel="noopener noreferrer" target="_blank">docs/console-evidence.md</a> · <code>0b5e01cd0abc</code>.
 GitHub source and issue links may require repository access.</p>
 
 
@@ -6806,16 +6913,12 @@ GitHub source and issue links may require repository access.</p>
 
 
 <h1 id="page-8fcf07826d2459c3--physical-wii-u-test-checklist">Physical Wii U test checklist<a class="headerlink" href="#page-8fcf07826d2459c3--physical-wii-u-test-checklist" title="Permanent link">¶</a></h1>
-<p><strong>Current workflow: use the v0.14.6 kit and follow
-<a href="#page-5748ca38e77fe743">console-retest.md</a>: Compiled Save, then the automatic Compiled
-RomFS test if exit works.</strong> The user reports Native/Guarded/Compiled completion
-without errors on 0.14.5, but no new TXT reports. Supplied text logs are older;
-the valid snapshot proves initial writing and the later save step failed.
-Independent <code>result-*-0.14.6-*.txt</code> files now retain named outcomes and are closed/
-read-back verified. Upload them and the snapshot/siblings in this chat. No long
-native/input repetition is needed. The manual checklist below is historical
-reference for deeper acceptance rounds; <a href="#page-3317412f2c28808f">guided-testing.md</a>
-describes current controls and reporting.</p>
+<p><strong>Current evidence:</strong> October 13 audio/GX/draw results are reviewed in
+<a href="#page-ec849fdaf3bbc38f">console-evidence.md</a>. There is no request to repeat the
+completed Save/RomFS/audio routes. The next draw follow-up addresses measured
+startup delay, phase timing and accurate visual confirmation. See
+<a href="#page-5748ca38e77fe743">console-retest.md</a>. The versioned manual checks below are
+historical reference for deeper acceptance, not a new blanket test request.</p>
 <p>No console is attached to this environment. Full physical acceptance remains
 open despite the scoped native results. Cross-compilation, host tests and RPX headers do not
 establish console behavior.</p>
@@ -7005,7 +7108,7 @@ benchmarks. No commercial ROM is needed for the native test above. One user-owne
 fully decrypted Old 3DS revision will be requested for the commercial milestone
 for the selected Super Mario 3D Land candidate's private revision analysis.</p>
 <hr>
-<p>Maintained source: <a href="https://github.com/Jdiller-86/CTR-2-WUP/blob/068149c223d48e42c44f907845086b1f64b1fa4a/docs/console-testing.md" rel="noopener noreferrer" target="_blank">docs/console-testing.md</a> · <code>068149c223d4</code>.
+<p>Maintained source: <a href="https://github.com/Jdiller-86/CTR-2-WUP/blob/0b5e01cd0abcb9fe2db1c00408b6f6584151cabb/docs/console-testing.md" rel="noopener noreferrer" target="_blank">docs/console-testing.md</a> · <code>0b5e01cd0abc</code>.
 GitHub source and issue links may require repository access.</p>
 
 
@@ -7053,7 +7156,7 @@ for byte.</p>
 driver/adapter/runtime and reproducible generation instructions are supplied
 in the CTR2WUP source bundle. No compiler/toolchain binary is redistributed.</p>
 <hr>
-<p>Maintained source: <a href="https://github.com/Jdiller-86/CTR-2-WUP/blob/068149c223d48e42c44f907845086b1f64b1fa4a/docs/licenses/devkitarm-crtls/README.md" rel="noopener noreferrer" target="_blank">docs/licenses/devkitarm-crtls/README.md</a> · <code>068149c223d4</code>.
+<p>Maintained source: <a href="https://github.com/Jdiller-86/CTR-2-WUP/blob/0b5e01cd0abcb9fe2db1c00408b6f6584151cabb/docs/licenses/devkitarm-crtls/README.md" rel="noopener noreferrer" target="_blank">docs/licenses/devkitarm-crtls/README.md</a> · <code>0b5e01cd0abc</code>.
 GitHub source and issue links may require repository access.</p>
 
 
@@ -7224,7 +7327,7 @@ a failed upload leaves a draft. Published versions cannot be replaced by differe
 artifacts. This route also avoids the cloud connection's rejected upload-host
 authentication. It does not close console or commercial acceptance gates.</p>
 <h2 id="page-7dcf84926bde3c84--agent-support">Agent support<a class="headerlink" href="#page-7dcf84926bde3c84--agent-support" title="Permanent link">¶</a></h2>
-<p><a href="#page-c3deb1b9b4f4d58a">Shared instructions</a>, <a href="https://github.com/Jdiller-86/CTR-2-WUP/blob/068149c223d48e42c44f907845086b1f64b1fa4a/.github/copilot-instructions.md" rel="noopener noreferrer" target="_blank">Copilot guidance</a>
+<p><a href="#page-c3deb1b9b4f4d58a">Shared instructions</a>, <a href="https://github.com/Jdiller-86/CTR-2-WUP/blob/0b5e01cd0abcb9fe2db1c00408b6f6584151cabb/.github/copilot-instructions.md" rel="noopener noreferrer" target="_blank">Copilot guidance</a>
 and four specialist profiles cover CPU/runtime, host conversion, graphics and
 read-only console-evidence review. Use supported Copilot clients when the account
 has access. Profile files do not activate a subscription or automatically assign
@@ -7333,7 +7436,7 @@ Discussions, merged-branch cleanup and free Dependabot alerts, then verifies the
 result through the API. <strong>Project tracking</strong> owns board setup, explicit reviewed
 task transitions and public aggregates. <strong>Publish public documentation</strong> verifies
 the docs-only export before publication. Each preserves operation receipts.
-The <a href="https://github.com/Jdiller-86/CTR-2-WUP/blob/068149c223d48e42c44f907845086b1f64b1fa4a/.github/repository-settings.json" rel="noopener noreferrer" target="_blank">desired settings</a> specify mutation scope;
+The <a href="https://github.com/Jdiller-86/CTR-2-WUP/blob/0b5e01cd0abcb9fe2db1c00408b6f6584151cabb/.github/repository-settings.json" rel="noopener noreferrer" target="_blank">desired settings</a> specify mutation scope;
 actual API receipts establish which operations succeeded.</p>
 <p>Only trusted immutable main code executes with the management token. Values are
 consumed normally by the GitHub CLI and never copied into reports, source or
@@ -7341,7 +7444,7 @@ chat. Existing owner board values remain authoritative; source synchronization
 cannot overwrite them. No branch protection or paid feature is enabled, and
 application repository visibility remains private.</p>
 <hr>
-<p>Maintained source: <a href="https://github.com/Jdiller-86/CTR-2-WUP/blob/068149c223d48e42c44f907845086b1f64b1fa4a/docs/github-development.md" rel="noopener noreferrer" target="_blank">docs/github-development.md</a> · <code>068149c223d4</code>.
+<p>Maintained source: <a href="https://github.com/Jdiller-86/CTR-2-WUP/blob/0b5e01cd0abcb9fe2db1c00408b6f6584151cabb/docs/github-development.md" rel="noopener noreferrer" target="_blank">docs/github-development.md</a> · <code>0b5e01cd0abc</code>.
 GitHub source and issue links may require repository access.</p>
 
 
@@ -7438,7 +7541,7 @@ docs with <code>python3 tools/build-docs-site.py</code> using <code>docs-require
   material remaining gates. Never substitute test counts for product acceptance.</li>
 </ul>
 <hr>
-<p>Maintained source: <a href="https://github.com/Jdiller-86/CTR-2-WUP/blob/068149c223d48e42c44f907845086b1f64b1fa4a/AGENTS.md" rel="noopener noreferrer" target="_blank">AGENTS.md</a> · <code>068149c223d4</code>.
+<p>Maintained source: <a href="https://github.com/Jdiller-86/CTR-2-WUP/blob/0b5e01cd0abcb9fe2db1c00408b6f6584151cabb/AGENTS.md" rel="noopener noreferrer" target="_blank">AGENTS.md</a> · <code>0b5e01cd0abc</code>.
 GitHub source and issue links may require repository access.</p>
 
 
@@ -7486,7 +7589,7 @@ documented scope; they do not establish signature authenticity, safe installatio
 or compatibility with a commercial game. Preserve the private-input boundaries
 in <a href="#page-c3deb1b9b4f4d58a">AGENTS.md</a> and the limitations in <a href="#page-818f9b8607a7b7f4">architecture</a>.</p>
 <hr>
-<p>Maintained source: <a href="https://github.com/Jdiller-86/CTR-2-WUP/blob/068149c223d48e42c44f907845086b1f64b1fa4a/SECURITY.md" rel="noopener noreferrer" target="_blank">SECURITY.md</a> · <code>068149c223d4</code>.
+<p>Maintained source: <a href="https://github.com/Jdiller-86/CTR-2-WUP/blob/0b5e01cd0abcb9fe2db1c00408b6f6584151cabb/SECURITY.md" rel="noopener noreferrer" target="_blank">SECURITY.md</a> · <code>0b5e01cd0abc</code>.
 GitHub source and issue links may require repository access.</p>
 
 
@@ -7510,6 +7613,16 @@ GitHub source and issue links may require repository access.</p>
 <h1 id="page-bae58f2e333b3722--changelog">Changelog<a class="headerlink" href="#page-bae58f2e333b3722--changelog" title="Permanent link">¶</a></h1>
 <p>All releases are development increments. RPX/WUHB diagnostics and desktop passes
 do not establish commercial-game compatibility or installable WUP acceptance.</p>
+<h2 id="page-bae58f2e333b3722--evidence-follow-up-2026-10-13">Evidence follow-up — 2026-10-13<a class="headerlink" href="#page-bae58f2e333b3722--evidence-follow-up-2026-10-13" title="Permanent link">¶</a></h2>
+<ul>
+<li>Review physical Audio Check/GX Transfers 0.20.0 and Guest Draws 0.23.0 passes,
+  separate picture/Menu-return confirmation, and silence/native-tone results.</li>
+<li>Record the 57.33-second drawn presentation and premature visual-prompt guard;
+  plan bounded guest progress and separate execution/scaling/wait/storage metrics.</li>
+<li>Replace completed test handoffs with current evidence and remaining gates.</li>
+<li>Document the Windows/Python small-intake route for the oversized reportedly
+  decrypted CCI. No uploaded ROM byte, key or private trace is published.</li>
+</ul>
 <h2 id="page-bae58f2e333b3722--0230-2026-10-13">0.23.0 — 2026-10-13<a class="headerlink" href="#page-bae58f2e333b3722--0230-2026-10-13" title="Permanent link">¶</a></h2>
 <ul>
 <li>Execute original compiled guest PICA draws through standard GSP with tracked
@@ -7636,7 +7749,7 @@ do not establish commercial-game compatibility or installable WUP acceptance.</p
 <p>Earlier source/build evidence is preserved in
 <a href="#page-2bf37a6e06142482">development history</a>.</p>
 <hr>
-<p>Maintained source: <a href="https://github.com/Jdiller-86/CTR-2-WUP/blob/068149c223d48e42c44f907845086b1f64b1fa4a/CHANGELOG.md" rel="noopener noreferrer" target="_blank">CHANGELOG.md</a> · <code>068149c223d4</code>.
+<p>Maintained source: <a href="https://github.com/Jdiller-86/CTR-2-WUP/blob/0b5e01cd0abcb9fe2db1c00408b6f6584151cabb/CHANGELOG.md" rel="noopener noreferrer" target="_blank">CHANGELOG.md</a> · <code>0b5e01cd0abc</code>.
 GitHub source and issue links may require repository access.</p>
 
 
@@ -8567,7 +8680,7 @@ cleanup or network seed fetching to the GUI pipeline. A source-built external
 backend remains an option only if a concrete unmet requirement justifies it.
 See <a href="#page-9796e29579656671">the audit</a> and its original CCI handoff proof.</p>
 <hr>
-<p>Maintained source: <a href="https://github.com/Jdiller-86/CTR-2-WUP/blob/068149c223d48e42c44f907845086b1f64b1fa4a/docs/development-history.md" rel="noopener noreferrer" target="_blank">docs/development-history.md</a> · <code>068149c223d4</code>.
+<p>Maintained source: <a href="https://github.com/Jdiller-86/CTR-2-WUP/blob/0b5e01cd0abcb9fe2db1c00408b6f6584151cabb/docs/development-history.md" rel="noopener noreferrer" target="_blank">docs/development-history.md</a> · <code>0b5e01cd0abc</code>.
 GitHub source and issue links may require repository access.</p>
 
 
@@ -8607,7 +8720,7 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.</p>
 <hr>
-<p>Maintained source: <a href="https://github.com/Jdiller-86/CTR-2-WUP/blob/068149c223d48e42c44f907845086b1f64b1fa4a/LICENSE" rel="noopener noreferrer" target="_blank">LICENSE</a> · <code>068149c223d4</code>.
+<p>Maintained source: <a href="https://github.com/Jdiller-86/CTR-2-WUP/blob/0b5e01cd0abcb9fe2db1c00408b6f6584151cabb/LICENSE" rel="noopener noreferrer" target="_blank">LICENSE</a> · <code>0b5e01cd0abc</code>.
 GitHub source and issue links may require repository access.</p>
 
 
@@ -8771,7 +8884,7 @@ the source/artifact distribution in docs/licenses:
 <p>The full devkitPro SDK/image, external lifter binary and unlicensed packaging
 candidate binaries are not part of the delivered source/diagnostic bundles.</p>
 <hr>
-<p>Maintained source: <a href="https://github.com/Jdiller-86/CTR-2-WUP/blob/068149c223d48e42c44f907845086b1f64b1fa4a/THIRD_PARTY_NOTICES" rel="noopener noreferrer" target="_blank">THIRD_PARTY_NOTICES</a> · <code>068149c223d4</code>.
+<p>Maintained source: <a href="https://github.com/Jdiller-86/CTR-2-WUP/blob/0b5e01cd0abcb9fe2db1c00408b6f6584151cabb/THIRD_PARTY_NOTICES" rel="noopener noreferrer" target="_blank">THIRD_PARTY_NOTICES</a> · <code>0b5e01cd0abc</code>.
 GitHub source and issue links may require repository access.</p>
 
 
@@ -8833,6 +8946,13 @@ retain their separate scope.</p>
 
 
 <h1 id="page-da1a36df220cd5da--launch-music-check-0200">Launch music check (0.20.0)<a class="headerlink" href="#page-da1a36df220cd5da--launch-music-check-0200" title="Permanent link">¶</a></h1>
+<p><strong>Reviewed October 13:</strong> Audio Check's full trace records silence and the native
+tone PASS; GX Transfers has matching two-step PASS result/trace files. The user
+confirms launch music stopped and both apps exited correctly. The separate
+Audio Check result TXT was not included; its complete trace supplies the named
+observations. This focused regression is complete and needs no repeat. See
+<a href="#page-ec849fdaf3bbc38f">the evidence review</a>. The procedure below is retained for
+a future audio regression, not a pending test request.</p>
 <p>The latest Save, RomFS, SD asset and GX tests passed their scoped checks. The
 follow-up Save trace confirms persistence across closing and reopening the app.
 Those checks do not need repeating. See <a href="#page-ec849fdaf3bbc38f">the evidence review</a>.</p>
@@ -8877,7 +8997,7 @@ resets and cleanup counters. An initialized AX context alone cannot prove audibl
 silence. These tests do not establish 3DS guest audio, PICA draws, commercial
 gameplay or an installed WUP.</p>
 <hr>
-<p>Maintained source: <a href="https://github.com/Jdiller-86/CTR-2-WUP/blob/068149c223d48e42c44f907845086b1f64b1fa4a/docs/launch-audio.md" rel="noopener noreferrer" target="_blank">docs/launch-audio.md</a> · <code>068149c223d4</code>.
+<p>Maintained source: <a href="https://github.com/Jdiller-86/CTR-2-WUP/blob/0b5e01cd0abcb9fe2db1c00408b6f6584151cabb/docs/launch-audio.md" rel="noopener noreferrer" target="_blank">docs/launch-audio.md</a> · <code>0b5e01cd0abc</code>.
 GitHub source and issue links may require repository access.</p>
 
 
@@ -8906,14 +9026,15 @@ GitHub source and issue links may require repository access.</p>
       "waiting_labels": [
         "needs-console"
       ],
-      "summary": "Reviewed TXT, original save/reload, assets, pictures and Minus exit evidence exists. Launch-audio regression, platform recovery and installed-original-WUP acceptance remain open.",
+      "summary": "Reviewed TXT, saves, assets, pictures, silence/native tone and Minus exit evidence exists. Platform recovery, complete lifecycle/stability and installed-original-WUP acceptance remain open.",
       "verified_foundations": [
         "Versioned native/guest RPX/WUHB builds and read-back-checked test-report/save publication lifecycle",
         "Older native/control reports, confirmed Minus exit and user-reported Native/Guarded/Compiled v0.14.5 completion retained as scoped evidence",
-        "October 12 physical round: five completed named TXT reports, valid visit-2 snapshot, fresh-launch Save 0.14.6 RELOAD PASS and user-confirmed correct pictures/Minus return; looping launch music recorded separately"
+        "October 12 physical round: five completed named TXT reports, valid visit-2 snapshot, fresh-launch Save 0.14.6 RELOAD PASS and user-confirmed correct pictures/Minus return; looping launch music recorded separately",
+        "October 13 Audio Check 0.20.0 full trace and GX Transfers 0.20.0 result/trace record named passes; user confirms silence and correct exit. Native audio result TXT was not included."
       ],
       "acceptance_remaining": [
-        "Verify focused launch-audio regression and documented SD publication recovery",
+        "Verify documented SD publication recovery and repeat launch/Home/APT lifecycle acceptance",
         "Complete documented native controls/audio/lifecycle/stability evidence",
         "Install an original diagnostic WUP and prove Menu launch/exit"
       ],
@@ -9111,7 +9232,7 @@ GitHub source and issue links may require repository access.</p>
         "Owned memory, eight single-core contexts and scoped kernel/IPC/SRV/CFG/HID/GSP/APT/FS contracts",
         "Original compiled input/framebuffer/save/reload/RomFS/GX applications verified on desktop, sanitizers and selected emulated PowerPC comparisons",
         "Physical Save 0.14.6 fresh-process reload, embedded RomFS 0.14.6, SD-file RomFS 0.16.0 and GX 0.18.0 transfer/configuration guides completed with zero fallback/fault; user confirmed pictures and Minus return.",
-        "Original normal-CRT PICA draw application executes 17,420,794 ARM instructions without fallback, compares exact target/display pixels and builds native RPX/WUHB; physical renderer evidence remains pending."
+        "Original normal-CRT PICA draw guest has host exact-pixel checks and an October 13 physical own PASS/exit with zero fallback/fault; rendered second presentation at 57.33 seconds. User separately confirms pictures and Minus return."
       ],
       "acceptance_remaining": [
         "Prove current compiled guest display/input/exit/save/assets on Wii U",
@@ -9123,7 +9244,7 @@ GitHub source and issue links may require repository access.</p>
         {
           "id": "m3-homebrew-console",
           "title": "Verify the normal-CRT homebrew suite on Wii U",
-          "summary": "Collect focused physical evidence for the original compiled applications, especially Save, RomFS/Asset Files and GX Transfers.",
+          "summary": "Retain reviewed physical Save, RomFS/Asset Files, GX and bounded draw results. The new draw startup delay and guide timing require focused investigation; unchanged completed routes need no blanket repeat.",
           "acceptance_criteria": [
             "Current compiled guests update both screens, respond to the required input/touch, complete their documented exit and retain their versioned observations.",
             "Save fresh-process reload, nested/Unicode read-only assets and GX transfer pictures/results match the documented original fixtures; unresolved errors are investigated instead of marked passed."
@@ -9214,7 +9335,8 @@ GitHub source and issue links may require repository access.</p>
         "Original bounded vertex attribute decoding: four published component formats, explicit streams/input permutation and transactional finite-float/range/alias validation; no shader or draw enabled",
         "v0.21.0 adds unsigned 8-bit/16-bit indexed gathers, exhaustive index-domain checks and full referenced-range/value/alias validation before publication; no shader or draw enabled",
         "v0.22.0 original owned-resource loader/MOV shader/software triangles: 1,393,972 original assertions, exact analytic pixels for both index formats and 12,290 pinned independent encoding checks; focused native Scene Check cross-build, hardware evidence pending",
-        "Standard guest GSP integrates bounded owned-resource PICA draws transactionally; the compiled original draws four exact triangles into both targets and displays them with zero fallback."
+        "Standard guest GSP integrates bounded owned-resource PICA draws transactionally; the compiled original draws four exact triangles into both targets and displays them with zero fallback.",
+        "October 13 Guest Draws 0.23.0 has matching two-step PASS result/trace, four triangles, 97,200 fragments and user-confirmed pictures/exit. Aggregate frame timing and premature visual-prompt timing are recorded; full graphics costs remain unmeasured."
       ],
       "acceptance_remaining": [
         "Implement real PICA command/state, vertex/shader, texture/sampler/TEV and raster behavior",
@@ -9292,7 +9414,7 @@ GitHub source and issue links may require repository access.</p>
         {
           "id": "m4-console-scenes",
           "title": "Compare rendered scenes and measure Wii U graphics costs",
-          "summary": "Use original reference scenes to establish real GX2 output and timing before title-specific visual acceptance.",
+          "summary": "Retain the reviewed original compiled draw pictures and own PASS/exit; correct premature visual gating and separately measure CPU/GPU/transfer/wait/memory costs before full graphics or title acceptance.",
           "acceptance_criteria": [
             "Physical Wii U images match the defined scene tolerances and required visual checks; build/reference identity and unsupported features accompany the results.",
             "CPU submission, GPU work, transfers, waits, memory and frame-time distribution are measured on Wii U; selected-title scenes are later validated through M5."
@@ -9317,7 +9439,7 @@ GitHub source and issue links may require repository access.</p>
         "needs-console",
         "needs-input"
       ],
-      "summary": "Mario is the selected candidate; the received small intake has no executable. Exact owned revision/assets, title requirements and physical gameplay/audio/save/performance remain open.",
+      "summary": "Mario is selected; the newly supplied reportedly decrypted CCI exceeds the transfer limit. Exact owned revision/assets, title requirements and gameplay/audio/save/performance remain unverified.",
       "verified_foundations": [
         "Candidate and proposed private analysis/gameplay route documented",
         "Local preparation/decryption/intake helpers tested with original fixtures; actual commercial executable/assets not inspected"
