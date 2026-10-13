@@ -1815,6 +1815,8 @@
       
         
       
+        
+      
     
     
     
@@ -2239,6 +2241,34 @@
     
   
     Vertex attributes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../software-scenes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    First software scenes
   
 
     
@@ -3692,7 +3722,7 @@
 
 
 <h1 id="milestones-and-remaining-work">Milestones and remaining work<a class="headerlink" href="#milestones-and-remaining-work" title="Permanent link">&para;</a></h1>
-<p>Updated <strong>October 13, 2026</strong> for <strong>v0.21.0</strong>. The product is an UWUVCI-style
+<p>Updated <strong>October 13, 2026</strong> for <strong>v0.22.0</strong>. The product is an UWUVCI-style
 Windows GUI: <strong>Select owned 3DS ROM → configure title/artwork → Inject →
 install its WUP → play from the Wii U Menu</strong>. The CLI is the shared engine.
 Super Mario 3D Land is the first candidate; its exact revision remains unverified.</p>
@@ -3993,10 +4023,14 @@ so independent work can overlap without claiming downstream completion.</p>
 <h3 id="actionable-work-items_3">Actionable work items<a class="headerlink" href="#actionable-work-items_3" title="Permanent link">&para;</a></h3>
 <p><a id="m4-pica-commands"></a></p>
 <h4 id="m4-pica-commands-decode-pica-state-and-submit-bounded-draw-commands">m4-pica-commands: Decode PICA state and submit bounded draw commands<a class="headerlink" href="#m4-pica-commands-decode-pica-state-and-submit-bounded-draw-commands" title="Permanent link">&para;</a></h4>
-<p>The first bounded PICA command/state path now handles finalized viewport/scissor configuration through the standard guest queue. Draw inputs/resources and actual renderer submission remain open.</p>
+<p>The standard guest path handles finalized viewport/scissor configuration. A separate owned-resource scene boundary now validates loader/index/fixed/shader state and produces original software triangles; guest draw integration and broader pipeline state remain open.</p>
 <p>State: <strong>In progress</strong> · Needs: none for original-fixture development.</p>
 <p>Depends on: none.</p>
 <p>Verified foundation: <a href="../pica-commands/">PICA command contract</a>, 353 original builder/reference cases, transactional native state and the compiled standard command-queue fixture. No draws or full task acceptance are claimed.</p>
+<p>v0.22.0 adds <a href="../software-scenes/">owned software scenes</a> with complete-list
+state/pixel rollback, explicit resource binding and independent exact pixels.
+These execute draws in the experimental boundary; the guest queue remains
+configuration-only. Full task acceptance remains open.</p>
 <p>Acceptance:</p>
 <ul>
 <li>[ ] Original command streams establish register/state changes, draw inputs and validated resource ranges; malformed or unsupported state fails visibly before modifying output.</li>
@@ -4009,9 +4043,12 @@ so independent work can overlap without claiming downstream completion.</p>
 <p>Depends on: <a href="#m4-pica-commands">m4-pica-commands</a>.</p>
 <p>Verified foundation: <a href="../vertex-attributes/">resolved vertex decoding</a> now covers
 both contiguous streams and checked 8-bit/16-bit indexed gathers. The original
-suite covers every index value and transactional failure behavior. Loader/fixed
-state, uniforms, shader execution, actual draw scenes and full acceptance remain
-open; decoder checks do not accept this task.</p>
+suite covers every index value and transactional failure behavior. The first
+owned scenes now exercise loaders/fixed state, uniforms, MOV/NOP/END shaders,
+output maps and opaque triangles. Independent analytic pixels and 12,290 pinned
+encoding comparisons pass, and a focused Wii U diagnostic builds. Broader shader
+behavior, hardware/reference raster evidence, physical measured costs and a
+license-cleared GX2 shader route remain open; this checkpoint does not accept the task.</p>
 <p>Acceptance:</p>
 <ul>
 <li>[ ] Original vertex/shader scenes compare independently checked outputs across the reference and chosen GX2/software correctness path using stated tolerances.</li>
@@ -4247,7 +4284,7 @@ topic branches, reviewable PRs and passing CI remain the development convention.
 No paid subscription or administrative setting is assumed enabled. See
 <a href="../github-development/">GitHub development</a> for actual access limits.</p>
 <hr />
-<p>Maintained source: <a href="https://github.com/Jdiller-86/CTR-2-WUP/blob/192eab3078a4ebb67a487ad0178220e517b34d52/docs/milestones.md">docs/milestones.md</a> · <code>192eab3078a4</code>.
+<p>Maintained source: <a href="https://github.com/Jdiller-86/CTR-2-WUP/blob/a17aa4e6d8e6cdd63adf0d07192235a8c0ae33e8/docs/milestones.md">docs/milestones.md</a> · <code>a17aa4e6d8e6</code>.
 GitHub source and issue links may require repository access.</p>
 
 

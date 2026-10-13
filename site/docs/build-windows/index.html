@@ -1214,6 +1214,8 @@
       
         
       
+        
+      
     
     
     
@@ -1638,6 +1640,34 @@
     
   
     Vertex attributes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../software-scenes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    First software scenes
   
 
     
@@ -2529,6 +2559,11 @@ multi-stream/interleaved gathers; it uses portable byte loads rather than native
 unaligned index casts. These checks do not prove Wii U rendering or conversion.
 Generated fixtures are original and require no ROM, console key or commercial
 asset. See <a href="../encrypted-input/">encrypted inputs</a> for private local key handling.</p>
+<p>The software scene suite also runs under portable Windows GCC. It checks
+PICA-format loader/MOV shader/raster behavior independently of a Wii U build.
+With the verified native SDK installed, <code>python -m host build --target scene-check
+--output artifacts/scene-check</code> builds the focused original console diagnostic.
+See <a href="../software-scenes/">software scenes</a> for the accepted subset and evidence limits.</p>
 <p>The Python wheel contains the CLI, translator and preparation modules. It does
 not bundle the SDK, GUI or native runtime/build recipes. Extract the matching
 source distribution for Wii U builds; <code>CTR2WUP_PROJECT_ROOT</code> can point an installed
@@ -2559,7 +2594,7 @@ Original synthetic packing checks and development SDK probes do not close these
 gates. Follow <a href="../milestones/">milestones</a> and <a href="../github-development/">GitHub development</a>
 for the current record.</p>
 <hr />
-<p>Maintained source: <a href="https://github.com/Jdiller-86/CTR-2-WUP/blob/192eab3078a4ebb67a487ad0178220e517b34d52/docs/build-windows.md">docs/build-windows.md</a> · <code>192eab3078a4</code>.
+<p>Maintained source: <a href="https://github.com/Jdiller-86/CTR-2-WUP/blob/a17aa4e6d8e6cdd63adf0d07192235a8c0ae33e8/docs/build-windows.md">docs/build-windows.md</a> · <code>a17aa4e6d8e6</code>.
 GitHub source and issue links may require repository access.</p>
 
 

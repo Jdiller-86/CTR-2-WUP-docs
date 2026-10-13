@@ -1107,6 +1107,8 @@
       
         
       
+        
+      
     
     
     
@@ -1531,6 +1533,34 @@
     
   
     Vertex attributes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../software-scenes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    First software scenes
   
 
     
@@ -2662,6 +2692,14 @@
 <p>This selection establishes a host-side foundation. It does not establish that Zakuro's Rust desktop runtime can run on Wii U, that its entire CPU/VFP behavior is correct, or that a game can be lifted into a working Wii U program. A full HLE runtime and PICA-to-GX2 backend are still implementation work. Before distributing 3dsrecomp code or its emitted ABI header, resolve the missing copyright/license-notice file described below. An external local tool invocation avoids silently vendoring an incomplete notice.</p>
 <p>Do not adopt <code>mtrdrgz/3ds_recompiler</code>, <code>nuspacker</code>, or <code>CNUS_Packer</code> implementation until an applicable license grant is identified. Public source access is not permission to redistribute it. Azahar is a useful semantic reference and an explicitly GPL-covered alternative; incorporating its implementation would require a compatible project licensing/distribution decision.</p>
 <h2 id="source-and-reuse-matrix">Source and reuse matrix<a class="headerlink" href="#source-and-reuse-matrix" title="Permanent link">&para;</a></h2>
+<p>The v0.22.0 scene increment additionally checks shader encodings against the
+unmodified nihstro headers at <code>f4d8659decbfe5d234f04134b5002b82dc515a44</code>,
+BSD-3-Clause, copyright 2014 Tony Wasserka. The original test adapter runs in a
+separate test executable; external headers/code are never copied, linked into
+the runtime or bundled with artifacts. Azahar's pinned PICA register/loader
+descriptions remain a semantic reference only. Its approximate float24 arithmetic
+does not establish hardware accuracy; the new runtime subset uses exact MOV
+values and explicitly rejects arithmetic/rounding. See <a href="../software-scenes/">software scenes</a>.</p>
 <table>
 <thead>
 <tr>
@@ -2838,7 +2876,7 @@ renderer-status.md rather than hidden in a blanket comparison claim. No Azahar
 implementation is copied or linked. These checks do not prove GX2 rendering,
 real-game assets or Wii U performance.</p>
 <hr />
-<p>Maintained source: <a href="https://github.com/Jdiller-86/CTR-2-WUP/blob/192eab3078a4ebb67a487ad0178220e517b34d52/docs/foundation-audit.md">docs/foundation-audit.md</a> · <code>192eab3078a4</code>.
+<p>Maintained source: <a href="https://github.com/Jdiller-86/CTR-2-WUP/blob/a17aa4e6d8e6cdd63adf0d07192235a8c0ae33e8/docs/foundation-audit.md">docs/foundation-audit.md</a> · <code>a17aa4e6d8e6</code>.
 GitHub source and issue links may require repository access.</p>
 
 

@@ -1,15 +1,15 @@
 {
   "schema_version": 1,
   "ok": true,
-  "version": "0.21.0",
-  "source_commit": "192eab3078a4ebb67a487ad0178220e517b34d52",
+  "version": "0.22.0",
+  "source_commit": "a17aa4e6d8e6cdd63adf0d07192235a8c0ae33e8",
   "public_repository": "Jdiller-86/CTR-2-WUP-docs",
   "public_site_url": "https://jdiller-86.github.io/CTR-2-WUP-docs/",
-  "standalone_html": "CTR2WUP-Documentation-0.21.0.html",
-  "public_bundle": "CTR2WUP-Public-Docs-0.21.0.zip",
-  "document_pages": 55,
+  "standalone_html": "CTR2WUP-Documentation-0.22.0.html",
+  "public_bundle": "CTR2WUP-Public-Docs-0.22.0.zip",
+  "document_pages": 56,
   "embedded_text_attachments": 6,
-  "inline_images": 0,
+  "inline_images": 1,
   "excluded_source_files": [
     "assets/javascripts/bundle.d7400e89.min.js.map",
     "assets/javascripts/workers/search.2c215733.min.js.map",
@@ -21,13 +21,13 @@
     "sitemap.xml.gz"
   ],
   "all_maintained_article_pages_retained": true,
-  "public_site_internal_links_verified": 5445,
+  "public_site_internal_links_verified": 5607,
   "archive_contains_documentation_only": true,
   "application_source_bundled": false,
   "private_payloads_bundled": false,
   "progress_milestones_accepted": 0,
   "console_acceptance_claimed": false,
-  "internal_anchors_verified": 743,
-  "unique_ids": 528,
+  "internal_anchors_verified": 760,
+  "unique_ids": 537,
   "external_runtime_dependencies": false
 }

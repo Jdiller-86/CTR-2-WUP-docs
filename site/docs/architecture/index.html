@@ -1109,6 +1109,8 @@
       
         
       
+        
+      
     
     
     
@@ -1594,6 +1596,34 @@
     
   
     Vertex attributes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../software-scenes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    First software scenes
   
 
     
@@ -2419,6 +2449,14 @@ request is valid. The indexed path reads unsigned 8-bit or little-endian 16-bit
 elements, preserving order and duplicates without reading unreferenced vertices.
 It does not follow guest addresses or implement PICA loader state, fixed
 attributes, float24/shader arithmetic, primitive assembly or GX2 submission.</p>
+<p>The separate original <a href="../software-scenes/">scene boundary</a> now adapts bounded
+PICA loader/index/fixed/uniform/output state to that decoder and an original
+MOV/NOP/END shader executor. It stages owned registers/resources and a complete
+linear target, then rasterizes complete triangles with exact supported numeric
+values and constant opaque colors. A late error rolls back all state and pixels.
+The focused native Scene Check presents these CPU-produced scenes with existing
+GX2 surface copies. Guest GSP draws and general GPU shader translation remain
+unsupported; explicit resource binding is not guest physical-address resolution.</p>
 <p>The CIA intake path uses bounded signature-layout/TMD/bitmap/content checks and
 selects index-0 application NCCH with checked absolute file offsets. Its derived
 CXI view preserves ExeFS/exheader code identity while explicitly removing RomFS
@@ -2500,7 +2538,7 @@ reads HID, writes RGB565 and displays through this interface in all Wii U builds
 see <code>gsp-display.md</code>. Version 0.11.0 adds one local GSP relay/shared framebuffer
 page, diagnostic VBlank and atomic queued presentation; see <code>gsp-queues.md</code>.
 The standard display guest uses this queue. Version 0.17 adds scoped synchronous
-GX commands; see <a href="../gx-transfers/">gx-transfers.md</a>. PICA rendering remains absent.
+GX commands; see <a href="../gx-transfers/">gx-transfers.md</a>. Guest PICA draw integration remains absent.
 Its guest mode presents completed ARM-written raw framebuffers through the same
 GX2 copying path. It is separate from PICA/GSP emulation; see <code>guest-fixture.md</code>.
 Version 0.12 adds checked user-mode ARM/Thumb multiple-register/stack transfers
@@ -2615,7 +2653,7 @@ testing. Managed milestone issue sections derive from checked-in status data;
 PR/check/artifact/release records never automatically close hardware acceptance.
 Repository instructions and agent profiles preserve the same boundaries.</p>
 <hr />
-<p>Maintained source: <a href="https://github.com/Jdiller-86/CTR-2-WUP/blob/192eab3078a4ebb67a487ad0178220e517b34d52/docs/architecture.md">docs/architecture.md</a> · <code>192eab3078a4</code>.
+<p>Maintained source: <a href="https://github.com/Jdiller-86/CTR-2-WUP/blob/a17aa4e6d8e6cdd63adf0d07192235a8c0ae33e8/docs/architecture.md">docs/architecture.md</a> · <code>a17aa4e6d8e6</code>.
 GitHub source and issue links may require repository access.</p>
 
 
