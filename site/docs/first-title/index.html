@@ -2576,12 +2576,22 @@ the filename's <code>v0.3.0</code> is not a verified CIA title version.</p>
 analysis succeeds; the extended-header allowlist declares 27 services, including
 <code>dsp::DSP</code> and <code>ldr:ro</code>. These are declared capabilities, not traced runtime IPC
 or supported gameplay. Exact hashes and all commercial analysis stay private.</p>
-<p>The full CCI still exceeds transfer limits. The derived view excludes RomFS,
-so assets and CRO inventory remain unavailable. The lifter's zero-module count
-for this asset-free view does not establish that the full game has no modules.
-No commercial profile is enabled. Next work is the private asset/module and
-required-runtime matrix, followed by original probes for confirmed requirements.
-Physical original draw/audio passes remain separate from commercial compatibility.</p>
+<p><strong>October 13 asset reports received:</strong> the preparation report's output hash and
+revision match both the executable intake and the asset manifest. The two local
+reports contain identical full IVFC verification evidence. Inventory paths,
+file hashes, offsets/sizes, totals and source/revision bindings were cross-checked
+here. The original CCI and RomFS payload bytes remain on the user's PC; their
+full hashes and integrity are reported local evidence, not recomputed here.</p>
+<p>The manifest lists 1,756 files in 19 directories and a 298,080,796-byte Level-3
+blob: 1,666 <code>.szs</code> archives, 88 <code>.bcstm</code> streams, one <code>.bcsar</code> archive and one
+<code>.bsm</code> file. Two shader-named archives total about 20 KiB. No outer <code>.cro</code>/<code>.crs</code>
+entry is listed; nested archive contents remain unknown. This does not prove
+absence of dynamic modules or identify archive formats from extensions alone.</p>
+<p>Next: export explicit bounded shader/system/audio samples with matching hashes,
+inspect actual container/instruction/sample formats privately, then refine the
+required shared runtime matrix and original probes. Declared <code>ldr:ro</code>/DSP access
+is separate from observed use. No commercial profile is enabled, and the scoped
+original draw/audio passes do not establish commercial compatibility.</p>
 <h2 id="historical-intake-notes">Historical intake notes<a class="headerlink" href="#historical-intake-notes" title="Permanent link">&para;</a></h2>
 <p>October 11 update: the user is preparing console tests and has supplied the
 small CIA helper receipt. It reports outer-encrypted executable content and
@@ -2691,7 +2701,7 @@ are reusable startup interfaces, not an inferred Mario patch/profile. Its actual
 memory needs, thread/shared-memory behavior and GPU/DSP mappings still require
 private runtime evidence from the now-verified revision. See <code>guest-memory.md</code>.</p>
 <hr />
-<p>Maintained source: <a href="https://github.com/Jdiller-86/CTR-2-WUP/blob/e1a517df370edc29a56dced3a417942013134c37/docs/first-title.md">docs/first-title.md</a> · <code>e1a517df370e</code>.
+<p>Maintained source: <a href="https://github.com/Jdiller-86/CTR-2-WUP/blob/47271829f7bea594928ca7ff58fc259975c4f5d6/docs/first-title.md">docs/first-title.md</a> · <code>47271829f7be</code>.
 GitHub source and issue links may require repository access.</p>
 
 
