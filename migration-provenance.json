@@ -1,0 +1,10 @@
+{
+  "migration_id": "ctr2wup-canonical-redirect-v1",
+  "source_commit": "b98ecef22e7895090e922452cf80080d45d952f7",
+  "legacy_base": "85de2852cadf7cf4d0e826a592d24b2ecf46eed4",
+  "canonical_url": "https://jdiller-86.github.io/CTR-2-WUP/",
+  "history_preserved": true,
+  "historical_manifest": "historical-documentation-SHA256SUMS.txt",
+  "historical_manifest_sha256": "a0db45c9870be98611690adde7f6254b3a32de767fc2bc9d6ec05bc750fb823f",
+  "redirect_deployment_verified": false
+}
