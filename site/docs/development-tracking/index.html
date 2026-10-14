@@ -1869,6 +1869,17 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#development-without-hosted-actions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Development without hosted Actions
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#reviewed-management-and-audit" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -2214,6 +2225,8 @@
         
       
         
+      
+        
           
         
       
@@ -2312,6 +2325,34 @@
     
   
     GitHub development
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../direct-development/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Development without hosted Actions
   
 
     
@@ -2579,6 +2620,17 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#development-without-hosted-actions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Development without hosted Actions
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#reviewed-management-and-audit" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -2652,6 +2704,13 @@ unknown feature or active PR extending a closed feature fails before writes.</p>
 task, console route or full milestone was accepted. Full gates need their entire
 documented checklist and reviewed evidence. Physical testing remains pending
 when only host checks or RPX/WUHB builds exist.</p>
+<h2 id="development-without-hosted-actions">Development without hosted Actions<a class="headerlink" href="#development-without-hosted-actions" title="Permanent link">&para;</a></h2>
+<p>Use the owner-authorized <a href="../direct-development/">direct management and local validation route</a>
+when hosted jobs cannot start. It uses the independently supplied management
+identity, preflights fixed targets and requires clean current main for apply.
+Prepare reviewed status/resource transitions in <code>docs/project-reviews.json</code>;
+completed review markers preserve later owner edits. Record pending live updates
+when access is missing instead of claiming source edits updated the board.</p>
 <h2 id="reviewed-management-and-audit">Reviewed management and audit<a class="headerlink" href="#reviewed-management-and-audit" title="Permanent link">&para;</a></h2>
 <p>Run <strong>Development traceability</strong> on <code>main</code> with <code>apply=false</code> for a read-only
 preflight, then <code>apply=true</code> for the reviewed catalog. Both runs use an immutable
@@ -2664,7 +2723,7 @@ whose PR has not merged. Its private artifact records verified live relationship
 and any partial operation failure; a failed run must be reviewed before retrying.</p>
 <p>The initial status migration only replaces old empty/Todo values. Later manual
 Project status edits remain authoritative. Merged scoped features become Done;
-no full gate becomes Accepted through this workflow. The hourly <strong>Project
+no full gate becomes Accepted through this workflow. When hosted execution is available, the hourly <strong>Project
 tracking</strong> workflow publishes safe aggregates separately and does not expose
 private issue titles, bodies or feature identifiers in the public dashboard.</p>
 <h2 id="next-renderer-features">Next renderer features<a class="headerlink" href="#next-renderer-features" title="Permanent link">&para;</a></h2>
@@ -2721,7 +2780,7 @@ verified against merged PR #48/#57 and original reference traces. Its review
 marker is recorded once; later maintainer reopen/status changes are preserved.
 No full milestone or other unreviewed task can complete through that rule.</p>
 <hr />
-<p>Maintained source: <a href="https://github.com/Jdiller-86/CTR-2-WUP/blob/e90cbf3ab4ad1af2db1fbb67312766c3d1671f64/docs/development-tracking.md">docs/development-tracking.md</a> · <code>e90cbf3ab4ad</code>.
+<p>Maintained source: <a href="https://github.com/Jdiller-86/CTR-2-WUP/blob/d15d194386b8294d5d8949361209a38cd61f131b/docs/development-tracking.md">docs/development-tracking.md</a> · <code>d15d194386b8</code>.
 GitHub source and issue links may require repository access.</p>
 
 

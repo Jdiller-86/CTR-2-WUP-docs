@@ -13,7 +13,7 @@
         <link rel="canonical" href="https://jdiller-86.github.io/CTR-2-WUP-docs/agent-instructions/">
       
       
-        <link rel="prev" href="../docs/github-development/">
+        <link rel="prev" href="../docs/direct-development/">
       
       
         <link rel="next" href="../security/">
@@ -2120,6 +2120,8 @@
         
       
         
+      
+        
           
         
       
@@ -2221,6 +2223,34 @@
     
   
     GitHub development
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../docs/direct-development/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Development without hosted Actions
   
 
     
@@ -2674,14 +2704,15 @@ specific runtime contract over old development history when implementing behavio
    Assess the parent milestone and related tasks, not just the feature. Received
    input can make a gate In progress without completing or accepting it.</li>
 <li><strong>Native issue/PR tracking:</strong> update <code>docs/features.json</code>, the scoped issue's
-   acceptance/evidence and PR references. Run trusted-main <strong>Development
-   traceability</strong> dry-run/apply and inspect its verified hierarchy, milestone,
+   acceptance/evidence and PR references. Run <strong>Development traceability</strong> or
+   <code>tools/manage-github.py traceability</code> dry-run/apply and inspect the verified hierarchy, milestone,
    Project membership and native PR links. Broad unfinished tasks stay open.</li>
 <li><strong>Live Project and documentation tracker:</strong> Project #2 owns Status and Waiting
    resource. Source JSON edits and merges alone do not update existing board
    values. When evidence resolves a blocker, explicitly review the affected
-   transitions, preserve unrelated/later owner edits, then refresh <strong>Project
-   tracking</strong>. Verify live fields, mirrored issue labels and the public dashboard;
+   transitions through <code>docs/project-reviews.json</code>, preserve unrelated/later owner
+   edits, then refresh <strong>Project tracking</strong> or <code>tools/manage-github.py progress</code>.
+   Verify live fields, mirrored issue labels and the public dashboard;
    verify public docs publication separately. Record failed/queued updates rather
    than claiming they are live. Use the Actions credential for these operations.</li>
 </ol>
@@ -2711,7 +2742,13 @@ never accepts a full gate without its complete reviewed exit criteria.</p>
 <h2 id="build-and-validation">Build and validation<a class="headerlink" href="#build-and-validation" title="Permanent link">&para;</a></h2>
 <p>Run focused checks during implementation, then required <code>make check</code> (Python and
 all normal/ASan/UBSan C suites) and <code>make prototype</code> (RPX/WUHB) before merge.
-Automatic <strong>Required CI</strong> and <strong>Documentation build</strong> must also pass.</p>
+Automatic <strong>Required CI</strong> and <strong>Documentation build</strong> normally must pass.
+When hosted jobs are refused before starting, the owner-authorized maintenance
+exception in <code>docs/direct-development.md</code> permits an exact-head local receipt
+for Python management tools/tests and documentation. Run <code>tools/validate-local.py</code>
+on a clean committed branch, attach actual evidence to its PR and state missing
+platform coverage. Runtime/dependency/workflow changes retain required checks;
+never fabricate hosted success or disable sanitizers.</p>
 <p>Toolchain setup is <code>bash tools/install-wiiu-sdk.sh</code>; the optional pinned host
 lifter is <code>bash tools/install-translator.sh</code>. Host fixtures do not require the
 Wii U SDK. Original compiled-homebrew/reference validators document their own
@@ -2730,10 +2767,14 @@ docs with <code>python3 tools/build-docs-site.py</code> using <code>docs-require
   <code>python3 tools/codex-attribution.py install</code>, then use <code>git codex-commit</code>.
   Preserve existing hooks and human attribution; do not rewrite old history
   solely for attribution. See <code>CONTRIBUTING.md</code>.</li>
-<li>Use the <strong>Actions management credential</strong> through immutable trusted-main
-  workflows for GitHub management. Keep its value in Actions. The connected
+<li>Prefer the <strong>Actions management identity</strong> for GitHub management. Immutable
+  trusted-main workflows remain available. When hosted Actions are unavailable,
+  use <code>tools/manage-github.py</code> with the independently supplied secure environment
+  binding of that identity; see <code>docs/direct-development.md</code>. Its preflight must
+  succeed before applying from clean current remote main. The connected
   integration supplies source transport, PR lifecycle and workflow dispatch/read.
-  Never run arbitrary PR code with the management secret or copy it locally.</li>
+  Never run arbitrary PR code with the management secret, retrieve it from
+  Actions, store it in the checkout or print it. No automatic credential fallback.</li>
 <li>Run the <strong>Development traceability</strong> workflow dry-run first, inspect its
   receipt, apply the reviewed catalog, then verify native parent/PR relationships,
   milestone assignment and Project membership. Preserve conflicting owner data.</li>
@@ -2744,7 +2785,7 @@ docs with <code>python3 tools/build-docs-site.py</code> using <code>docs-require
   material remaining gates. Never substitute test counts for product acceptance.</li>
 </ul>
 <hr />
-<p>Maintained source: <a href="https://github.com/Jdiller-86/CTR-2-WUP/blob/e90cbf3ab4ad1af2db1fbb67312766c3d1671f64/AGENTS.md">AGENTS.md</a> · <code>e90cbf3ab4ad</code>.
+<p>Maintained source: <a href="https://github.com/Jdiller-86/CTR-2-WUP/blob/d15d194386b8294d5d8949361209a38cd61f131b/AGENTS.md">AGENTS.md</a> · <code>d15d194386b8</code>.
 GitHub source and issue links may require repository access.</p>
 
 

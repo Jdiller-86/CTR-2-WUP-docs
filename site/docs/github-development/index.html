@@ -16,7 +16,7 @@
         <link rel="prev" href="../../contributing/">
       
       
-        <link rel="next" href="../../agent-instructions/">
+        <link rel="next" href="../direct-development/">
       
       
         
@@ -2120,6 +2120,8 @@
         
       
         
+      
+        
           
         
       
@@ -2295,6 +2297,17 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#development-continuity" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Development continuity
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#pull-requests-and-ci" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -2386,6 +2399,34 @@
   
 </nav>
       
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../direct-development/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Development without hosted Actions
+  
+
+    
+  </span>
+  
+  
+
+      </a>
     </li>
   
 
@@ -2645,6 +2686,17 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#development-continuity" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Development continuity
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#pull-requests-and-ci" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -2860,6 +2912,14 @@ focused tasks, explicit blockers/evidence, triage priority and reproducible revi
 CTR2WUP's acceptance criteria remain specific to Wii U execution and the planned
 injector; unavailable console/game tests stay pending. The user's GitHub Free,
 private-source and no-branch-protection choices remain in force.</p>
+<h2 id="development-continuity">Development continuity<a class="headerlink" href="#development-continuity" title="Permanent link">&para;</a></h2>
+<p>Hosted jobs can refuse to start because of account billing/spending limits. The
+owner-authorized <a href="../direct-development/">direct route</a> keeps API management and
+local development independent of hosted compute. For scoped Python management
+and documentation PRs, exact-head local evidence can replace unavailable hosted
+checks. Runtime/platform acceptance is unchanged; no fake passing check is
+created. The Actions identity is supplied independently through a secure named
+environment binding. Its actual personal Project access must be verified.</p>
 <h2 id="pull-requests-and-ci">Pull requests and CI<a class="headerlink" href="#pull-requests-and-ci" title="Permanent link">&para;</a></h2>
 <p>Use a topic branch and the PR template for reviewable problem/behavior/validation
 changes. CODEOWNERS identifies the maintainer. <strong>Required CI</strong> summarizes:</p>
@@ -2899,7 +2959,7 @@ a failed upload leaves a draft. Published versions cannot be replaced by differe
 artifacts. This route also avoids the cloud connection's rejected upload-host
 authentication. It does not close console or commercial acceptance gates.</p>
 <h2 id="agent-support">Agent support<a class="headerlink" href="#agent-support" title="Permanent link">&para;</a></h2>
-<p><a href="../../agent-instructions/">Shared instructions</a>, <a href="https://github.com/Jdiller-86/CTR-2-WUP/blob/e90cbf3ab4ad1af2db1fbb67312766c3d1671f64/.github/copilot-instructions.md">Copilot guidance</a>
+<p><a href="../../agent-instructions/">Shared instructions</a>, <a href="https://github.com/Jdiller-86/CTR-2-WUP/blob/d15d194386b8294d5d8949361209a38cd61f131b/.github/copilot-instructions.md">Copilot guidance</a>
 and four specialist profiles cover CPU/runtime, host conversion, graphics and
 read-only console-evidence review. Use supported Copilot clients when the account
 has access. Profile files do not activate a subscription or automatically assign
@@ -3008,7 +3068,7 @@ Discussions, merged-branch cleanup and free Dependabot alerts, then verifies the
 result through the API. <strong>Project tracking</strong> owns board setup, explicit reviewed
 task transitions and public aggregates. <strong>Publish public documentation</strong> verifies
 the docs-only export before publication. Each preserves operation receipts.
-The <a href="https://github.com/Jdiller-86/CTR-2-WUP/blob/e90cbf3ab4ad1af2db1fbb67312766c3d1671f64/.github/repository-settings.json">desired settings</a> specify mutation scope;
+The <a href="https://github.com/Jdiller-86/CTR-2-WUP/blob/d15d194386b8294d5d8949361209a38cd61f131b/.github/repository-settings.json">desired settings</a> specify mutation scope;
 actual API receipts establish which operations succeeded.</p>
 <p>Only trusted immutable main code executes with the management token. Values are
 consumed normally by the GitHub CLI and never copied into reports, source or
@@ -3016,7 +3076,7 @@ chat. Existing owner board values remain authoritative; source synchronization
 cannot overwrite them. No branch protection or paid feature is enabled, and
 application repository visibility remains private.</p>
 <hr />
-<p>Maintained source: <a href="https://github.com/Jdiller-86/CTR-2-WUP/blob/e90cbf3ab4ad1af2db1fbb67312766c3d1671f64/docs/github-development.md">docs/github-development.md</a> · <code>e90cbf3ab4ad</code>.
+<p>Maintained source: <a href="https://github.com/Jdiller-86/CTR-2-WUP/blob/d15d194386b8294d5d8949361209a38cd61f131b/docs/github-development.md">docs/github-development.md</a> · <code>d15d194386b8</code>.
 GitHub source and issue links may require repository access.</p>
 
 
