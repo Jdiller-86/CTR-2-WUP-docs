@@ -2312,6 +2312,17 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#update-after-each-meaningful-change" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Update after each meaningful change
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#scope-and-evidence" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -2568,6 +2579,17 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#update-after-each-meaningful-change" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Update after each meaningful change
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#scope-and-evidence" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -2637,6 +2659,35 @@ Do not implement the GUI before the execution/conversion pipeline is demonstrate
 </ol>
 <p>Use <code>docs/repository-guide.md</code> for the source map and reader routes. Prefer the
 specific runtime contract over old development history when implementing behavior.</p>
+<h2 id="update-after-each-meaningful-change">Update after each meaningful change<a class="headerlink" href="#update-after-each-meaningful-change" title="Permanent link">&para;</a></h2>
+<p>Before pushing a checkpoint, review every affected surface:</p>
+<ol>
+<li><strong>Implementation and evidence:</strong> update the relevant runtime/tool contract,
+   tests, compatibility limits and versioned metadata. Keep private inputs and
+   derived analysis ignored; publish only reviewed aggregate findings.</li>
+<li><strong>Current reader handoff:</strong> update <code>STATUS.md</code>, <code>CHANGELOG.md</code> and affected
+   README/download instructions. Keep <code>docs/development-plan.md</code>,
+   <code>docs/current-roadblock.md</code> and <code>docs/compatibility.md</code> aligned; update
+   <code>docs/first-title.md</code> when title evidence changes. Remove resolved requests.</li>
+<li><strong>All affected gates:</strong> update evidence, remaining acceptance, state and
+   waiting resources in <code>docs/milestone-status.json</code> and <code>docs/milestones.md</code>.
+   Assess the parent milestone and related tasks, not just the feature. Received
+   input can make a gate In progress without completing or accepting it.</li>
+<li><strong>Native issue/PR tracking:</strong> update <code>docs/features.json</code>, the scoped issue's
+   acceptance/evidence and PR references. Run trusted-main <strong>Development
+   traceability</strong> dry-run/apply and inspect its verified hierarchy, milestone,
+   Project membership and native PR links. Broad unfinished tasks stay open.</li>
+<li><strong>Live Project and documentation tracker:</strong> Project #2 owns Status and Waiting
+   resource. Source JSON edits and merges alone do not update existing board
+   values. When evidence resolves a blocker, explicitly review the affected
+   transitions, preserve unrelated/later owner edits, then refresh <strong>Project
+   tracking</strong>. Verify live fields, mirrored issue labels and the public dashboard;
+   verify public docs publication separately. Record failed/queued updates rather
+   than claiming they are live. Use the Actions credential for these operations.</li>
+</ol>
+<p>Before merge, complete the required checks below. After merge, verify the
+published handoff and delete/verify both completed topic branches. A scoped pass
+never accepts a full gate without its complete reviewed exit criteria.</p>
 <h2 id="scope-and-evidence">Scope and evidence<a class="headerlink" href="#scope-and-evidence" title="Permanent link">&para;</a></h2>
 <ul>
 <li>Choose a concrete feature under an existing task. Give it a native parent,
@@ -2693,7 +2744,7 @@ docs with <code>python3 tools/build-docs-site.py</code> using <code>docs-require
   material remaining gates. Never substitute test counts for product acceptance.</li>
 </ul>
 <hr />
-<p>Maintained source: <a href="https://github.com/Jdiller-86/CTR-2-WUP/blob/cec9f12cd03520667fa1bb7dc0f945cd4dfb24b6/AGENTS.md">AGENTS.md</a> · <code>cec9f12cd035</code>.
+<p>Maintained source: <a href="https://github.com/Jdiller-86/CTR-2-WUP/blob/e90cbf3ab4ad1af2db1fbb67312766c3d1671f64/AGENTS.md">AGENTS.md</a> · <code>e90cbf3ab4ad</code>.
 GitHub source and issue links may require repository access.</p>
 
 

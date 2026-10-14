@@ -2612,7 +2612,7 @@ and use <strong>Download raw file</strong>. Save it as <code>export-asset-sample
 <p>Keep the existing <code>romfs.bin</code>, <code>asset-manifest.json</code> and matching
 <code>preparation-report.json</code> on your PC. In PowerShell, change to the directory
 containing the helper and adjust these <strong>original example paths</strong>:</p>
-<div class="language-powershell highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">py</span> <span class="p">.\</span><span class="nb">export-asset</span><span class="n">-samples</span><span class="p">.</span><span class="n">py</span> <span class="p">`</span>
+<div class="language-powershell highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">py</span> <span class="p">-</span><span class="n">3</span> <span class="p">.\</span><span class="nb">export-asset</span><span class="n">-samples</span><span class="p">.</span><span class="n">py</span> <span class="p">`</span>
 <a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>  <span class="p">-</span><span class="n">-manifest</span> <span class="s2">".\Original-assets\asset-manifest.json"</span> <span class="p">`</span>
 <a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>  <span class="p">-</span><span class="n">-preparation-report</span> <span class="s2">".\Original-prepared\preparation-report.json"</span> <span class="p">`</span>
 <a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>  <span class="p">-</span><span class="n">-romfs</span> <span class="s2">".\Original-assets\romfs.bin"</span> <span class="p">`</span>
@@ -2623,6 +2623,10 @@ containing the helper and adjust these <strong>original example paths</strong>:<
 exactly, including case. They are not PC filenames. Select the requested files;
 there is no directory, wildcard or automatic discovery export. Use <code>python3</code>
 instead of <code>py</code> on Linux/macOS.</p>
+<p>On Windows, <code>py -3</code> selects the installed Python explicitly. A plain <code>py</code>
+invocation can follow the script's <code>python3</code> launch line to the Microsoft Store
+alias even when <code>py -m host</code> works. If Python is still not found, check
+<code>py -3 --version</code> and <code>py --list-paths</code>; select an installed Python 3.12+.</p>
 <p>On success, JSON reports <code>"ok": true</code>, the selected file count and ZIP size.
 Share only the new sample ZIP through the agreed private channel. It contains
 <code>files/&lt;guest path&gt;</code> entries and <code>asset-sample-report.json</code>. It does not contain
@@ -2648,7 +2652,7 @@ signatures, identify nested formats or establish console/game compatibility.
 The receipt records those limits explicitly. Inspect selected bytes before
 asserting archive, shader, audio or dynamic-module requirements.</p>
 <hr />
-<p>Maintained source: <a href="https://github.com/Jdiller-86/CTR-2-WUP/blob/cec9f12cd03520667fa1bb7dc0f945cd4dfb24b6/docs/private-asset-samples.md">docs/private-asset-samples.md</a> · <code>cec9f12cd035</code>.
+<p>Maintained source: <a href="https://github.com/Jdiller-86/CTR-2-WUP/blob/e90cbf3ab4ad1af2db1fbb67312766c3d1671f64/docs/private-asset-samples.md">docs/private-asset-samples.md</a> · <code>e90cbf3ab4ad</code>.
 GitHub source and issue links may require repository access.</p>
 
 

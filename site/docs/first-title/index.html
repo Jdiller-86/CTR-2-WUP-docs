@@ -1987,6 +1987,28 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#october-13-selected-asset-bytes-verified" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        October 13 selected asset bytes verified
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#current-feature-and-test-route-matrix" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Current feature and test-route matrix
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#historical-intake-notes" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -2546,6 +2568,28 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#october-13-selected-asset-bytes-verified" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        October 13 selected asset bytes verified
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#current-feature-and-test-route-matrix" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Current feature and test-route matrix
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#historical-intake-notes" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -2596,6 +2640,11 @@
 
 
 <h1 id="first-supported-title-candidate-super-mario-3d-land">First supported-title candidate: Super Mario 3D Land<a class="headerlink" href="#first-supported-title-candidate-super-mario-3d-land" title="Permanent link">&para;</a></h1>
+<p><strong>Current M5 work: In progress, full acceptance open.</strong> The executable,
+preparation/inventory reports and seven selected asset payloads are available
+for private analysis. Input absence no longer blocks this work. Static resource
+findings guide shared implementation; observed boot/gameplay and useful Wii U
+performance remain unverified. Project #2 owns the live status.</p>
 <p><strong>October 13 verified executable intake:</strong> the smaller private export contains
 an independently inspected v2 NCCH executable. Stored hashes, decompression and
 exact executable-revision identity match its receipt. Product <code>CTR-P-AREE</code>,
@@ -2615,20 +2664,112 @@ full hashes and integrity are reported local evidence, not recomputed here.</p>
 <p>The manifest lists 1,756 files in 19 directories and a 298,080,796-byte Level-3
 blob: 1,666 <code>.szs</code> entries, 88 <code>.bcstm</code> entries, one <code>.bcsar</code> entry and one
 <code>.bsm</code> entry. Two shader-named <code>.szs</code> files total about 20 KiB. No outer <code>.cro</code>/<code>.crs</code>
-entry is listed; nested archive contents remain unknown. This does not prove
+entry is listed. Selected nested structures are reviewed below; the remaining
+inventory is uninspected here. This does not prove
 absence of dynamic modules or identify archive formats from extensions alone.</p>
-<p>Next: use the <a href="../private-asset-samples/">standalone private sample helper</a>,
-delivered under <a href="https://github.com/Jdiller-86/CTR-2-WUP/issues/92">issue #92</a> and
-<a href="https://github.com/Jdiller-86/CTR-2-WUP/pull/93">PR #93</a>, to export explicit bounded
-shader/system/audio samples with matching hashes,
-inspect actual container/instruction/sample formats privately, then refine the
-required shared runtime matrix and original probes. Declared <code>ldr:ro</code>/DSP access
-is separate from observed use. No commercial profile is enabled, and the scoped
-original draw/audio passes do not establish commercial compatibility.</p>
+<h2 id="october-13-selected-asset-bytes-verified">October 13 selected asset bytes verified<a class="headerlink" href="#october-13-selected-asset-bytes-verified" title="Permanent link">&para;</a></h2>
+<p>The received ZIP contains exactly seven requested files, totaling 15,304,637
+bytes, plus a bounded receipt. Every file size/hash matches the earlier manifest;
+receipt hashes match the unchanged preparation/asset reports, executable revision
+and prepared-main identity. Selected bytes are independently checked here. The
+full original CCI/RomFS hash and IVFC verification remain reported local evidence.</p>
+<table>
+<thead>
+<tr>
+<th>Selected content</th>
+<th>Checked structure</th>
+<th>Shared work it informs</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Three compressed archives</td>
+<td>Yaz0 decompression yields bounded NARC allocation tables; four DVLB members, one CGFX member and one BYML member</td>
+<td>Reusable bounded decompression/container readers; never turn guest names into arbitrary host paths</td>
+</tr>
+<tr>
+<td>Four layout shader members and the primitive shader binary</td>
+<td>Five DVLB code/descriptor/DVLE table sets fit their files; five vertex entries and one geometry entry</td>
+<td>Arithmetic, comparisons/addressing, bounded control flow and possible geometry support; actual entry selection is untraced</td>
+</tr>
+<tr>
+<td>CGFX shader resource</td>
+<td>Its DATA block fits the file; three embedded DVLB regions have valid bounded code/tables and twelve vertex entries</td>
+<td>CGFX dictionary/resource binding remains to be validated; code sizes 472, 428 and 264 exceed the current 256-word runtime limit</td>
+</tr>
+<tr>
+<td>System class table</td>
+<td>Little-endian BYML version 1 header and table/root offsets fit the member</td>
+<td>Validate typed nodes and bounds when consumed; class names do not establish service use</td>
+</tr>
+<tr>
+<td>Sound archive</td>
+<td>CSAR version 2 STRG/INFO/FILE blocks fit the supplied file</td>
+<td>Resolve archive references/banks/sequences/waves; nested signature candidates are not a validated complete inventory</td>
+</tr>
+<tr>
+<td>Two short streams</td>
+<td>CSTM version 2 INFO/SEEK/DATA blocks; both declare non-looping, stereo DSP ADPCM at 32 kHz</td>
+<td>Original codec/block/history/seek probes and guest DSP/audio integration; no decoded-audio or playback acceptance yet</td>
+</tr>
+</tbody>
+</table>
+<p>The raw shader code includes ADD, DP3/DP4, MUL, floor/max/reciprocal, address moves,
+comparisons, conditional/loop/jump control, multiply-add and geometry emit families.
+Opcode-family facts were checked against the pinned nihstro encoding reference
+<code>f4d8659decbfe5d234f04134b5002b82dc515a44</code>; no reference implementation is bundled.
+This is a static code inventory, including potentially unreachable words, rather
+than proof that every instruction executes on the proposed gameplay route.</p>
+<h2 id="current-feature-and-test-route-matrix">Current feature and test-route matrix<a class="headerlink" href="#current-feature-and-test-route-matrix" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Area</th>
+<th>Present evidence</th>
+<th>Next acceptance</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Exact revision/input</td>
+<td>Independently verified executable and selected bytes; complete local inventory reports</td>
+<td>Retain private provenance; broader modules/assets and original full-container integrity remain bounded by available bytes</td>
+</tr>
+<tr>
+<td>Shader runtime</td>
+<td>Actual resources exceed MOV-only semantics and include code beyond 256 words</td>
+<td>Original numeric/control/capacity probes, safe upload/rollback and selected-entry traces before claiming support</td>
+</tr>
+<tr>
+<td>Fragment/rendering</td>
+<td>Original canonical software draws pass their scoped routes</td>
+<td>Capture actual required TEV/texture/depth/blend/coherency state; implement shared features and native GX2 translation</td>
+</tr>
+<tr>
+<td>Guest audio</td>
+<td>Two sampled streams declare DSP ADPCM; archive structure exists</td>
+<td>Verify codec/history/seek behavior with originals, required DSP protocol/mixing and later physical game audio</td>
+</tr>
+<tr>
+<td>Services/modules/saves</td>
+<td>Declared DSP/loader capabilities and static executable analysis</td>
+<td>Trace actual IPC/module/save demands; do not implement all declarations as silent successful stubs</td>
+</tr>
+<tr>
+<td>Gameplay/conversion</td>
+<td>Proposed private route and Windows product contract</td>
+<td>Boot/menu/course/input/audio/save/reload, useful Wii U costs and complete WUP/GUI acceptance</td>
+</tr>
+</tbody>
+</table>
+<p>No additional copy of these seven samples is needed. Continue the reusable shader,
+container, audio and execution-budget work, then refine the matrix from observed
+execution. Additional private files are requested only for a specific missing
+structure. No commercial profile is enabled.</p>
 <p>The helper accepts the supplied schema-1/0.20.0 reports and needs only Python
 3.12+. It checks the complete blob and selected file hashes, while preserving
-sources and existing outputs. Selected asset bytes still need private inspection;
-implementing the transfer route does not complete M5 #32/#33.</p>
+sources and existing outputs. The selected upload is now reviewed above;
+implementing the transfer route and static inspection do not complete M5 #32/#33.</p>
 <h2 id="historical-intake-notes">Historical intake notes<a class="headerlink" href="#historical-intake-notes" title="Permanent link">&para;</a></h2>
 <p>October 11 update: the user is preparing console tests and has supplied the
 small CIA helper receipt. It reports outer-encrypted executable content and
@@ -2738,7 +2879,7 @@ are reusable startup interfaces, not an inferred Mario patch/profile. Its actual
 memory needs, thread/shared-memory behavior and GPU/DSP mappings still require
 private runtime evidence from the now-verified revision. See <code>guest-memory.md</code>.</p>
 <hr />
-<p>Maintained source: <a href="https://github.com/Jdiller-86/CTR-2-WUP/blob/cec9f12cd03520667fa1bb7dc0f945cd4dfb24b6/docs/first-title.md">docs/first-title.md</a> · <code>cec9f12cd035</code>.
+<p>Maintained source: <a href="https://github.com/Jdiller-86/CTR-2-WUP/blob/e90cbf3ab4ad1af2db1fbb67312766c3d1671f64/docs/first-title.md">docs/first-title.md</a> · <code>e90cbf3ab4ad</code>.
 GitHub source and issue links may require repository access.</p>
 
 
