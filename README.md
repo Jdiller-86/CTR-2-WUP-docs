@@ -1,3 +1,15 @@
+<!-- ctr2wup-canonical-redirect-v1 -->
+# Documentation moved
+
+Source, maintained articles, live Project aggregates and Pages now share
+[Jdiller-86/CTR-2-WUP](https://github.com/Jdiller-86/CTR-2-WUP) and
+[the canonical site](https://jdiller-86.github.io/CTR-2-WUP/).
+
+This repository retains migration redirects and historical generated files.
+The text below is an archived earlier export; do not maintain it independently.
+
+---
+
 # CTR2WUP public documentation
 
 This repository contains generated documentation only. Application source remains
