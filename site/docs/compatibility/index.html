@@ -781,6 +781,8 @@
       
         
       
+        
+      
     
     
     
@@ -925,6 +927,34 @@
     
   
     RomFS assets
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../private-asset-samples/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Private asset samples
   
 
     
@@ -2521,18 +2551,18 @@
 </tr>
 <tr>
 <td>Original compiled libctru applications</td>
-<td>Seven original applications verified; interactive/guarded v0.14.5 completion user-reported</td>
-<td>Supplied text logs are older; new independent TXT results await hardware evidence. Normal CRT/newlib, threads/TLS/HID/GSP/FS/APT and Level-3 RomFS reads pass; retail saves/GX/PICA/audio absent</td>
+<td>Nine original applications verified; scoped console results reviewed</td>
+<td>Normal CRT/newlib, threads/TLS/HID/GSP/FS/APT, saves/assets, GX and bounded draws; complete lifecycle/stability, general PICA, retail saves and guest audio remain open</td>
 </tr>
 <tr>
 <td>Original compiled savedata program</td>
-<td>Desktop save/reload verified; console first-write evidence, later failure reported</td>
-<td>Uploaded snapshot has two valid visit-1 records; its private desktop copy reloads to visits 2 and 3. v0.14.6 backup/publication/rollback fixes a tested rename assumption; console update/reload acceptance pending</td>
+<td>Desktop and scoped fresh-launch console reload verified</td>
+<td>Reviewed 0.14.6 TXT/trace confirms original save write and fresh-process reload; earlier 0.14.5 failures remain recorded; retail saves and broader recovery remain open</td>
 </tr>
 <tr>
 <td>Original compiled RomFS program</td>
-<td>Desktop/sanitized/emulated PPC verified; console pending</td>
-<td>Original Level-3 image, root/nested/Unicode reads, seek/EOF, directory listing and write denial; canonical NCCH/IVFC preparation and file-provider checks added in v0.16; no signature authentication or commercial asset integration</td>
+<td>Desktop/sanitized/emulated PPC and scoped console reads verified</td>
+<td>Reviewed embedded and SD-provider original nested/Unicode read, seek/list and write-denial results; no signature authentication or commercial asset integration</td>
 </tr>
 <tr>
 <td>Decrypted base-application CIA</td>
@@ -2561,8 +2591,8 @@
 </tr>
 <tr>
 <td>Main RomFS assets</td>
-<td>Canonical full IVFC/metadata preparation implemented</td>
-<td>Private blob/manifest; bounded names/chains/extents and streamed hashes; file-backed original guest proof; actual game assets/console SD remain unverified</td>
+<td>Canonical full IVFC/metadata preparation and bounded sample export implemented</td>
+<td>Private blob/manifest and explicit-file ZIP; matching reported provenance, full-blob/selected-file hashes and safe publication; original SD-provider results reviewed; actual selected game bytes/formats still need inspection</td>
 </tr>
 <tr>
 <td>PICA base textures</td>
@@ -2581,8 +2611,13 @@
 </tr>
 <tr>
 <td>Original compiled GX transfer program</td>
-<td>Sanitized desktop/reference checked; console pending</td>
-<td>16 standard operations, exact frames; scoped DMA/fill/transfer/copy/cache; PICA draw command faults</td>
+<td>Sanitized desktop/reference and scoped console results reviewed</td>
+<td>0.20.0 guest PASS/exit and exact transfer pictures; 17 GX operations, scoped DMA/fill/transfer/copy/cache and no-draw configuration; full renderer acceptance remains open</td>
+</tr>
+<tr>
+<td>Original compiled guest PICA draws</td>
+<td>Exact desktop frames and scoped 0.23.0 console results reviewed</td>
+<td>Four triangles, 97,200 fragments, zero fallback/fault and normal exit; 57.33-second drawn presentation and early visual prompt require progress/timing follow-up; general shaders/TEV/GX2 remain open</td>
 </tr>
 <tr>
 <td><code>.3dsx</code>, update/DLC merges</td>
@@ -2612,8 +2647,10 @@ executable/module revision and recorded console evidence. Upstream authors'
 desktop compatibility reports never set CTR2WUP's console-verified status.</p>
 <p>The October 11 native report provides scoped physical evidence for its embedded
 CPU/services/heap/objects/HID/GSP/relay/stack/thread self-tests. It does not
-establish full live guest graphics, save update/reload, full lifecycle acceptance or commercial
-compatibility. Full console acceptance remains open; see <code>console-retest.md</code>.</p>
+establish full lifecycle acceptance or commercial compatibility. Later original
+save/assets/GX/draw and launch-audio results are reviewed in
+<a href="../console-evidence/">console evidence</a>; <a href="../current-roadblock/">remaining gates</a>
+records the specific pending acceptance instead of requesting blanket repeats.</p>
 <p>Deferred: New 3DS exclusives, stereo output, online services, cameras, microphone,
 DLC/update merging, save import/export, arbitrary-ROM compatibility and Windows
 GUI. Native output copying is not a working PICA renderer.</p>
@@ -2626,7 +2663,7 @@ v0.14.5 Native/Guarded/Compiled successes are retained as reported evidence whil
 the user is away. They do not establish v0.15 decryption, v0.14.6 SD/RomFS, retail
 compatibility or actual WUP installation. No completed milestone is added.</p>
 <hr />
-<p>Maintained source: <a href="https://github.com/Jdiller-86/CTR-2-WUP/blob/47271829f7bea594928ca7ff58fc259975c4f5d6/docs/compatibility.md">docs/compatibility.md</a> · <code>47271829f7be</code>.
+<p>Maintained source: <a href="https://github.com/Jdiller-86/CTR-2-WUP/blob/cec9f12cd03520667fa1bb7dc0f945cd4dfb24b6/docs/compatibility.md">docs/compatibility.md</a> · <code>cec9f12cd035</code>.
 GitHub source and issue links may require repository access.</p>
 
 

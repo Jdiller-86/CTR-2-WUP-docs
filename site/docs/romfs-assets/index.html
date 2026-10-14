@@ -16,7 +16,7 @@
         <link rel="prev" href="../console-retest/">
       
       
-        <link rel="next" href="../encrypted-input/">
+        <link rel="next" href="../private-asset-samples/">
       
       
         
@@ -768,6 +768,8 @@
       
         
       
+        
+      
     
     
     
@@ -1025,6 +1027,34 @@
   
 </nav>
       
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../private-asset-samples/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Private asset samples
+  
+
+    
+  </span>
+  
+  
+
+      </a>
     </li>
   
 
@@ -2678,6 +2708,10 @@ All declared physical blocks are checked, including zero final-block padding.
 NCCH's checked superblock must cover the complete master table. This establishes
 hash consistency, not authentic signatures or commercial compatibility.
 Output publication is atomic and refuses replacement; sources remain unchanged.</p>
+<p>When the blob exceeds the transfer limit, use the
+<a href="../private-asset-samples/">standalone private sample helper</a> to share only explicit
+hash-checked guest files and a small receipt. It works with existing schema-1
+reports, including 0.20.0, without reinstalling the host wheel.</p>
 <h2 id="file-backed-provider-and-optional-wii-u-test">File-backed provider and optional Wii U test<a class="headerlink" href="#file-backed-provider-and-optional-wii-u-test" title="Permanent link">&para;</a></h2>
 <p><code>ctr_romfs_file</code> opens an explicitly configured immutable blob, streams its
 SHA-256 and requires the expected manifest hash before mounting. It lends the
@@ -2715,7 +2749,7 @@ extdata/retail saves, console SD behavior and Windows conversion integration
 remain unfinished. Signature authenticity is unverified. This diagnostic does
 not enable a retail profile, render PICA scenes or establish console speed.</p>
 <hr />
-<p>Maintained source: <a href="https://github.com/Jdiller-86/CTR-2-WUP/blob/47271829f7bea594928ca7ff58fc259975c4f5d6/docs/romfs-assets.md">docs/romfs-assets.md</a> · <code>47271829f7be</code>.
+<p>Maintained source: <a href="https://github.com/Jdiller-86/CTR-2-WUP/blob/cec9f12cd03520667fa1bb7dc0f945cd4dfb24b6/docs/romfs-assets.md">docs/romfs-assets.md</a> · <code>cec9f12cd035</code>.
 GitHub source and issue links may require repository access.</p>
 
 

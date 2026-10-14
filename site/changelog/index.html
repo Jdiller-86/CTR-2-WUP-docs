@@ -766,6 +766,8 @@
       
         
       
+        
+      
     
     
     
@@ -910,6 +912,34 @@
     
   
     RomFS assets
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../docs/private-asset-samples/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Private asset samples
   
 
     
@@ -2327,6 +2357,17 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#private-sample-exporter-2026-10-13" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Private sample exporter — 2026-10-13
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#asset-inventory-review-2026-10-13" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -2626,6 +2667,17 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#private-sample-exporter-2026-10-13" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Private sample exporter — 2026-10-13
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#asset-inventory-review-2026-10-13" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -2788,6 +2840,17 @@
 <h1 id="changelog">Changelog<a class="headerlink" href="#changelog" title="Permanent link">&para;</a></h1>
 <p>All releases are development increments. RPX/WUHB diagnostics and desktop passes
 do not establish commercial-game compatibility or installable WUP acceptance.</p>
+<h2 id="private-sample-exporter-2026-10-13">Private sample exporter — 2026-10-13<a class="headerlink" href="#private-sample-exporter-2026-10-13" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Provide a standalone Python 3.12+ helper for explicit local RomFS samples,
+  matching report provenance, full-blob/selected-file hashes and bounded ZIPs.</li>
+<li>Reject ambiguous paths, invalid extents, changed inputs and output replacement;
+  retain a private receipt with explicit integrity/compatibility evidence limits.</li>
+<li>Compare path/handle metadata against their respective stable snapshots so
+  Windows timestamp precision differences do not reject unchanged sources.</li>
+<li>Publish a small script/guide/license CI artifact with original boundary tests;
+  existing schema-1/0.20.0 reports work without reinstalling the host wheel.</li>
+</ul>
 <h2 id="asset-inventory-review-2026-10-13">Asset inventory review — 2026-10-13<a class="headerlink" href="#asset-inventory-review-2026-10-13" title="Permanent link">&para;</a></h2>
 <ul>
 <li>Match private preparation/output, asset-source and executable revision reports.</li>
@@ -2942,7 +3005,7 @@ do not establish commercial-game compatibility or installable WUP acceptance.</p
 <p>Earlier source/build evidence is preserved in
 <a href="../docs/development-history/">development history</a>.</p>
 <hr />
-<p>Maintained source: <a href="https://github.com/Jdiller-86/CTR-2-WUP/blob/47271829f7bea594928ca7ff58fc259975c4f5d6/CHANGELOG.md">CHANGELOG.md</a> · <code>47271829f7be</code>.
+<p>Maintained source: <a href="https://github.com/Jdiller-86/CTR-2-WUP/blob/cec9f12cd03520667fa1bb7dc0f945cd4dfb24b6/CHANGELOG.md">CHANGELOG.md</a> · <code>cec9f12cd035</code>.
 GitHub source and issue links may require repository access.</p>
 
 
